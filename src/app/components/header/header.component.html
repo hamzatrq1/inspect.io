@@ -1,43 +1,6 @@
 <header class="site-header">
   <div class="brand-group">
     <div class="brand-top">
-      <aside class="doc-menu" [class.doc-menu--collapsed]="!docMenuOpen()">
-        <div class="doc-menu__panel">
-          <button
-            type="button"
-            class="doc-menu__toggle"
-            aria-label="Menu"
-            [attr.aria-expanded]="docMenuOpen()"
-            (click)="toggleDocMenu()"
-          >
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z" />
-            </svg>
-          </button>
-
-          @if (docMenuOpen()) {
-            <div class="doc-menu__dropdown">
-              <h2 class="doc-menu__title">Menu</h2>
-              <nav class="doc-menu__links" aria-label="Menu documentation" (click)="toggleDocMenu()">
-                @for (item of docMenuItems; track item.label) {
-                  <div class="doc-menu__item">
-                    <a class="doc-menu__link" [routerLink]="item.link">{{ item.label | translate }}</a>
-                    @if (item.children?.length) {
-                      <div class="doc-menu__sublinks">
-                        @for (child of item.children; track child.label) {
-                          <a class="doc-menu__sublink" [routerLink]="child.link">{{ child.label | translate }}</a>
-                        }
-                      </div>
-                    }
-                  </div>
-                }
-              </nav>
-            </div>
-          }
-        </div>
-      </aside>
-
-
       <!--  Logo SVG de INSPECT -->
       <svg
       class="brand-logo"

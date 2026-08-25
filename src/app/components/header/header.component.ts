@@ -1,10 +1,9 @@
-import {Component, EventEmitter, Output, computed, inject, signal} from '@angular/core';
-import {TranslatePipe, TranslateService} from '@ngx-translate/core';
-import {RouterLink} from '@angular/router';
+import { Component, computed, EventEmitter, inject, Output, signal } from '@angular/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
-  imports: [TranslatePipe, RouterLink],
+  imports: [TranslatePipe],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
@@ -59,35 +58,5 @@ export class HeaderComponent {
 
   goToGithub() {
     window.open('https://github.com/oneteme', '_blank');
-  }
-
-  readonly docMenuItems = [
-    { label: 'header.menu.home', link: '/' },
-    { label: 'header.menu.installation', link: '/installation' },
-    { label: 'header.menu.quick-start', link: '/demonstration' },
-    // sous titre : c'est pour qui inspect (PO, DEV, Suivi...)
-    // pas trop de plue value : à retirer
-    // mentionner que les img docker ont besoin de manip en plus (certifs etc)
-    // DualEventTrace => event tracé 2 fois, début et fin
-    // Quand le traitement prend fin, on cherche sa fin pour avoir une meilleure visibilité dessus
-    {
-      label: 'header.menu.architecture.title',
-      link: '/architecture',
-      children: [
-        { label: 'header.menu.architecture.application', link: '/architecture' },
-        { label: 'header.menu.architecture.collector', link: '/architecture' },
-        { label: 'header.menu.architecture.server', link: '/architecture' },
-      ],
-    },
-    { label: 'Compatibilités', link: '/TODO' }, // java, js, parler de spring des framework
-    // parler des dépendances techniques IMPORTANTES, jakarta pour l'envoi de mail
-    // pour du HTTP REST, on utilise Reactor et une autre => intéressant de lister
-    { label: 'header.menu.technical-description', link: '/TODO' },
-    { label: 'header.menu.conduct-code', link: '/TODO' },
-    { label: 'header.menu.contributing', link: '/TODO' },
-  ];
-
-  toggleDocMenu(): void {
-    this.docMenuOpen.set(!this.docMenuOpen());
   }
 }

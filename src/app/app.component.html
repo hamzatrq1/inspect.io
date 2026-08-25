@@ -1,4 +1,27 @@
 <app-header></app-header>
+<aside class="doc-menu">
+  <div class="doc-menu__panel">
+      <div class="doc-menu__dropdown">
+        <h2 class="doc-menu__title">Menu</h2>
+        <nav class="doc-menu__links" aria-label="Menu documentation">
+<!--          Table of contents-->
+          @for (item of docMenuItems; track item.label) {
+            <div class="doc-menu__item">
+              <a class="doc-menu__link" [routerLink]="item.link">{{ item.label | translate }}</a>
+              @if (item.children?.length) {
+                <div class="doc-menu__sublinks">
+                  @for (child of item.children; track child.label) {
+                    <a class="doc-menu__sublink" [routerLink]="child.link">{{ child.label | translate }}</a>
+                  }
+                </div>
+              }
+            </div>
+          }
+        </nav>
+      </div>
+  </div>
+</aside>
+
 <main>
   <div class="main">
     <div class="content">

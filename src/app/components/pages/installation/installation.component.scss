@@ -1,0 +1,61 @@
+.installation {
+  width: 100%;
+}
+
+.installation__status {
+  margin: 0;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+.installation__status--error {
+  color: #b91c1c;
+}
+
+.installation__doc {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+  text-align: left;
+}
+
+.installation__doc h1,
+.installation__doc h2,
+.installation__doc h3 {
+  margin: 0;
+  color: #0f172a;
+}
+
+.installation__doc h1 {
+  font-size: 2rem;
+}
+
+.installation__doc h2 {
+  font-size: 1.5rem;
+}
+
+.installation__doc h3 {
+  font-size: 1.2rem;
+}
+
+.installation__doc p {
+  margin: 0;
+  color: #334155;
+  line-height: 1.7;
+}
+
+.installation__doc pre {
+  margin: 0;
+  padding: 1rem 1.1rem;
+  overflow: auto;
+  border-radius: 12px;
+  background: #0f172a;
+  color: #e2e8f0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.installation__doc code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}

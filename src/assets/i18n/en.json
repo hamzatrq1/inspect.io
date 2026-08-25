@@ -1,0 +1,32 @@
+
+{
+  "header": {
+    "search": "Search",
+    "language-tooltip": "Change language",
+    "repo": "Repositories",
+    "menu": {
+      "home": "Description",
+      "installation": "Installation",
+      "quick-start": "Quick start",
+      "architecture": {
+        "title": "Architecture",
+        "application": "Application",
+        "collector": "Collector",
+        "server": "Server"
+      },
+      "technical-description": "Technical description",
+      "conduct-code": "Code of conduct",
+      "contributing": "Contributing"
+    }
+
+  },
+  "home":
+  { "title": "INSPECT",
+    "content" : "Welcome to the INSPECT demo site. INSPECT allows you to monitor your application, quickly identify if there are errors in your services and which flows are in error (HTTP, JDBC, FTP, SMTP). KPIs can also be generated. This showcase is intended to facilitate the integration of INSPECT products into your application.",
+    "redirect": " Explore the details on the instances informations"
+  },
+  "installation": {
+    "title": "Installation",
+    "explanation": "Blabla."
+  }
+}

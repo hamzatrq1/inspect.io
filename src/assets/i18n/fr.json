@@ -1,0 +1,31 @@
+{
+  "header": {
+    "search": "Rechercher",
+    "language-tooltip": "Changer la langue",
+    "repo": "Projets",
+    "menu": {
+      "home": "Description",
+      "installation": "Installation",
+      "quick-start": "Démonstation rapide",
+      "architecture": {
+        "title": "(D° FONCTIONNEL) Architecture",
+        "application": "Application",
+        "collector": "Collecteur",
+        "server": "Serveur"
+      },
+      "technical-description": "(D° TECHNIQUE) Méthodes, objets et services disponibles",
+      "conduct-code": "Code de conduite",
+      "contributing": "Contribuer"
+    }
+  },
+  "home":
+  { "title": "INSPECT",
+    "content" : "Bienvenue sur le site de démonstration d'INSPECT. INSPECT permet de monitorer votre application, de repérer rapidement s'il y a des erreurs dans vos services et quels flux sont en erreur (HTTP, JDBC, FTP, SMTP). Des KPI peuvent aussi être générés. Cette vitrine a pour but de faciliter l'intégration des produits INSPECT dans votre application. ",
+    "redirect": " Explorer le détail des informations sur les instances "
+  },
+  "installation": {
+    "title": "Installation",
+    "content": "Pour installer INSPECT, il y a 2 dépendances à ajouter dans votre projet : inspect-core et inspect-ng-collector",
+    "explanation": "Dans le tableau de bord, vous trouvez un tableau avec plusieurs données paramétrables. Ce tableau permet de superviser l'ensemble des microservices de votre application pour repérer au plus tôt s'il y en a en erreur"
+  }
+}

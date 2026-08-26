@@ -7,8 +7,40 @@
 <!--          Table of contents-->
           @for (item of docMenuItems; track item.label) {
             <div class="doc-menu__item">
-              <a class="doc-menu__link" [routerLink]="item.link">{{ item.label | translate }}</a>
               @if (item.children?.length) {
+                  <div class="doc-menu__link-row">
+                    <a class="doc-menu__link doc-menu__link--main" [routerLink]="item.link">
+                      @if (item.icon) {
+                        <ng-icon [name]="item.icon" class="doc-menu__icon"></ng-icon>
+                      }
+                      <span class="doc-menu__label">{{ item.label | translate }}</span>
+                    </a>
+                    <button
+                      type="button"
+                      class="doc-menu__link doc-menu__link--parent"
+                      [attr.aria-expanded]="isSectionOpen(item.label)"
+                      (click)="toggleSection(item.label)"
+                      aria-label="Afficher les sous-menus"
+                    >
+                      <svg
+                        class="doc-menu__chevron"
+                        [class.doc-menu__chevron--open]="isSectionOpen(item.label)"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path d="M7 10l5 5 5-5" />
+                      </svg>
+                    </button>
+                  </div>
+              } @else {
+                <a class="doc-menu__link" [routerLink]="item.link">
+                  @if (item.icon) {
+                    <ng-icon [name]="item.icon" class="doc-menu__icon"></ng-icon>
+                  }
+                  <span class="doc-menu__label">{{ item.label | translate }}</span>
+                </a>
+              }
+              @if (item.children?.length && isSectionOpen(item.label)) {
                 <div class="doc-menu__sublinks">
                   @for (child of item.children; track child.label) {
                     <a class="doc-menu__sublink" [routerLink]="child.link">{{ child.label | translate }}</a>

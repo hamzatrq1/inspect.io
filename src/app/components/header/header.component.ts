@@ -14,7 +14,6 @@ export class HeaderComponent {
 
   readonly isFirefox = typeof navigator !== 'undefined' && /Firefox\//.test(navigator.userAgent);
   readonly repoMenuOpen = signal(false);
-  readonly docMenuOpen = signal(false);
   readonly currentLang = computed(() => this.translate.currentLang() ?? 'fr');
 
   // Redirect to the latest version of each component on Docker Hub, Maven Central, and npm

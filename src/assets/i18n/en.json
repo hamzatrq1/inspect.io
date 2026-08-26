@@ -18,15 +18,36 @@
       "conduct-code": "Code of conduct",
       "contributing": "Contributing"
     }
-
   },
-  "home":
-  { "title": "INSPECT",
-    "content" : "Welcome to the INSPECT demo site. INSPECT allows you to monitor your application, quickly identify if there are errors in your services and which flows are in error (HTTP, JDBC, FTP, SMTP). KPIs can also be generated. This showcase is intended to facilitate the integration of INSPECT products into your application.",
-    "redirect": " Explore the details on the instances informations"
-  },
-  "installation": {
-    "title": "Installation",
-    "explanation": "Blabla."
+  "home": {
+    "title": "INSPECT",
+    "content": "INSPECT is a platform for monitoring and analyzing multiple types of calls and designed to provide deep visibility into the interactions between different components of a distributed system. INSPECT allows you to monitor and analyze the performance of your application, identify potential issues, and optimize your system's performance.",
+    "description": {
+      "advantages": "Why use INSPECT?",
+      "observability": {
+        "title": "Observability",
+        "content": "Observability is the ability to understand the internal state of a system by observing its external outputs. It helps detect, diagnose, and resolve issues in complex systems."
+      },
+      "analytics": {
+        "title": "Analytics",
+        "content": "INSPECT allows you to extract useful insights from the collected data. This helps understand trends, identify queries more effectively, and improve system performance."
+      },
+      "time": {
+        "title": "Real time",
+        "content": "INSPECT allows you to follow in real time the api calls and the global performances. It helps for detecting quickly some issues and to resolve them before your users are getting impacted from it"
+      },
+      "e2e": {
+        "title": "Start to end informations",
+        "content": "When you are trying to find the root cause of an issue, you might be used to look for one log in a lot of files and lines. You have a first trace id, then an other that you are following. INSPECT makes you improve time because it's able to follow an action to it's start until it's end, even if the trace id are changing."
+      },
+      "uniformize": {
+        "title": "Data Uniformization",
+        "content": "Request analyzed are uniformized at a maximum level. If the callback are HTTP requets, PostgreSQL, ORACLE, the responses are studied so you can understand easily where the issue is located, even without any technical knowledge."
+      },
+      "heartbeat": {
+        "title": "Monitoring",
+        "content": "With INSPECT, you can watch and monitore all microservices of your project, know when was the last restart, what is the deployed version, the number of restsrat, all of it in a few seconds."
+      }
+    }
   }
 }

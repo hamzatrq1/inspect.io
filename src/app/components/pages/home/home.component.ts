@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
-import {TranslatePipe} from '@ngx-translate/core';
+import { RouterLink } from '@angular/router';
+import { TranslatePipe } from '@ngx-translate/core';
+import { NgIcon, provideIcons } from '@ng-icons/core';
+import { heroArrowLeftStartOnRectangleMicro } from '@ng-icons/heroicons/micro';
 
 @Component({
   selector: 'app-home',
-  imports: [
-    TranslatePipe
-  ],
+  imports: [TranslatePipe, RouterLink, NgIcon],
+  providers: [provideIcons({ heroArrowLeftStartOnRectangleMicro })],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {}

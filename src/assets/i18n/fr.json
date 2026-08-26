@@ -6,26 +6,55 @@
     "menu": {
       "home": "Description",
       "installation": "Installation",
-      "quick-start": "Démonstation rapide",
+      "quick-start": "Démonstation",
       "architecture": {
-        "title": "(D° FONCTIONNEL) Architecture",
+        "title": "Architecture",
         "application": "Application",
         "collector": "Collecteur",
         "server": "Serveur"
       },
-      "technical-description": "(D° TECHNIQUE) Méthodes, objets et services disponibles",
+      "dependencies": "Compatibilités",
+      "technical-description": "TBD",
       "conduct-code": "Code de conduite",
       "contributing": "Contribuer"
     }
   },
   "home":
-  { "title": "INSPECT",
-    "content" : "Bienvenue sur le site de démonstration d'INSPECT. INSPECT permet de monitorer votre application, de repérer rapidement s'il y a des erreurs dans vos services et quels flux sont en erreur (HTTP, JDBC, FTP, SMTP). Des KPI peuvent aussi être générés. Cette vitrine a pour but de faciliter l'intégration des produits INSPECT dans votre application. ",
-    "redirect": " Explorer le détail des informations sur les instances "
+  {
+    "title": "INSPECT",
+    "content": "INSPECT est une plateforme de suivi et d'analyse des appels d'API conçue pour offrir une visibilité approfondie sur les interactions entre les différents composants d'un système distribué.",
+    "redirect": " Plus de détails sur ces fonctionnalités ",
+    "description": {
+      "advantages": "Pourquoi utiliser INSPECT ? ",
+      "observability": {
+        "title": "Observabilité",
+        "content": "INSPECT est un outil pouvant facilité l'observabilité de votre application. Elle permet de détecter et diagnostiquer les problèmes dans des systèmes complexes. Elle permet d'avoir une observabilité optimale sur votre application"
+      },
+      "analytics": {
+        "title": "Analyse",
+        "content": "INSPECT permet de récupérer de nombreuses informations et de quantifier les requêtes de votre application. Cela permet de comprendre les tendances, repérer au mieux les requêtes critiques et d'améliorer l'expérience utilisateur."
+      },
+      "time": {
+        "title": "Temps réel",
+        "content": "INSPECT permet de suivre en temps réel les appels d'API et les performances de votre application. Cela permet de détecter rapidement les problèmes et d'y remédier avant qu'ils n'affectent les utilisateurs finaux."
+      },
+      "e2e": {
+        "title": "Suivi de bout en bout",
+        "content": "Lors d'une analyse de logs classique, il faut analyser dans des milliers de lignes des logs avec un premier trace id, puis chercher la suite des évènements à l'aide d'un fil rouge difficilement repérable. INSPECT vous épargne ce travail car il y a un suivi de bout en bout entre une première action et sa fin."
+      },
+      "uniformize": {
+        "title": "Uniformisation des données",
+        "content": "INSPECT uniformise au maximum les types de requêtes analysées. Que ce soit des retours HTTP, PostgreSQL, ORACLE, les codes réponses sont adaptés au maximum pour que vous puissiez comprendre l'origine de l'erreur, même sans connaissance technique particulière."
+      },
+      "heartbeat": {
+        "title": "Monitoring",
+        "content": "Avec INSPECT, vous pourrez surveiller et monitorer l'ensemble des microservices de votre projet, voir le dernier redémarrage, la version déployée, le nombre de tentatives, tout ça en quelques secondes."
+      }
+    }
   },
   "installation": {
     "title": "Installation",
     "content": "Pour installer INSPECT, il y a 2 dépendances à ajouter dans votre projet : inspect-core et inspect-ng-collector",
-    "explanation": "Dans le tableau de bord, vous trouvez un tableau avec plusieurs données paramétrables. Ce tableau permet de superviser l'ensemble des microservices de votre application pour repérer au plus tôt s'il y en a en erreur"
+    "explanation": "Dans le tableau de bord, vous trouvez un tableau avec plusieurs données paramétrables. Ce tableau permet de superviser l'ensemble des microservices de votre application pour repérer au plus tôt s'il y en a en erreur."
   }
 }

@@ -1,11 +1,67 @@
 <!-- intro -->
-<div class="intro">
-  <img class="intro__logo" src="assets/jarvis.svg" alt="Jarvis" />
+
+<div class="intro" xmlns="http://www.w3.org/1999/html">
+  <img class="intro__logo" src="assets/icons/description/jarvis.svg" alt="Jarvis" />
 
   <div class="intro__title">
-    <span class="intro__accent">{{ "home.title" | translate }}</span>
+    <span >IN</span>
+    <span class="intro__desc">tegrated </span>
+    <span >S</span>
+    <span class="intro__desc">ystem </span>
+    <span >P</span>
+    <span class="intro__desc">erformance </span>
+    <span >E</span>
+    <span class="intro__desc">valuation </span>
+    <span >C</span>
+    <span class="intro__desc">ommunication </span>
+    <span >T</span>
+    <span class="intro__desc">racking </span>
+    <br>
   </div>
-  <br>
-  <span class="intro__desc">{{ "home.content" | translate }}</span>
+
+  <span class="intro__text">{{ "home.content" | translate }}</span>
+  <div class="intro__second_title"> {{ "home.description.advantages" | translate }} </div>
+  <div class="intro__grid">
+    <article class="intro__grid-item intro__grid-item--left">
+      <img [src]="'assets/icons/description/observability.png'" alt="Observability" class="intro__grid-image" />
+      <h2>{{ "home.description.observability.title" | translate }}</h2>
+      <span class="intro__grid-content">{{ "home.description.observability.content" | translate }}</span>
+    </article>
+
+    <article class="intro__grid-item __grid-item--center">
+      <img [src]="'assets/icons/description/analytics.png'" alt="Analytics" class="intro__grid-image" />
+      <h2>{{ "home.description.analytics.title" | translate }}</h2>
+      <span class="intro__grid-content">{{ "home.description.analytics.content" | translate }}</span>
+    </article>
+
+    <article class="intro__grid-item intro__grid-item--right">
+      <img [src]="'assets/icons/description/time.png'" alt="Time" class="intro__grid-image" />
+      <h2>{{ "home.description.time.title" | translate }}</h2>
+      <span class="intro__grid-content">{{ "home.description.time.content" | translate }}</span>
+    </article>
+
+
+    <article class="intro__grid-item intro__grid-item--left intro__grid-item--bottom">
+      <img [src]="'assets/icons/description/e2e.png'" alt="endToEnd" class="intro__grid-image" />
+      <h2>{{ "home.description.e2e.title" | translate }}</h2>
+      <span class="intro__grid-content">{{ "home.description.e2e.content" | translate }}</span>
+    </article>
+
+    <article class="intro__grid-item intro__grid-item--center intro__grid-item--bottom">
+      <img [src]="'assets/icons/description/uniformize.png'" alt="uniform" class="intro__grid-image" />
+      <h2> {{ "home.description.uniformize.title" | translate }}</h2>
+      <span class="intro__grid-content"> {{ "home.description.uniformize.content" | translate }}</span>
+    </article>
+
+    <article class="intro__grid-item intro__grid-item--right intro__grid-item--bottom">
+      <img [src]="'assets/icons/description/heartbeat.png'" alt="heartbeat" class="intro__grid-image" />
+      <h2> {{ "home.description.heartbeat.title" | translate }}</h2>
+      <span class="intro__grid-content"> {{ "home.description.heartbeat.content" | translate }}</span>
+    </article>
+  </div>
+  <button type="button" class="intro__redirect" routerLink="/architecture">
+    <ng-icon name="heroArrowLeftStartOnRectangleMicro" class="intro__redirect_icon"></ng-icon>
+    {{ "home.redirect" | translate }}
+  </button>
 
 </div>

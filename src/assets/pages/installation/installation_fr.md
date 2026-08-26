@@ -1,10 +1,11 @@
-## Projets 
+# Projets 
 
 - [Front-end (inspect-ng-collector)](#inspect-ng-collector)
 - [Back-end (inspect-core)](#inspect-core)
 
 
 ## inspect-ng-collector
+
 ### Importer le Module
 
 Dans le `app.module.ts`:
@@ -36,7 +37,7 @@ import { AppComponent } from './app.component';
 export class AppModule { }
 ```
 
-### (Optionnel) Ajouter un traçage personnalisé
+### Ajouter un traçage personnalisé
 
 Utilisez le décorateur `@TraceableStage()` pour suivre les étapes personnalisées de l'application :
 
@@ -59,7 +60,7 @@ export class DataService {
 }
 ```
 
-### (Optionnel) Journaliser les événements de l'application
+### Journaliser les événements de l'application
 
 ```typescript
 import { Injectable } from '@angular/core';
@@ -78,11 +79,12 @@ export class MyService {
   }
 }
 ```
+___
 
-### inspect-core
+## inspect-core
 
-Quick Start
------------
+### Quick Start
+
 Maven
 ```xml
 <dependency>
@@ -92,7 +94,8 @@ Maven
 </dependency>
 ```
 
-Configuration (example application.yml)
+### Configuration (example application.yml)
+
 ```yaml
 inspect:
   collector:

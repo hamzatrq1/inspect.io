@@ -2,21 +2,28 @@
   "header": {
     "search": "Search",
     "language-tooltip": "Change language",
-    "repo": "Repositories",
-    "menu": {
-      "home": "Description",
-      "installation": "Installation",
-      "quick-start": "Quick start",
-      "architecture": {
-        "title": "Architecture",
-        "application": "Application",
-        "collector": "Collector",
-        "server": "Server"
-      },
-      "technical-description": "Components",
-      "conduct-code": "Code of conduct",
-      "contributing": "Contributing"
-    }
+    "repo": "Repositories"
+  },
+  "menu": {
+    "button": {
+      "tooltip": {
+        "close": "Close menu",
+        "open": "Open menu"
+      }
+    },
+    "home": "Description",
+    "installation": "Installation",
+    "quick-start": "Quick start",
+    "dependencies": "Dependencies",
+    "architecture": {
+      "title": "Architecture",
+      "application": "Application",
+      "collector": "Collector",
+      "server": "Server"
+    },
+    "technical-description": "Components",
+    "conduct-code": "Code of conduct",
+    "contributing": "Contributing"
   },
   "home": {
     "title": "INSPECT",

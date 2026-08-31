@@ -1,4 +1,12 @@
 {
+  "menu": {
+    "button": {
+      "tooltip": {
+        "close": "Fermer le menu",
+        "open": "Ouvrir le menu"
+      }
+    }
+  },
   "header": {
     "search": "Rechercher",
     "language-tooltip": "Changer la langue",

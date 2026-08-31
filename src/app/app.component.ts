@@ -1,23 +1,35 @@
-import {Component, inject, signal } from '@angular/core';
+import { Component, Output, signal } from '@angular/core';
 import {HeaderComponent} from './components/header/header.component';
-import { RouterLink, RouterOutlet} from '@angular/router';
-import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
+import { TranslatePipe } from '@ngx-translate/core';
 import { NgIcon, provideIcons } from '@ng-icons/core';
-import { boxAngularLogo } from '@ng-icons/boxicons/logos';
 import { typBusinessCard } from '@ng-icons/typicons';
 import { hugeComputerProgramming01 } from '@ng-icons/huge-icons';
 import { fluentPeopleTeam, fluentDocumentQueueMultiple } from '@ng-icons/fluent-ui';
-import { matDocumentSearchRound, matSchemaRound } from '@ng-icons/material-symbols/round';
+import {
+  matDocumentSearchRound,
+  matSchemaRound,
+  matArrowMenuOpenRound,
+  matArrowMenuCloseRound,
+} from '@ng-icons/material-symbols/round';
 import { matInfoSharp } from '@ng-icons/material-symbols/sharp';
 import { matRuleSettingsFillOutline } from '@ng-icons/material-symbols/outline';
 import { bootstrapRocketTakeoffFill } from '@ng-icons/bootstrap-icons';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent, RouterOutlet, TranslatePipe, RouterLink, NgIcon],
+  imports: [
+    HeaderComponent,
+    RouterOutlet,
+    TranslatePipe,
+    RouterLink,
+    RouterLinkActive,
+    NgIcon,
+    MatTooltipModule
+  ],
   providers: [
     provideIcons({
-      boxAngularLogo,
       typBusinessCard,
       hugeComputerProgramming01,
       fluentPeopleTeam,
@@ -27,48 +39,62 @@ import { bootstrapRocketTakeoffFill } from '@ng-icons/bootstrap-icons';
       matRuleSettingsFillOutline,
       matSchemaRound,
       matInfoSharp,
+      matArrowMenuOpenRound,
+      matArrowMenuCloseRound,
     }),
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  private readonly translate = inject(TranslateService);
+
+  @Output() tabName: string | undefined;
+
+  readonly menuVisible = signal(true);
   constructor() {}
 
   readonly docMenuItems = [
-    { label: 'header.menu.home', link: '/', icon: 'matInfoSharp' },
-    { label: 'header.menu.installation', link: '/installation', icon: 'hugeComputerProgramming01' },
+    { label: 'menu.home', link: '/', icon: 'matInfoSharp' },
+    { label: 'menu.installation', link: '/installation', icon: 'hugeComputerProgramming01' },
     {
-      label: 'header.menu.quick-start',
+      label: 'menu.quick-start',
       link: '/demonstration',
       icon: 'bootstrapRocketTakeoffFill',
     },
-    { label: 'header.menu.dependencies', link: '/TODO', icon: 'matRuleSettingsFillOutline' }, // java, js, parler de spring des framework
-
+    {
+      label: 'menu.dependencies',
+      link: '/dependencies',
+      icon: 'matRuleSettingsFillOutline',
+      children: [
+        { label: 'inspect-app', link: '/dependencies/application' },
+        { label: 'inspect-core', link: '/dependencies/collector' },
+        { label: 'inspect-ng-collector', link: '/dependencies/ng-collector' },
+        { label: 'inspect-server', link: '/dependencies/server' },
+      ],
+    },
     // sous titre : c'est pour qui inspect (PO, DEV, Suivi...)
     // mentionner que les img docker ont besoin de manip en plus (certifs etc)
     // DualEventTrace => event tracé 2 fois, début et fin
     // Quand le traitement prend fin, on cherche sa fin pour avoir une meilleure visibilité dessus
     {
-      label: 'header.menu.architecture.title',
+      label: 'menu.architecture.title',
       link: '/architecture',
       icon: 'matSchemaRound ',
       children: [
-        { label: 'header.menu.architecture.application', link: '/architecture' },
-        { label: 'header.menu.architecture.collector', link: '/architecture' },
-        { label: 'header.menu.architecture.server', link: '/architecture' },
+        { label: 'menu.architecture.application', link: '/architecture/application' },
+        { label: 'menu.architecture.collector', link: '/architecture/collector' },
+        { label: 'menu.architecture.server', link: '/architecture/server' },
       ],
     },
     // parler des dépendances techniques IMPORTANTES, jakarta pour l'envoi de mail
     // pour du HTTP REST, on utilise Reactor et une autre => intéressant de lister
     {
-      label: 'header.menu.technical-description',
+      label: 'menu.technical-description',
       link: '/TODO',
       icon: 'fluentDocumentQueueMultiple',
     },
-    { label: 'header.menu.conduct-code', link: '/TODO', icon: 'matDocumentSearchRound' },
-    { label: 'header.menu.contributing', link: '/TODO', icon: 'fluentPeopleTeam' },
+    { label: 'menu.conduct-code', link: '/TODO', icon: 'matDocumentSearchRound' },
+    { label: 'menu.contributing', link: '/TODO', icon: 'fluentPeopleTeam' },
   ];
 
   readonly openSections = signal<Record<string, boolean>>(
@@ -89,5 +115,9 @@ export class AppComponent {
       ...sections,
       [label]: !sections[label],
     }));
+  }
+
+  toggleMenuVisibility(): void {
+    this.menuVisible.update((visible) => !visible);
   }
 }

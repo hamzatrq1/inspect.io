@@ -28,7 +28,7 @@
       <span class="intro__grid-content">{{ "home.description.observability.content" | translate }}</span>
     </article>
 
-    <article class="intro__grid-item __grid-item--center">
+    <article class="intro__grid-item intro__grid-item--middle">
       <img [src]="'assets/icons/description/analytics.png'" alt="Analytics" class="intro__grid-image" />
       <h2>{{ "home.description.analytics.title" | translate }}</h2>
       <span class="intro__grid-content">{{ "home.description.analytics.content" | translate }}</span>
@@ -47,7 +47,7 @@
       <span class="intro__grid-content">{{ "home.description.e2e.content" | translate }}</span>
     </article>
 
-    <article class="intro__grid-item intro__grid-item--center intro__grid-item--bottom">
+    <article class="intro__grid-item intro__grid-item--right intro__grid-item--middle">
       <img [src]="'assets/icons/description/uniformize.png'" alt="uniform" class="intro__grid-image" />
       <h2> {{ "home.description.uniformize.title" | translate }}</h2>
       <span class="intro__grid-content"> {{ "home.description.uniformize.content" | translate }}</span>
@@ -63,5 +63,17 @@
     <ng-icon name="heroArrowLeftStartOnRectangleMicro" class="intro__redirect_icon"></ng-icon>
     {{ "home.redirect" | translate }}
   </button>
+
+  <div class="intro__title">{{ "home.profiles.title" | translate }}</div>
+  <div class="second_title"> {{ "home.profiles.functional.title" | translate }}</div>
+  <div class="intro__text">{{ "home.profiles.functional.content" | translate }}</div>
+
+  <section class="intro__scroll-trigger" (click)="goToInstallation()" aria-label="Passer à l'installation">
+    <div class="intro__scroll-badge">
+    </div>
+    <div class="tui-scroll-indicator" [class.tui-scroll-indicator--active]="isTransitioning()">
+      <div class="tui-scroll-indicator__wheel"></div>
+    </div>
+  </section>
 
 </div>

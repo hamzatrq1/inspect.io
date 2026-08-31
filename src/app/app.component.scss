@@ -1,40 +1,5 @@
-:host {
-  --bright-blue: oklch(51.01% 0.274 263.83);
-  --electric-violet: oklch(53.18% 0.28 296.97);
-  --french-violet: oklch(47.66% 0.246 305.88);
-  --vivid-pink: oklch(69.02% 0.277 332.77);
-  --hot-red: oklch(61.42% 0.238 15.34);
-  --orange-red: oklch(63.32% 0.24 31.68);
+@import "src/styles.scss";
 
-  --gray-900: oklch(19.37% 0.006 300.98);
-  --gray-700: oklch(36.98% 0.014 302.71);
-  --gray-400: oklch(70.9% 0.015 304.04);
-
-  --red-to-pink-to-purple-vertical-gradient: linear-gradient(
-    180deg,
-    var(--orange-red) 0%,
-    var(--vivid-pink) 50%,
-    var(--electric-violet) 100%
-  );
-
-  --red-to-pink-to-purple-horizontal-gradient: linear-gradient(
-    90deg,
-    var(--orange-red) 0%,
-    var(--vivid-pink) 50%,
-    var(--electric-violet) 100%
-  );
-
-  --pill-accent: var(--bright-blue);
-
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol";
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  display: block;
-  height: 100dvh;
-}
 
 $text-primary: #0f172a;
 $surface: #ffffff;
@@ -53,10 +18,6 @@ h1 {
   "Segoe UI Symbol";
 }
 
-p {
-  margin: 0;
-  color: var(--gray-700);
-}
 
 .main {
   width: 100%;
@@ -72,7 +33,6 @@ p {
 
 
 .content {
-  display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -94,57 +54,6 @@ p {
   margin-inline: 0.5rem;
 }
 
-.pill-group {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  flex-wrap: wrap;
-  gap: 1.25rem;
-}
-
-.pill {
-  align-items: center;
-  --pill-accent: var(--bright-blue);
-  background: color-mix(in srgb, var(--pill-accent) 5%, transparent);
-  color: var(--pill-accent);
-  padding-inline: 0.75rem;
-  padding-block: 0.375rem;
-  border-radius: 2.75rem;
-  border: 0;
-  transition: background 0.3s ease;
-  font-size: 0.875rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1.4rem;
-  letter-spacing: -0.00875rem;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.pill:hover {
-  background: color-mix(in srgb, var(--pill-accent) 15%, transparent);
-}
-
-.pill-group .pill:nth-child(6n + 1) {
-  --pill-accent: var(--bright-blue);
-}
-.pill-group .pill:nth-child(6n + 2) {
-  --pill-accent: var(--electric-violet);
-}
-.pill-group .pill:nth-child(6n + 3) {
-  --pill-accent: var(--french-violet);
-}
-
-.pill-group .pill:nth-child(6n + 4),
-.pill-group .pill:nth-child(6n + 5),
-.pill-group .pill:nth-child(6n + 6) {
-  --pill-accent: var(--hot-red);
-}
-
-.pill-group svg {
-  margin-inline-start: 0.25rem;
-}
-
 @media screen and (max-width: 650px) {
   .content {
     flex-direction: column;
@@ -163,19 +72,6 @@ p {
   &__logo {
     display: block;
     margin: 0 auto 1.5rem;
-  }
-
-  &__badge {
-    display: inline-block;
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    background: rgba(99, 102, 241, 0.12);
-    color: #818cf8;
-    border: 1px solid rgba(99, 102, 241, 0.3);
-    padding: 0.3rem 0.9rem;
-    border-radius: 100px;
-    margin-bottom: 1.5rem;
   }
 
   &__title {
@@ -233,12 +129,52 @@ p {
   left: 1rem;
   bottom: 1rem;
   z-index: 20;
-  max-width: 15rem;
   transition: width 0.2s ease;
 }
 
-.doc-menu--collapsed {
-  width: 4rem;
+.doc-menu--hidden {
+  display: none;
+}
+
+.doc-menu-icon {
+  cursor: pointer;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  width: 2rem;
+  height: 2rem;
+  color: #0f172a;
+  background: transparent;
+
+  &.display {
+    justify-content: flex-end;
+    margin-top: 2rem;
+    transition: transform 0.2s ease;
+
+  }
+
+  &.hidden {
+    top: 5rem;
+    left: 1rem;
+    z-index: 30;
+    position: fixed;
+
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: translateY(-1px);
+    }
+  }
+}
+
+
+
+.doc-menu__dropdown {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .doc-menu__panel {
@@ -287,8 +223,6 @@ p {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
-  overflow-y: auto;
-  overflow-x: hidden;
 }
 
 .doc-menu__item {
@@ -313,11 +247,16 @@ p {
   padding: 0.56rem 0.68rem;
   width: 100%;
   box-sizing: border-box;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
 
   &:hover {
     background: #f8fafc;
     color: #0f172a;
+  }
+
+  &--active {
+    background: #f1f5f9;
+    color: var(--gray-700);
   }
 }
 
@@ -391,6 +330,11 @@ p {
     background: #f8fafc;
     color: #0f172a;
   }
+
+  &--active {
+    background: #f1f5f9;
+    color: var(--gray-500);
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -405,38 +349,3 @@ p {
   }
 }
 
-.repo-menu-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  padding: 0.45rem 0.7rem;
-  border: none;
-  background: $surface;
-  color: $text-primary;
-  cursor: pointer;
-  font-size: 0.9rem;
-  font-weight: 500;
-  line-height: 1;
-
-  &:hover {
-    transform: translateY(-1px);
-  }
-
-  &:focus-visible {
-    outline: 2px solid rgba(15, 23, 42, 0.45);
-    outline-offset: 2px;
-  }
-
-  svg {
-    width: 14px;
-    height: 14px;
-    stroke: currentColor;
-    stroke-width: 2;
-    fill: none;
-    transition: transform 0.2s ease;
-  }
-
-  &.is-open svg {
-    transform: rotate(180deg);
-  }
-}

@@ -1,0 +1,33 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+thead {
+  background: linear-gradient(135deg, #f8fafc, #eef2ff);
+}
+
+th, td {
+  padding: 0.9rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+  color: #1f2937;
+}
+
+th {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+tbody tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+tbody tr:hover {
+  background: #f1f5f9;
+}

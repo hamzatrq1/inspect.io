@@ -1,9 +1,3 @@
-# Projets 
-
-- [Front-end (inspect-ng-collector)](#inspect-ng-collector)
-- [Back-end (inspect-core)](#inspect-core)
-
-
 ## inspect-ng-collector
 
 ### Importer le Module
@@ -144,4 +138,22 @@ Maven:
 mvn clean test
 mvn -DskipTests package
 ```
+## Utiliser l'IHM d'INSPECT
+
+Dans le répertoire inspect-app, lancer une installation :
+```shell
+npm install
+```
+Puis lancer l'application :
+```shell
+npm run start
+``` 
+L'IHM est disponible sur le port 4200. Vous pouvez y accéder via http://localhost:4200.
+
+Dans le répertoire inspect-server, lancer une installation maven :
+```shell
+mvn clean install
+```
+
+Préparer un fichier de configuration `application.yml` dans le répertoire `src/main/resources` avec le contenu suivant :
 

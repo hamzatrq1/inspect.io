@@ -1,1 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
+
+.title {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  color: var(--clr-text-primary, #0f172a);
+  display: block;
+  margin-top: 1.6rem;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: clamp(2rem, 5vw, 2rem);
+  color: var(--clr-text-secondary, #000000);
+  font-weight: 600;
+  margin: 10rem auto 2rem;
+  line-height: 1.7;
+  strong { color: var(--clr-text-primary, #1e293b); font-weight: 600; }
+  text-align: center;
+}
+
+.second_title {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  color: var(--clr-text-secondary, #000000);
+  margin: 10rem auto 2rem;
+  line-height: 1.7;
+  strong { color: var(--clr-text-primary, #1e293b); font-weight: 600; }
+}
+
+.text {
+  display: block;
+  margin-top: 4rem;
+  font-size: 1.5rem;
+  align-content: space-between;
+  line-height: 2;
+  text-align: center;
+  row-gap: 2rem;
+  strong { color: var(--clr-text-primary, #1e293b); font-weight: 600; }
+}

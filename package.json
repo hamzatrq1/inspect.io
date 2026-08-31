@@ -25,6 +25,7 @@
     "@ng-icons/huge-icons": "^35.0.1",
     "@ng-icons/material-icons": "^35.0.1",
     "@ng-icons/material-symbols": "^35.0.1",
+    "@ng-icons/remixicon": "^35.0.1",
     "@ng-icons/typicons": "^35.0.1",
     "@ngx-translate/core": "^18.0.0",
     "@ngx-translate/http-loader": "^18.0.0",

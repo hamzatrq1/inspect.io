@@ -13,7 +13,7 @@
         "collector": "Collecteur",
         "server": "Serveur"
       },
-      "dependencies": "Compatibilités",
+      "dependencies": "Dépendances",
       "technical-description": "TBD",
       "conduct-code": "Code de conduite",
       "contributing": "Contribuer"
@@ -22,13 +22,13 @@
   "home":
   {
     "title": "INSPECT",
-    "content": "INSPECT est une plateforme de suivi et d'analyse des appels d'API conçue pour offrir une visibilité approfondie sur les interactions entre les différents composants d'un système distribué.",
+    "content": "INSPECT est une plateforme de suivi et d'analyse des appels d'API conçue pour offrir une visibilité approfondie sur les interactions entre les différents composants d'un système distribué. Quelques uns des points forts d'INSPECT :",
     "redirect": " Plus de détails sur ces fonctionnalités ",
     "description": {
       "advantages": "Pourquoi utiliser INSPECT ? ",
       "observability": {
         "title": "Observabilité",
-        "content": "INSPECT est un outil pouvant facilité l'observabilité de votre application. Elle permet de détecter et diagnostiquer les problèmes dans des systèmes complexes. Elle permet d'avoir une observabilité optimale sur votre application"
+        "content": "INSPECT est un outil pouvant facilité l'observabilité de votre application. Elle permet de détecter et diagnostiquer les problèmes dans des systèmes complexes. Vous avez une observabilité optimale sur votre application"
       },
       "analytics": {
         "title": "Analyse",
@@ -40,7 +40,7 @@
       },
       "e2e": {
         "title": "Suivi de bout en bout",
-        "content": "Lors d'une analyse de logs classique, il faut analyser dans des milliers de lignes des logs avec un premier trace id, puis chercher la suite des évènements à l'aide d'un fil rouge difficilement repérable. INSPECT vous épargne ce travail car il y a un suivi de bout en bout entre une première action et sa fin."
+        "content": "Lors d'une analyse de logs classique, il faut repérer une erreur spécifique dans des milliers de lignes des logs, puis chercher la suite des évènements à l'aide d'un fil rouge difficilement repérable. INSPECT vous épargne ce travail car il y a un suivi de bout en bout entre une première action et sa fin."
       },
       "uniformize": {
         "title": "Uniformisation des données",
@@ -54,7 +54,26 @@
   },
   "installation": {
     "title": "Installation",
-    "content": "Pour installer INSPECT, il y a 2 dépendances à ajouter dans votre projet : inspect-core et inspect-ng-collector",
-    "explanation": "Dans le tableau de bord, vous trouvez un tableau avec plusieurs données paramétrables. Ce tableau permet de superviser l'ensemble des microservices de votre application pour repérer au plus tôt s'il y en a en erreur."
+    "content": "Pour installer INSPECT, il y a 2 dépendances à ajouter dans votre projet : inspect-core et inspect-ng-collector"
+  },
+  "architecture": {
+    "title": "Architecture",
+    "content": "INSPECT est composé de 3 composants principaux : le collecteur, le serveur et l'application. Le collecteur est responsable de la collecte des données à partir de diverses sources, telles que les journaux, les métriques et les traces. Le serveur est responsable du traitement et du stockage des données collectées, et fournit une interface utilisateur pour visualiser et analyser les données. L'application est responsable de la génération des données collectées par le collecteur.",
+    "application": {
+      "title": "Application",
+      "content": "L'application est le composant qui génère les données collectées par le collecteur. Il peut s'agir d'une application web, d'un service backend ou de tout autre type d'application qui produit des données de performance et de suivi."
+    },
+    "collector": {
+      "title": "Collecteur",
+      "content": "Le collecteur est le composant responsable de la collecte des données à partir de diverses sources. Il peut collecter des données à partir de journaux, de métriques et de traces, et les envoyer au serveur pour traitement et stockage."
+    },
+    "server": {
+      "title": "Serveur",
+      "content": "Le serveur est le composant responsable du traitement et du stockage des données collectées par le collecteur. Il fournit également une interface utilisateur pour visualiser et analyser les données collectées, permettant aux utilisateurs de comprendre les performances et le comportement de leur application."
+    },
+    "flow": {
+      "title": "Flux",
+      "content": "Voici un exemple de flux applicatif typique :"
+    }
   }
 }

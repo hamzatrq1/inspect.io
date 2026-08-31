@@ -1,4 +1,3 @@
-
 {
   "header": {
     "search": "Search",
@@ -14,7 +13,7 @@
         "collector": "Collector",
         "server": "Server"
       },
-      "technical-description": "Technical description",
+      "technical-description": "Components",
       "conduct-code": "Code of conduct",
       "contributing": "Contributing"
     }
@@ -22,11 +21,23 @@
   "home": {
     "title": "INSPECT",
     "content": "INSPECT is a platform for monitoring and analyzing multiple types of calls and designed to provide deep visibility into the interactions between different components of a distributed system. INSPECT allows you to monitor and analyze the performance of your application, identify potential issues, and optimize your system's performance.",
+    "profiles": {
+      "title": "Who is INSPECT for?",
+      "technical": {
+        "title": "Technical profiles",
+        "content": "INSPECT is designed for technical profiles, such as developers, DevOps engineers, and system administrators. These users can use INSPECT to monitor and analyze the performance of their applications, identify potential issues, and optimize their systems' performance."
+      },
+      "functional": {
+        "title": "Functional profiles",
+        "content": "INSPECT is also designed for functional profiles, such as product managers, business analysts, and project managers. These users can use INSPECT to gain insights into the performance of their applications, identify potential issues, and make data-driven decisions to improve their systems' performance."
+      }
+    },
+    "redirect": " More details on these features ",
     "description": {
-      "advantages": "Why use INSPECT?",
+      "advantages": "Why use INSPECT ?",
       "observability": {
         "title": "Observability",
-        "content": "Observability is the ability to understand the internal state of a system by observing its external outputs. It helps detect, diagnose, and resolve issues in complex systems."
+        "content": "INSPECT is a tool that can facilitate the observability of your application. It allows you to detect and diagnose problems in complex systems. You have optimal observability on your application."
       },
       "analytics": {
         "title": "Analytics",
@@ -49,5 +60,13 @@
         "content": "With INSPECT, you can watch and monitore all microservices of your project, know when was the last restart, what is the deployed version, the number of restsrat, all of it in a few seconds."
       }
     }
+  },
+  "installation": {
+    "title": "Installation",
+    "content": "To install INSPECT, there are 2 dependencies to add to your project: inspect-core and inspect-ng-collector"
+  },
+  "architecture": {
+    "title": "Architecture",
+    "content": "INSPECT is composed of 3 main components: the collector, the server and the application. The collector is responsible for collecting data from various sources, such as logs, metrics, and traces. The server is responsible for processing and storing the collected data, and providing a user interface for visualizing and analyzing the data. The application is responsible for generating the data that is collected by the collector."
   }
 }

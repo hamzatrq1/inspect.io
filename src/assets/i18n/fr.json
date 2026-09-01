@@ -35,7 +35,7 @@
     "content": "INSPECT est une plateforme de suivi et d'analyse des appels d'API conçue pour offrir une visibilité approfondie sur les interactions entre les différents composants d'un système distribué. Quelques uns des points forts d'INSPECT :",
     "redirect": {
       "services": "Plus de détails sur ces fonctionnalités",
-      "profiles": "Plus de détails sur les cas d'utilisation"
+      "profiles": "Plus de détails sur les scénarios d'utilisation"
     },
     "description": {
       "advantages": "Pourquoi utiliser INSPECT ? ",
@@ -69,11 +69,11 @@
       "description": "À première vue, on peut penser qu'INSPECT est uniquement fait pour les développeurs. Mais sa plus-value réside dans le fait que tout le monde peut l'utiliser. Les développeurs sont, certes, ceux qui doivent l'implémenter dans le code. Mais après l'implémentation, tous les profils sont gagnants en l'utilisant.",
       "technical": {
         "title": "Technique",
-        "content": "INSPECT apporte de la valeur aux profils techniques, tels que les développeurs. Ils peuvent vérifier l'état des microservices, si le déploiement est en erreur. INSPECT peut être utilisé pour l'analyse de logs, afin de trouver la root cause d'un bug. De nombreux protocoles sont unifiés pour éviter une longue recherche dans plusieurs fichiers de logs."
+        "content": "Les profils techniques peuvent vérifier la santé des microservices, si le déploiement a des erreurs. INSPECT peut également être utilisé pour l'analyse des logs, afin de trouver la root cause. Plusieurs réponses de protocoles sont unifiées au maximum pour éviter une longue recherche dans plusieurs fichiers de logs volumineux."
       },
       "functional": {
         "title": "Fonctionnel",
-        "content": "Les profils fonctionnels, tels que les product owners, tirent également des avantages à utiliser INSPECT. Si un utilisateur remonte des erreurs au PO, il peut vérifier quelle erreur est survenue grâce au niveau de détail fourni par INSPECT, les User Stories peuvent contenir plus d'informations pour aider les développeurs à identifier plus rapidement l'origine du bug. Le PO peut également savoir quelles requêtes sont les plus utilisées et lesquelles sont les plus critiques. Cela peut aider à prioriser son backlog."
+        "content": "Un profil fonctionnel peut facilement identifier un problème sans demander à l'équipe de développement de vérifier les logs, car INSPECT fournit des informations détaillées. Il est également possible de voir quelles requêtes sont les plus utilisées et quelles sont les plus critiques, ce qui aide à prioriser le backlog."
       }
     }
   },

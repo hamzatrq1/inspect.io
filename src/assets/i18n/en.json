@@ -33,7 +33,7 @@
       "description": "At first look, you might think that INSPECT is a developer tool only. But its value comes from the fact that every profile can use it. Developers are indeed the ones that have to implement it in the code. But after the implementation, everyone will find their work easier by using it.",
       "technical": {
         "title": "Technical",
-        "content": "INSPECT provides value to technical profiles, such as developers. They can check the health of microservices, if the deployment has errors. INSPECT can also be used for log analysis, to find the root cause of an issue. Many protocols are unified to avoid a long search in multiple log files."
+        "content": "Technical profiles can check the health of microservices, if the deployment has errors. INSPECT can also be used for log analysis, to find the root cause of an issue. Many protocols are unified to avoid a long search in multiple log files."
       },
       "functional": {
         "title": "Functional",

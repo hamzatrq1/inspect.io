@@ -1,4 +1,4 @@
-import { Component, Output, signal } from '@angular/core';
+import { Component, HostListener, Output, signal } from '@angular/core';
 import {HeaderComponent} from './components/header/header.component';
 import { RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
@@ -47,17 +47,27 @@ import { MatTooltipModule } from '@angular/material/tooltip';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-
   @Output() tabName: string | undefined;
 
-  readonly menuVisible = signal(true);
-  constructor() {}
+  private readonly mobileBreakpoint = 1024;
+  readonly menuVisible = signal(typeof window !== 'undefined' ? window.innerWidth >= 1024 : true);
+
+  @HostListener('window:resize')
+  onResize(): void {
+    this.checkScreenSize();
+  }
+
+  private checkScreenSize(): void {
+    if (typeof window !== 'undefined' && window.innerWidth < this.mobileBreakpoint) {
+      this.menuVisible.set(false);
+    }
+  }
 
   readonly docMenuItems = [
     { label: 'menu.home', link: '/', icon: 'matInfoSharp' },
     { label: 'menu.installation', link: '/installation', icon: 'hugeComputerProgramming01' },
     {
-      label: 'menu.quick-start',
+      label: 'Services',
       link: '/demonstration',
       icon: 'bootstrapRocketTakeoffFill',
     },
@@ -72,10 +82,6 @@ export class AppComponent {
         { label: 'inspect-server', link: '/dependencies/server' },
       ],
     },
-    // sous titre : c'est pour qui inspect (PO, DEV, Suivi...)
-    // mentionner que les img docker ont besoin de manip en plus (certifs etc)
-    // DualEventTrace => event tracé 2 fois, début et fin
-    // Quand le traitement prend fin, on cherche sa fin pour avoir une meilleure visibilité dessus
     {
       label: 'menu.architecture.title',
       link: '/architecture',
@@ -86,12 +92,14 @@ export class AppComponent {
         { label: 'menu.architecture.server', link: '/architecture/server' },
       ],
     },
-    // parler des dépendances techniques IMPORTANTES, jakarta pour l'envoi de mail
-    // pour du HTTP REST, on utilise Reactor et une autre => intéressant de lister
     {
-      label: 'menu.technical-description',
-      link: '/TODO',
+      label: 'menu.components.title',
+      link: '/components',
       icon: 'fluentDocumentQueueMultiple',
+      children: [
+        { label: 'menu.components.session', link: '/components/session' },
+        { label: 'menu.components.request', link: '/components/request' },
+      ],
     },
     { label: 'menu.conduct-code', link: '/TODO', icon: 'matDocumentSearchRound' },
     { label: 'menu.contributing', link: '/TODO', icon: 'fluentPeopleTeam' },

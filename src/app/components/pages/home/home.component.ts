@@ -23,10 +23,9 @@ import { goToPage, isAtBottom } from '@utils/utils';
 })
 export class HomeComponent {
   private readonly router = inject(Router);
-  readonly isTransitioning = signal(false);
-
-  private wheelAccumulator = 0;
+  isTransitioning = signal(false);
   private touchStartY = 0;
+  private scrollCount = 0;
 
   @HostListener('window:wheel', ['$event'])
   onWheel(event: WheelEvent): void {
@@ -34,13 +33,8 @@ export class HomeComponent {
       return;
     }
 
-    if (event.deltaY > 0 && isAtBottom()) {
-      this.wheelAccumulator += event.deltaY;
-      if (this.wheelAccumulator > 40) {
-        this.goToInstallation();
-      }
-    } else {
-      this.wheelAccumulator = 0;
+    if (event.deltaY > 50 && isAtBottom()) {
+      this.goToInstallation();
     }
   }
 

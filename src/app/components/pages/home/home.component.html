@@ -59,16 +59,35 @@
       <span class="intro__grid-content"> {{ "home.description.heartbeat.content" | translate }}</span>
     </article>
   </div>
-  <button type="button" class="intro__redirect" routerLink="/architecture">
+
+  <!--  Button to route to /components to get technical informations-->
+  <button type="button" class="intro__redirect" routerLink="/components">
     <ng-icon name="heroArrowLeftStartOnRectangleMicro" class="intro__redirect_icon"></ng-icon>
     {{ "home.redirect" | translate }}
   </button>
 
-  <div class="intro__title">{{ "home.profiles.title" | translate }}</div>
-  <div class="second_title"> {{ "home.profiles.functional.title" | translate }}</div>
-  <div class="intro__text">{{ "home.profiles.functional.content" | translate }}</div>
+  <div class="intro__title">{{ "home.profiles.title" | translate }} </div>
+  <span class="intro__text">{{ "home.profiles.description" | translate }}</span>
+  <span class="intro__grid">
+    <article class="intro__grid-item intro__grid-item--left">
+      <img [src]="'assets/icons/technical.png'" alt="Technical" class="intro__grid-image" />
+      <div class="intro__second_title"> {{ "home.profiles.technical.title" | translate }}</div>
+      <span class="intro__grid-content">{{ "home.profiles.technical.content" | translate }}</span>
+    </article>
 
-  <section class="intro__scroll-trigger" (click)="goToInstallation()" aria-label="Passer à l'installation">
+    <article class="intro__grid-item intro__grid-item--right">
+      <img [src]="'assets/icons/functional.png'" alt="Functional" class="intro__grid-image" />
+      <div class="intro__second_title"> {{ "home.profiles.functional.title" | translate }}</div>
+      <span class="intro__grid-content">{{ "home.profiles.functional.content" | translate }}</span>
+    </article>
+
+
+</span>
+
+
+
+  <!--  Redirection to next tab-->
+  <section class="intro__scroll-trigger" (click)="goToInstallation()" >
     <div class="intro__scroll-badge">
     </div>
     <div class="tui-scroll-indicator" [class.tui-scroll-indicator--active]="isTransitioning()">

@@ -1,34 +1,36 @@
 {
+  "header": {
+    "search": "Rechercher",
+    "language-tooltip": "Changer la langue",
+    "repo": "Projets"
+  },
   "menu": {
+    "home": "Description",
     "button": {
       "tooltip": {
         "close": "Fermer le menu",
         "open": "Ouvrir le menu"
       }
-    }
-  },
-  "header": {
-    "search": "Rechercher",
-    "language-tooltip": "Changer la langue",
-    "repo": "Projets",
-    "menu": {
-      "home": "Description",
-      "installation": "Installation",
-      "quick-start": "Démonstation",
-      "architecture": {
-        "title": "Architecture",
-        "application": "Application",
-        "collector": "Collecteur",
-        "server": "Serveur"
+    },
+    "installation": "Installation",
+    "quick-start": "Démonstation",
+    "architecture": {
+      "title": "Architecture",
+      "application": "Application",
+      "collector": "Collecteur",
+      "server": "Serveur"
+    },
+    "dependencies": "Compatibilités",
+    "components": {
+      "title": "Composants techniques",
+      "session": "Session",
+      "request": "Requêtes",
+      "resource": "Métriques"
       },
-      "dependencies": "Dépendances",
-      "technical-description": "TBD",
-      "conduct-code": "Code de conduite",
-      "contributing": "Contribuer"
-    }
+    "conduct-code": "Code de conduite",
+    "contributing": "Contribuer"
   },
-  "home":
-  {
+  "home": {
     "title": "INSPECT",
     "content": "INSPECT est une plateforme de suivi et d'analyse des appels d'API conçue pour offrir une visibilité approfondie sur les interactions entre les différents composants d'un système distribué. Quelques uns des points forts d'INSPECT :",
     "redirect": " Plus de détails sur ces fonctionnalités ",
@@ -58,11 +60,26 @@
         "title": "Monitoring",
         "content": "Avec INSPECT, vous pourrez surveiller et monitorer l'ensemble des microservices de votre projet, voir le dernier redémarrage, la version déployée, le nombre de tentatives, tout ça en quelques secondes."
       }
+    },
+    "profiles": {
+      "title": "Qui peut utiliser INSPECT ?",
+      "description": "À première vue, on peut penser qu'INSPECT est uniquement fait pour les développeurs. Mais sa plus-value réside dans le fait que tout le monde peut l'utiliser. Les développeurs sont, certes, ceux qui doivent l'implémenter dans le code. Mais après l'implémentation, tous les profils sont gagnants en l'utilisant.",
+      "technical": {
+        "title": "Technique",
+        "content": "INSPECT apporte de la valeur aux profils techniques, tels que les développeurs. Ils peuvent vérifier l'état des microservices, si le déploiement est en erreur. INSPECT peut être utilisé pour l'analyse de logs, afin de trouver la root cause d'un bug. De nombreux protocoles sont unifiés pour éviter une longue recherche dans plusieurs fichiers de logs."
+      },
+      "functional": {
+        "title": "Fonctionnel",
+        "content": "Les profils fonctionnels, tels que les product owners, tirent également des avantages à utiliser INSPECT. Si un utilisateur remonte des erreurs au PO, il peut vérifier quelle erreur est survenue grâce au niveau de détail fourni par INSPECT, les User Stories peuvent contenir plus d'informations pour aider les développeurs à identifier plus rapidement l'origine du bug. Le PO peut également savoir quelles requêtes sont les plus utilisées et lesquelles sont les plus critiques. Cela peut aider à prioriser son backlog."
+      }
     }
   },
   "installation": {
     "title": "Installation",
     "content": "Pour installer INSPECT, il y a 2 dépendances à ajouter dans votre projet : inspect-core et inspect-ng-collector"
+  },
+  "dependencies": {
+    "title": "Dépendances"
   },
   "architecture": {
     "title": "Architecture",
@@ -83,5 +100,8 @@
       "title": "Flux",
       "content": "Voici un exemple de flux applicatif typique :"
     }
+  },
+  "components": {
+    "title": "Composants techniques"
   }
 }

@@ -39,7 +39,7 @@
   font-weight: 800;
   color: var(--clr-text-primary, #0f172a);
   display: block;
-  margin-top: 4rem;
+  margin-top: 3rem;
   text-align: center;
 }
 
@@ -71,4 +71,13 @@
   text-align: center;
   row-gap: 2rem;
   strong { color: var(--clr-text-primary, #1e293b); font-weight: 600; }
+}
+
+.classical-text {
+  margin-top: 2rem;
+  display: block;
+  text-align: center;
+  font-size: 1.5rem;
+  max-width: 500px;
+  line-height: 1.7;
 }

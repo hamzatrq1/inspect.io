@@ -1,3 +1,12 @@
+<section class="installation__scroll-trigger installation__scroll-trigger--up"
+         [class.is-visible]="isScrollUpVisible()"
+         (click)="goToDemo()">
+  <div class="tui-scroll-indicator tui-scroll-indicator--up" [class.tui-scroll-indicator--active]="isTransitioning()">
+    <div class="tui-scroll-indicator__wheel"></div>
+  </div>
+</section>
+
+<div class="title"> {{ "dependencies.title" | translate }} </div>
 <table>
   <thead>
   <tr>
@@ -16,27 +25,39 @@
   </tr>
   <tr>
     <td>inspect-app</td>
-    <td>Node.js</td>
-    <td>v20+</td>
-    <td>Runtime pour le build et les outils</td>
+    <td>&#64;oneteme/inspect-ng-collector</td>
+    <td>v1.3+</td>
+    <td>Collecteur front</td>
   </tr>
   <tr>
     <td>inspect-app</td>
-    <td>Mermaid</td>
-    <td>v11.x</td>
-    <td>Génération de diagrammes</td>
+    <td>jquery-echarts</td>
+    <td>v0.0+</td>
+    <td>Génération des KPI</td>
   </tr>
   <tr>
-    <td>inspect-app</td>
-    <td>ngx-translate</td>
-    <td>v16.x</td>
-    <td>Internationalisation des textes</td>
+    <td>inspect-core</td>
+    <td>Java</td>
+    <td>v21.x</td>
+    <td> - </td>
   </tr>
   <tr>
     <td>inspect-core</td>
     <td>Jakarta</td>
-    <td>v2.1.0.x</td>
+    <td>v2.1.x</td>
     <td>API pour l’envoi d’emails</td>
+  </tr>
+  <tr>
+    <td>inspect-server</td>
+    <td> - </td>
+    <td> - </td>
+    <td> _ </td>
   </tr>
   </tbody>
 </table>
+
+<section class="installation__scroll-trigger" (click)="goToArchitecture()">
+  <div class="tui-scroll-indicator tui-scroll-indicator--down" [class.tui-scroll-indicator--active]="isTransitioning()">
+    <div class="tui-scroll-indicator__wheel"></div>
+  </div>
+</section>

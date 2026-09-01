@@ -8,6 +8,8 @@ import {DemoComponent} from './components/pages/demo/demo.component';
 import { CollectorComponent } from './components/pages/architecture/collector/collector.component';
 import { ServerComponent } from './components/pages/architecture/server/server.component';
 import { DependenciesComponent } from './components/pages/dependencies/dependencies.component';
+import { ComponentsComponent } from '@app/components/pages/components/components.component';
+import { SessionsComponent } from '@app/components/pages/components/sessions/sessions.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -18,6 +20,8 @@ export const routes: Routes = [
   { path: 'architecture/application', component: ApplicationComponent },
   { path: 'architecture/collector', component: CollectorComponent },
   { path: 'architecture/server', component: ServerComponent },
+  { path: 'components', component: ComponentsComponent},
+  { path: 'components/session', component: SessionsComponent},
 ];
 
 @NgModule({

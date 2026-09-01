@@ -14,14 +14,14 @@
     "home": "Description",
     "installation": "Installation",
     "quick-start": "Quick start",
-    "dependencies": "Dependencies",
+    "dependencies": "Compatibilities",
     "architecture": {
       "title": "Architecture",
       "application": "Application",
       "collector": "Collector",
       "server": "Server"
     },
-    "technical-description": "Components",
+    "technical-description": "Technical components",
     "conduct-code": "Code of conduct",
     "contributing": "Contributing"
   },
@@ -29,14 +29,15 @@
     "title": "INSPECT",
     "content": "INSPECT is a platform for monitoring and analyzing multiple types of calls and designed to provide deep visibility into the interactions between different components of a distributed system. INSPECT allows you to monitor and analyze the performance of your application, identify potential issues, and optimize your system's performance.",
     "profiles": {
-      "title": "Who is INSPECT for?",
+      "title": "Who is INSPECT for ?",
+      "description": "At first look, you might think that INSPECT is a developer tool only. But its value comes from the fact that every profile can use it. Developers are indeed the ones that have to implement it in the code. But after the implementation, everyone will find their work easier by using it.",
       "technical": {
-        "title": "Technical profiles",
-        "content": "INSPECT is designed for technical profiles, such as developers, DevOps engineers, and system administrators. These users can use INSPECT to monitor and analyze the performance of their applications, identify potential issues, and optimize their systems' performance."
+        "title": "Technical",
+        "content": "INSPECT provides value to technical profiles, such as developers. They can check the health of microservices, if the deployment has errors. INSPECT can also be used for log analysis, to find the root cause of an issue. Many protocols are unified to avoid a long search in multiple log files."
       },
       "functional": {
-        "title": "Functional profiles",
-        "content": "INSPECT is also designed for functional profiles, such as product managers, business analysts, and project managers. These users can use INSPECT to gain insights into the performance of their applications, identify potential issues, and make data-driven decisions to improve their systems' performance."
+        "title": "Functional",
+        "content": "Functional profiles, such as product owners, also benefit from using INSPECT. If a user reports an issue, the product owner can check what went wrong thanks to the detailed information provided by INSPECT. User Stories can contain more information to help developers identify the root cause of a bug faster. The product owner can also see which requests are the most used and which are the most critical, helping to prioritize the backlog."
       }
     },
     "redirect": " More details on these features ",
@@ -72,8 +73,31 @@
     "title": "Installation",
     "content": "To install INSPECT, there are 2 dependencies to add to your project: inspect-core and inspect-ng-collector"
   },
+  "dependencies": {
+    "title": "Compatibilities"
+  },
   "architecture": {
     "title": "Architecture",
-    "content": "INSPECT is composed of 3 main components: the collector, the server and the application. The collector is responsible for collecting data from various sources, such as logs, metrics, and traces. The server is responsible for processing and storing the collected data, and providing a user interface for visualizing and analyzing the data. The application is responsible for generating the data that is collected by the collector."
+    "content": "INSPECT is composed of 3 main components: the collector, the server and the application. The collector is responsible for collecting data from various sources, such as logs, metrics, and traces. The server is responsible for processing and storing the collected data, and providing a user interface for visualizing and analyzing the data. The application is responsible for generating the data that is collected by the collector.",
+    "application": {
+      "title": "Application",
+      "content": "The application is the component that generates the data collected by the collector. It can be a web application, a backend service, or any other type of application that produces performance and tracking data."
+    },
+    "collector": {
+      "title": "Collector",
+      "content": "The collector is the component responsible for collecting data from various sources. It can collect data from logs, metrics, and traces, and send them to the server for processing and storage."
+    },
+    "server": {
+      "title": "Server",
+      "content": "The server is the component responsible for processing and storing the data collected by the collector. It also provides a user interface for visualizing and analyzing the collected data, allowing users to understand the performance and behavior of their application."
+    },
+    "flow": {
+      "title": "Flow",
+      "content": "Here is an example of a typical application flow:"
+    }
+  },
+  "components": {
+    "title": "Technical components",
+    "content": "INSPECT is composed of several technical components that work together to provide a comprehensive monitoring and analysis solution. These components include the collector, server, and application, as well as various libraries and tools that facilitate data collection, processing, and visualization."
   }
 }

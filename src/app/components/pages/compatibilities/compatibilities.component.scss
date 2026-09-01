@@ -1,4 +1,4 @@
-@import "src/styles.scss";
+@use "src/styles.scss" as *;
 
 table {
   width: 100%;
@@ -167,49 +167,49 @@ tbody tr:hover {
   }
 }
 
-.dependencies__status {
+.compatibilities__status {
   margin: 0;
   color: #475569;
   font-size: 0.95rem;
 }
 
-.dependencies__status--error {
+.compatibilities__status--error {
   color: #b91c1c;
 }
 
-.dependencies__doc {
+.compatibilities__doc {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
   text-align: left;
 }
 
-.dependencies__doc h1,
-.dependencies__doc h2,
-.dependencies__doc h3 {
+.compatibilities__doc h1,
+.compatibilities__doc h2,
+.compatibilities__doc h3 {
   margin: 0;
   color: #0f172a;
 }
 
-.dependencies__doc h1 {
+.compatibilities__doc h1 {
   font-size: 2rem;
 }
 
-.dependencies__doc h2 {
+.compatibilities__doc h2 {
   font-size: 1.5rem;
 }
 
-.dependencies__doc h3 {
+.compatibilities__doc h3 {
   font-size: 1.2rem;
 }
 
-.dependencies__doc p {
+.compatibilities__doc p {
   margin: 0;
   color: #334155;
   line-height: 1.7;
 }
 
-.dependencies__doc pre {
+.compatibilities__doc pre {
   margin: 0;
   padding: 1rem 1.1rem;
   overflow: auto;
@@ -220,6 +220,6 @@ tbody tr:hover {
   line-height: 1.6;
 }
 
-.dependencies__doc code {
+.compatibilities__doc code {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }

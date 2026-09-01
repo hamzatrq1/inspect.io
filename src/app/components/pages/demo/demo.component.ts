@@ -31,8 +31,8 @@ export class DemoComponent {
     }, 400);
   }
 
-  goToDependencies(): void {
-    goToPage(this.isTransitioning(), this.router, '/dependencies');
+  goTocompatibilities(): void {
+    goToPage(this.isTransitioning(), this.router, '/compatibilities');
   }
 
   @HostListener('window:scroll')
@@ -66,7 +66,7 @@ export class DemoComponent {
       if (event.deltaY > 50 && isAtBottom()) {
         this.wheelAccumulator += event.deltaY;
         if (this.wheelAccumulator > 40) {
-          this.goToDependencies();
+          this.goTocompatibilities();
         }
       }
     } else {

@@ -7,7 +7,7 @@ import {ArchitectureComponent} from './components/pages/architecture/architectur
 import {DemoComponent} from './components/pages/demo/demo.component';
 import { CollectorComponent } from './components/pages/architecture/collector/collector.component';
 import { ServerComponent } from './components/pages/architecture/server/server.component';
-import { DependenciesComponent } from './components/pages/dependencies/dependencies.component';
+import { CompatibilitiesComponent } from './components/pages/compatibilities/compatibilities.component';
 import { ComponentsComponent } from '@app/components/pages/components/components.component';
 import { SessionsComponent } from '@app/components/pages/components/sessions/sessions.component';
 
@@ -15,7 +15,7 @@ export const routes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'installation', component: InstallationComponent },
   { path: 'demonstration', component: DemoComponent },
-  { path: 'dependencies', component: DependenciesComponent },
+  { path: 'compatibilities', component: CompatibilitiesComponent },
   { path: 'architecture', component: ArchitectureComponent },
   { path: 'architecture/application', component: ApplicationComponent },
   { path: 'architecture/collector', component: CollectorComponent },

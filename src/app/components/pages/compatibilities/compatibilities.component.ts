@@ -5,11 +5,11 @@ import { goToPage, isAtBottom, isAtTop } from '@utils/utils';
 
 @Component({
   imports: [TranslatePipe],
-  selector: 'app-dependencies',
-  styleUrls: ['./dependencies.component.scss'],
-  templateUrl: './dependencies.component.html',
+  selector: 'app-compatibilities',
+  styleUrls: ['./compatibilities.component.scss'],
+  templateUrl: './compatibilities.component.html',
 })
-export class DependenciesComponent {
+export class CompatibilitiesComponent {
   private readonly router = inject(Router);
   protected readonly translate = inject(TranslateService);
   private wheelAccumulator = 0;

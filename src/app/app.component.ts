@@ -72,14 +72,14 @@ export class AppComponent {
       icon: 'bootstrapRocketTakeoffFill',
     },
     {
-      label: 'menu.dependencies',
-      link: '/dependencies',
+      label: 'menu.compatibilities',
+      link: '/compatibilities',
       icon: 'matRuleSettingsFillOutline',
       children: [
-        { label: 'inspect-app', link: '/dependencies/application' },
-        { label: 'inspect-core', link: '/dependencies/collector' },
-        { label: 'inspect-ng-collector', link: '/dependencies/ng-collector' },
-        { label: 'inspect-server', link: '/dependencies/server' },
+        { label: 'inspect-app', link: '/compatibilities/application' },
+        { label: 'inspect-core', link: '/compatibilities/collector' },
+        { label: 'inspect-ng-collector', link: '/compatibilities/ng-collector' },
+        { label: 'inspect-server', link: '/compatibilities/server' },
       ],
     },
     {

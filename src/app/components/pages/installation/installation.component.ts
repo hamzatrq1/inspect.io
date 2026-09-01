@@ -2,7 +2,7 @@ import { Component, HostListener, inject, signal } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { MarkdownComponent } from 'ngx-markdown';
 import { Router } from '@angular/router';
-import { isAtTop, isAtBottom, goToPage } from '@utils/utils';
+import { goToPage, ScrollNavigationHandler } from '@utils/utils';
 
 @Component({
   selector: 'app-installation',
@@ -16,89 +16,42 @@ import { isAtTop, isAtBottom, goToPage } from '@utils/utils';
 export class InstallationComponent {
   private readonly router = inject(Router);
   protected readonly translate = inject(TranslateService);
-  private wheelAccumulator = 0;
-  private touchStartY = 0;
-  private lastScrollY = 0;
 
   readonly isTransitioning = signal(false);
   readonly isScrollUpVisible = signal(false);
 
-  goToHome(): void {
-    if (this.isTransitioning()) {
-      return;
-    }
+  private readonly scrollNav = new ScrollNavigationHandler({
+    isTransitioning: () => this.isTransitioning(),
+    isScrollUpVisible: this.isScrollUpVisible,
+    onNavigateUp: () => this.goToFeatures(),
+    onNavigateDown: () => this.goToCompatibilities(),
+  });
 
-    this.isTransitioning.set(true);
-
-    setTimeout(() => {
-      this.router.navigate(['/']);
-    }, 400);
+  goToFeatures(): void {
+    goToPage(this.isTransitioning(), this.router, '/features');
   }
 
-
-  goToDemo(): void {
-    goToPage(this.isTransitioning(), this.router, '/demonstration');
+  goToCompatibilities(): void {
+    goToPage(this.isTransitioning(), this.router, '/compatibilities');
   }
 
   @HostListener('window:scroll')
   onScroll(): void {
-    const currentScrollY = typeof window !== 'undefined' ? (window.scrollY || document.documentElement.scrollTop || 0) : 0;
-    if (currentScrollY < this.lastScrollY) {
-      this.isScrollUpVisible.set(true);
-    } else if (currentScrollY > this.lastScrollY && currentScrollY > 20) {
-      this.isScrollUpVisible.set(false);
-    }
-    this.lastScrollY = currentScrollY;
+    this.scrollNav.onScroll();
   }
 
   @HostListener('window:wheel', ['$event'])
   onWheel(event: WheelEvent): void {
-    if (this.isTransitioning()) {
-      return;
-    }
-
-    if (event.deltaY < 0) {
-      this.isScrollUpVisible.set(true);
-      if (isAtTop()) {
-        this.wheelAccumulator += Math.abs(event.deltaY);
-        if (this.wheelAccumulator > 40) {
-          this.goToHome();
-        }
-      }
-    } else if (event.deltaY > 0) {
-      this.isScrollUpVisible.set(false);
-      if (event.deltaY > 50 && isAtBottom()) {
-        this.wheelAccumulator += event.deltaY;
-        if (this.wheelAccumulator > 40) {
-          this.goToDemo();
-        }
-      }
-    } else {
-      this.wheelAccumulator = 0;
-    }
+    this.scrollNav.onWheel(event);
   }
 
   @HostListener('window:touchstart', ['$event'])
   onTouchStart(event: TouchEvent): void {
-    this.touchStartY = event.touches[0]?.clientY ?? 0;
+    this.scrollNav.onTouchStart(event);
   }
 
   @HostListener('window:touchmove', ['$event'])
   onTouchMove(event: TouchEvent): void {
-    if (this.isTransitioning()) {
-      return;
-    }
-
-    const currentY = event.touches[0]?.clientY ?? 0;
-    const deltaY = this.touchStartY - currentY;
-
-    if (deltaY < 0) {
-      this.isScrollUpVisible.set(true);
-      if (deltaY < -50 && isAtTop()) {
-        this.goToHome();
-      }
-    } else if (deltaY > 0) {
-      this.isScrollUpVisible.set(false);
-    }
+    this.scrollNav.onTouchMove(event);
   }
 }

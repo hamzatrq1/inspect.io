@@ -26,6 +26,9 @@ export class HomeComponent {
   isTransitioning = signal(false);
   private touchStartY = 0;
 
+  goToFeatures(): void {
+    goToPage(this.isTransitioning(), this.router, '/features');
+  }
   @HostListener('window:wheel', ['$event'])
   onWheel(event: WheelEvent): void {
     if (this.isTransitioning()) {
@@ -50,13 +53,8 @@ export class HomeComponent {
 
     const currentY = event.touches[0]?.clientY ?? 0;
     const deltaY = this.touchStartY - currentY;
-
     if (deltaY > 50 && isAtBottom()) {
       this.goToFeatures();
     }
-  }
-
-  goToFeatures(): void {
-    goToPage(this.isTransitioning(), this.router, '/features');
   }
 }

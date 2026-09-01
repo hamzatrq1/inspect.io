@@ -1,3 +1,13 @@
+<!-- Relink when scroll up -->
+<section class="scroll-trigger scroll-trigger--up"
+         [class.is-visible]="isScrollUpVisible()"
+         (click)="goToCompatibilities()">
+  <div class="tui-scroll-indicator tui-scroll-indicator--up" [class.tui-scroll-indicator--active]="isTransitioning()">
+    <div class="tui-scroll-indicator__wheel"></div>
+  </div>
+</section>
+
+
 <div class="title">{{ 'architecture.title' | translate }}</div>
 <div class="text">{{ 'architecture.content' | translate }}</div>
 <pre class="mermaid schema">
@@ -60,3 +70,11 @@ sequenceDiagram
     S-->>UI: Données agrégées
     UI-->>U: Dashboard / détails / architecture
 </pre>
+
+
+<!-- Relink when scroll down -->
+<section class="scroll-trigger" (click)="goToComponents()">
+  <div class="tui-scroll-indicator tui-scroll-indicator--down" [class.tui-scroll-indicator--active]="isTransitioning()">
+    <div class="tui-scroll-indicator__wheel"></div>
+  </div>
+</section>

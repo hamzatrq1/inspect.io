@@ -1,6 +1,6 @@
-@import "src/styles.scss";
-.mermaid {
+@use "src/styles.scss" as *;
 
+.mermaid {
 
   &.schema {
     min-width: 800px;

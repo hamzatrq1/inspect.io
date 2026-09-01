@@ -5,7 +5,12 @@
   <aside class="doc-menu" [class.doc-menu--hidden]="!menuVisible()">
     <div class="doc-menu__panel">
       <div class="doc-menu__dropdown">
-        <h2 class="doc-menu__title">Menu</h2>
+        <div class="doc-menu__header">
+          <h2 class="doc-menu__title">Menu</h2>
+          <button type="button" class="doc-menu__expand-btn" (click)="toggleAllSections()">
+            {{ areAllSectionsOpen() ? 'Replier' : 'Déplier' }}
+          </button>
+        </div>
         <nav class="doc-menu__links" aria-label="Menu documentation">
           <!--          Table of contents-->
           @for (item of docMenuItems; track item.label) {
@@ -70,11 +75,7 @@
             </div>
           }
         </nav>
-        <ng-icon
-          name="matArrowMenuCloseRound"
-          class="doc-menu-icon display"
-          (click)="toggleMenuVisibility()"
-        ></ng-icon>
+        <ng-icon name="matArrowMenuCloseRound" class="doc-menu-icon display" (click)="toggleMenuVisibility()"></ng-icon>
       </div>
     </div>
   </aside>

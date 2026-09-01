@@ -72,6 +72,12 @@
       }
     }
   },
+  "features": {
+    "title": "Features",
+    "monitoring": {
+      "title": "Monitoring"
+    }
+  },
   "installation": {
     "title": "Installation",
     "content": "To install INSPECT, there are 2 dependencies to add to your project: inspect-core and inspect-ng-collector"

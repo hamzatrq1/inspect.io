@@ -77,6 +77,13 @@
       }
     }
   },
+  "features": {
+    "title": "Fonctionnalités",
+    "monitoring": {
+      "title": "Monitoring",
+      "content": "INSPECT permet de surveiller et de suivre les performances de votre application en temps réel. Il fournit des informations détaillées sur les appels d'API, les requêtes et les métriques, ce qui vous permet de détecter rapidement les problèmes et d'y remédier avant qu'ils n'affectent vos utilisateurs."
+    }
+  },
   "installation": {
     "title": "Installation",
     "content": "Pour installer INSPECT, il y a 2 dépendances à ajouter dans votre projet : inspect-core et inspect-ng-collector"

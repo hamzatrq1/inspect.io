@@ -212,11 +212,35 @@ h1 {
   fill: currentColor;
 }
 
+.doc-menu__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 0.6rem;
+}
+
 .doc-menu__title {
   font-size: 1.05rem;
   font-weight: 700;
-  margin: 0 0 0.6rem;
+  margin: 0;
   color: #0f172a;
+}
+
+.doc-menu__expand-btn {
+  background: transparent;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #6366f1;
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    background: #f1f5f9;
+    color: #4f46e5;
+  }
 }
 
 .doc-menu__links {

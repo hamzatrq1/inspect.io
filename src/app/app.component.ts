@@ -1,4 +1,4 @@
-import { Component, HostListener, Output, signal } from '@angular/core';
+import { Component, computed, HostListener, Output, signal } from '@angular/core';
 import {HeaderComponent} from './components/header/header.component';
 import { RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
@@ -112,6 +112,12 @@ export class AppComponent {
       }, {}),
   );
 
+  readonly areAllSectionsOpen = computed(() => {
+    const sections = this.openSections();
+    const keys = Object.keys(sections);
+    return keys.length > 0 && keys.every((key) => sections[key]);
+  });
+
   isSectionOpen(label: string): boolean {
     return this.openSections()[label] ?? false;
   }
@@ -121,6 +127,17 @@ export class AppComponent {
       ...sections,
       [label]: !sections[label],
     }));
+  }
+
+  toggleAllSections(): void {
+    const shouldOpen = !this.areAllSectionsOpen();
+    const updated: Record<string, boolean> = {};
+    this.openSections.update((sections) => {
+      for (const key of Object.keys(sections)) {
+        updated[key] = shouldOpen;
+      }
+      return updated;
+    });
   }
 
   toggleMenuVisibility(): void {

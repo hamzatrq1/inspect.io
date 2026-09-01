@@ -57,6 +57,7 @@ export class AppComponent {
     this.checkScreenSize();
   }
 
+  // function to close the menu when the screen size is too small
   private checkScreenSize(): void {
     if (typeof window !== 'undefined' && window.innerWidth < this.mobileBreakpoint) {
       this.menuVisible.set(false);
@@ -65,12 +66,9 @@ export class AppComponent {
 
   readonly docMenuItems = [
     { label: 'menu.home', link: '/', icon: 'matInfoSharp' },
-    { label: 'menu.installation', link: '/installation', icon: 'hugeComputerProgramming01' },
-    {
-      label: 'Services',
-      link: '/demonstration',
-      icon: 'bootstrapRocketTakeoffFill',
-    },
+    { label: 'menu.features', link: '/features', icon: 'hugeComputerProgramming01' },
+    { label: 'menu.installation', link: '/installation', icon: 'bootstrapRocketTakeoffFill' },
+
     {
       label: 'menu.compatibilities',
       link: '/compatibilities',

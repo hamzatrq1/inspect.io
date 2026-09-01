@@ -12,8 +12,8 @@
         "open": "Ouvrir le menu"
       }
     },
+    "features": "Fonctionnalités",
     "installation": "Installation",
-    "quick-start": "Démonstation",
     "architecture": {
       "title": "Architecture",
       "application": "Application",
@@ -68,11 +68,11 @@
       "title": "Qui peut utiliser INSPECT ?",
       "description": "À première vue, on peut penser qu'INSPECT est uniquement fait pour les développeurs. Mais sa plus-value réside dans le fait que tout le monde peut l'utiliser. Les développeurs sont, certes, ceux qui doivent l'implémenter dans le code. Mais après l'implémentation, tous les profils sont gagnants en l'utilisant.",
       "technical": {
-        "title": "Technique",
+        "title": "Profils Technique",
         "content": "Les profils techniques peuvent vérifier la santé des microservices, si le déploiement a des erreurs. INSPECT peut également être utilisé pour l'analyse des logs, afin de trouver la root cause. Plusieurs réponses de protocoles sont unifiées au maximum pour éviter une longue recherche dans plusieurs fichiers de logs volumineux."
       },
       "functional": {
-        "title": "Fonctionnel",
+        "title": "Profils Fonctionnel",
         "content": "Un profil fonctionnel peut facilement identifier un problème sans demander à l'équipe de développement de vérifier les logs, car INSPECT fournit des informations détaillées. Il est également possible de voir quelles requêtes sont les plus utilisées et quelles sont les plus critiques, ce qui aide à prioriser le backlog."
       }
     }

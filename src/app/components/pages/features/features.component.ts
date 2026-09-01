@@ -4,12 +4,12 @@ import { Router } from '@angular/router';
 import { goToPage, isAtBottom, isAtTop } from '@utils/utils';
 
 @Component({
-  selector: 'app-demo',
+  selector: 'app-features',
   imports: [],
-  templateUrl: './demo.component.html',
-  styleUrls: ['./demo.component.scss'],
+  templateUrl: './features.component.html',
+  styleUrls: ['./features.component.scss'],
 })
-export class DemoComponent {
+export class FeaturesComponent {
   private readonly router = inject(Router);
   protected readonly translate = inject(TranslateService);
   private wheelAccumulator = 0;
@@ -31,7 +31,7 @@ export class DemoComponent {
     }, 400);
   }
 
-  goTocompatibilities(): void {
+  goToCompatibilities(): void {
     goToPage(this.isTransitioning(), this.router, '/compatibilities');
   }
 
@@ -66,7 +66,7 @@ export class DemoComponent {
       if (event.deltaY > 50 && isAtBottom()) {
         this.wheelAccumulator += event.deltaY;
         if (this.wheelAccumulator > 40) {
-          this.goTocompatibilities();
+          this.goToCompatibilities();
         }
       }
     } else {

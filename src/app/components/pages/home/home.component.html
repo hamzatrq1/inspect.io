@@ -61,7 +61,7 @@
   </div>
 
   <!--  Button to route to /components to get technical informations-->
-  <button type="button" class="intro__redirect" routerLink="/components">
+  <button type="button" class="intro__redirect" routerLink="/features">
     <ng-icon name="heroArrowLeftStartOnRectangleMicro" class="intro__redirect_icon"></ng-icon>
     {{ "home.redirect.services" | translate }}
   </button>
@@ -83,7 +83,7 @@
   </span>
 
   <!--  Button to route to /components to get user cases-->
-  <button type="button" class="intro__redirect" routerLink="/components">
+  <button type="button" class="intro__redirect" routerLink="/architecture">
     <ng-icon name="heroArrowLeftStartOnRectangleMicro" class="intro__redirect_icon"></ng-icon>
     {{ "home.redirect.profiles" | translate }}
   </button>
@@ -91,7 +91,7 @@
 
 
   <!--  Redirection to next tab-->
-  <section class="intro__scroll-trigger" (click)="goToInstallation()" >
+  <section class="intro__scroll-trigger" (click)="goToFeatures()" >
     <div class="intro__scroll-badge">
     </div>
     <div class="tui-scroll-indicator" [class.tui-scroll-indicator--active]="isTransitioning()">

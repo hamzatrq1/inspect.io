@@ -25,7 +25,6 @@ export class HomeComponent {
   private readonly router = inject(Router);
   isTransitioning = signal(false);
   private touchStartY = 0;
-  private scrollCount = 0;
 
   @HostListener('window:wheel', ['$event'])
   onWheel(event: WheelEvent): void {
@@ -34,7 +33,7 @@ export class HomeComponent {
     }
 
     if (event.deltaY > 50 && isAtBottom()) {
-      this.goToInstallation();
+      this.goToFeatures();
     }
   }
 
@@ -53,11 +52,11 @@ export class HomeComponent {
     const deltaY = this.touchStartY - currentY;
 
     if (deltaY > 50 && isAtBottom()) {
-      this.goToInstallation();
+      this.goToFeatures();
     }
   }
 
-  goToInstallation(): void {
-    goToPage(this.isTransitioning(), this.router, '/installation');
+  goToFeatures(): void {
+    goToPage(this.isTransitioning(), this.router, '/features');
   }
 }

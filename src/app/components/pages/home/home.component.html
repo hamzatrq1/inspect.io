@@ -20,7 +20,7 @@
   </div>
 
   <span class="intro__text">{{ "home.content" | translate }}</span>
-  <div class="intro__second_title"> {{ "home.description.advantages" | translate }} </div>
+  <h2 class="intro__title"> {{ "home.description.advantages" | translate }} </h2>
   <div class="intro__grid">
     <article class="intro__grid-item intro__grid-item--left">
       <img [src]="'assets/icons/description/observability.png'" alt="Observability" class="intro__grid-image" />
@@ -63,7 +63,7 @@
   <!--  Button to route to /components to get technical informations-->
   <button type="button" class="intro__redirect" routerLink="/components">
     <ng-icon name="heroArrowLeftStartOnRectangleMicro" class="intro__redirect_icon"></ng-icon>
-    {{ "home.redirect" | translate }}
+    {{ "home.redirect.services" | translate }}
   </button>
 
   <div class="intro__title">{{ "home.profiles.title" | translate }} </div>
@@ -71,18 +71,22 @@
   <span class="intro__grid">
     <article class="intro__grid-item intro__grid-item--left">
       <img [src]="'assets/icons/technical.png'" alt="Technical" class="intro__grid-image" />
-      <div class="intro__second_title"> {{ "home.profiles.technical.title" | translate }}</div>
+      <div class="intro__title"> {{ "home.profiles.technical.title" | translate }}</div>
       <span class="intro__grid-content">{{ "home.profiles.technical.content" | translate }}</span>
     </article>
 
     <article class="intro__grid-item intro__grid-item--right">
       <img [src]="'assets/icons/functional.png'" alt="Functional" class="intro__grid-image" />
-      <div class="intro__second_title"> {{ "home.profiles.functional.title" | translate }}</div>
+      <div class="intro__title"> {{ "home.profiles.functional.title" | translate }}</div>
       <span class="intro__grid-content">{{ "home.profiles.functional.content" | translate }}</span>
     </article>
+  </span>
 
-
-</span>
+  <!--  Button to route to /components to get user cases-->
+  <button type="button" class="intro__redirect" routerLink="/components">
+    <ng-icon name="heroArrowLeftStartOnRectangleMicro" class="intro__redirect_icon"></ng-icon>
+    {{ "home.redirect.profiles" | translate }}
+  </button>
 
 
 

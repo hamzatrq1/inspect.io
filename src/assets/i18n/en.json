@@ -14,7 +14,7 @@
     "home": "Description",
     "installation": "Installation",
     "quick-start": "Quick start",
-    "dependencies": "Compatibilities",
+    "compatibilities": "Compatibilities",
     "architecture": {
       "title": "Architecture",
       "application": "Application",
@@ -37,10 +37,13 @@
       },
       "functional": {
         "title": "Functional",
-        "content": "Functional profiles, such as product owners, also benefit from using INSPECT. If a user reports an issue, the product owner can check what went wrong thanks to the detailed information provided by INSPECT. User Stories can contain more information to help developers identify the root cause of a bug faster. The product owner can also see which requests are the most used and which are the most critical, helping to prioritize the backlog."
+        "content": "A functional profile might be able to find out easily what is wrong without asking the dev team to check for logs because INSPECT provides detailed informations. It is also possible to see which requests are the most used and which are the most critical, helping to prioritize the backlog."
       }
     },
-    "redirect": " More details on these features ",
+    "redirect": {
+      "services": " More details on these features ",
+      "profiles": " More details on the use cases "
+    },
     "description": {
       "advantages": "Why use INSPECT ?",
       "observability": {
@@ -57,15 +60,15 @@
       },
       "e2e": {
         "title": "Start to end informations",
-        "content": "When you are trying to find the root cause of an issue, you might be used to look for one log in a lot of files and lines. You have a first trace id, then an other that you are following. INSPECT makes you improve time because it's able to follow an action to it's start until it's end, even if the trace id are changing."
+        "content": "When you are trying to find the root cause of an issue, you might be used to look for one log in a lot of files and lines. INSPECT makes you improve time because it's able to follow an action to it's start until it's end, even if the trace id are changing."
       },
       "uniformize": {
         "title": "Data Uniformization",
-        "content": "Request analyzed are uniformized at a maximum level. If the callback are HTTP requets, PostgreSQL, ORACLE, the responses are studied so you can understand easily where the issue is located, even without any technical knowledge."
+        "content": "Request analyzed are uniformized at a maximum level. If the callback are HTTP requests, JDBC, SMTP... the responses are studied so you can understand easily where the issue is located, even without any technical knowledge."
       },
       "heartbeat": {
         "title": "Monitoring",
-        "content": "With INSPECT, you can watch and monitore all microservices of your project, know when was the last restart, what is the deployed version, the number of restsrat, all of it in a few seconds."
+        "content": "With INSPECT, you can watch and monitor all microservices of your project, know when was the last restart, what is the deployed version, the number of restarts, all of it in a few seconds."
       }
     }
   },
@@ -73,7 +76,7 @@
     "title": "Installation",
     "content": "To install INSPECT, there are 2 dependencies to add to your project: inspect-core and inspect-ng-collector"
   },
-  "dependencies": {
+  "compatibilities": {
     "title": "Compatibilities"
   },
   "architecture": {

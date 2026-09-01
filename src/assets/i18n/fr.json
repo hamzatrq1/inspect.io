@@ -20,7 +20,7 @@
       "collector": "Collecteur",
       "server": "Serveur"
     },
-    "dependencies": "Compatibilités",
+    "compatibilities": "Compatibilités",
     "components": {
       "title": "Composants techniques",
       "session": "Session",
@@ -33,7 +33,10 @@
   "home": {
     "title": "INSPECT",
     "content": "INSPECT est une plateforme de suivi et d'analyse des appels d'API conçue pour offrir une visibilité approfondie sur les interactions entre les différents composants d'un système distribué. Quelques uns des points forts d'INSPECT :",
-    "redirect": " Plus de détails sur ces fonctionnalités ",
+    "redirect": {
+      "services": "Plus de détails sur ces fonctionnalités",
+      "profiles": "Plus de détails sur les cas d'utilisation"
+    },
     "description": {
       "advantages": "Pourquoi utiliser INSPECT ? ",
       "observability": {
@@ -78,7 +81,7 @@
     "title": "Installation",
     "content": "Pour installer INSPECT, il y a 2 dépendances à ajouter dans votre projet : inspect-core et inspect-ng-collector"
   },
-  "dependencies": {
+  "compatibilities": {
     "title": "Dépendances"
   },
   "architecture": {

@@ -35,7 +35,7 @@
   height: 100dvh;
 }
 .title {
-  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-size: clamp(2rem, 2vw, 3rem);
   font-weight: 800;
   color: var(--clr-text-primary, #0f172a);
   display: block;
@@ -54,7 +54,7 @@
 }
 
 .second_title {
-  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-size: clamp(1rem, 1vw, 3rem);
   font-weight: 800;
   color: var(--clr-text-secondary, #000000);
   margin: 10rem auto 2rem;
@@ -65,12 +65,13 @@
 .text {
   display: block;
   margin-top: 4rem;
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 1vw, 1.2rem);
   align-content: space-between;
   line-height: 2;
   text-align: center;
   row-gap: 2rem;
   strong { color: var(--clr-text-primary, #1e293b); font-weight: 600; }
+  margin-bottom: 2rem;
 }
 
 .classical-text {

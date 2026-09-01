@@ -1,4 +1,4 @@
-@import "src/styles.scss";
+@use "src/styles.scss" as *;
 
 .intro {
   margin-top: 3rem;
@@ -10,7 +10,7 @@
   }
 
   &__title {
-    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-size: clamp(2rem, 2vw, 3rem);
     font-weight: 800;
     color: var(--clr-text-primary, #0f172a);
     display: block;
@@ -19,7 +19,7 @@
 
 
   &__desc {
-    font-size: 2rem;
+    font-size: clamp(1rem, 2vw, 1.5rem);
     color: var(--clr-text-secondary, #64748b);
     margin: 3rem 0 6rem;
     line-height: 1.7;
@@ -29,7 +29,7 @@
 
 
   &__second_title {
-    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-size: clamp(1rem, 1vw, 3rem);
     font-weight: 800;
     color: var(--clr-text-secondary, #000000);
     margin: 10rem auto 2rem;
@@ -38,6 +38,7 @@
   }
 
 
+  //Button to redirect to "Services" page
   &__redirect {
     display: inline-flex;
     align-items: center;
@@ -78,13 +79,13 @@
   &__text {
     display: block;
     margin-top: 4rem;
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 1vw, 1.2rem);
     align-content: space-between;
-    color: var(--clr-text-secondary, #64748b);
     line-height: 2;
-    text-align: center;
+    text-align: justify-all;
     row-gap: 2rem;
-    strong { color: var(--clr-text-primary, #1e293b); font-weight: 600; }
+    color: var(--clr-text-secondary, #64748b);
+    strong { color: var(--clr-text-primary, #1e293b); font-weight: 700; }
   }
 
   &__actions {
@@ -148,12 +149,13 @@
   }
 
   &__grid-content {
-    margin-top: 2rem;
+    margin: 1rem 2rem 0.5rem;
     display: block;
-    text-align: center;
-    font-size: 1.5rem;
-    max-width: 500px;
+    text-align: justify-all;
+    align-content: space-between;
+    font-size: clamp(1.5rem, 1vw, 1.2rem);
     line-height: 1.7;
+    color: var(--clr-text-secondary, #535665);
   }
 
   &__scroll-trigger {

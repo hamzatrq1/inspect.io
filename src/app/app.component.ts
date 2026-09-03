@@ -6,6 +6,7 @@ import { NgIcon, provideIcons } from '@ng-icons/core';
 import { typBusinessCard } from '@ng-icons/typicons';
 import { hugeComputerProgramming01 } from '@ng-icons/huge-icons';
 import { fluentPeopleTeam, fluentDocumentQueueMultiple } from '@ng-icons/fluent-ui';
+import { remixCloseLargeFill } from '@ng-icons/remixicon';
 import {
   matDocumentSearchRound,
   matSchemaRound,
@@ -26,7 +27,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     RouterLink,
     RouterLinkActive,
     NgIcon,
-    MatTooltipModule
+    MatTooltipModule,
   ],
   providers: [
     provideIcons({
@@ -41,6 +42,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
       matInfoSharp,
       matArrowMenuOpenRound,
       matArrowMenuCloseRound,
+      remixCloseLargeFill,
     }),
   ],
   templateUrl: './app.component.html',
@@ -66,7 +68,19 @@ export class AppComponent {
 
   readonly docMenuItems = [
     { label: 'menu.home', link: '/', icon: 'matInfoSharp' },
-    { label: 'menu.features', link: '/features', icon: 'hugeComputerProgramming01' },
+    {
+      label: 'menu.features.title',
+      link: '/features',
+      icon: 'hugeComputerProgramming01',
+      children: [
+        { label: 'menu.features.monitoring', link: '/features/monitoring' },
+        { label: 'menu.features.e2e', link: '/features/e2e' },
+        { label: 'menu.features.analytics', link: '/features/analytics' },
+        { label: 'menu.features.health', link: '/features/health' },
+        { label: 'menu.features.autonomy', link: '/features/autonomy' },
+        { label: 'menu.features.traceability', link: '/features/traceability' },
+      ],
+    },
     { label: 'menu.installation', link: '/installation', icon: 'bootstrapRocketTakeoffFill' },
 
     {

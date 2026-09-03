@@ -1,7 +1,8 @@
-<div class="collector">
-  <markdown
-    class="collector__doc"
-    [src]="'assets/pages/architecture/collector/collector_' + (translate.getCurrentLang()) + '.md'">
-  </markdown>
+<div class="title">
+  {{ 'architecture.collector.title' | translate }}
 </div>
 
+<markdown
+  class="doc"
+  [src]="'assets/pages/architecture/collector/collector_' + (translate.getCurrentLang()) + '.md'">
+</markdown>

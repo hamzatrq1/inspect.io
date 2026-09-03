@@ -10,10 +10,22 @@ import { ServerComponent } from './components/pages/architecture/server/server.c
 import { CompatibilitiesComponent } from './components/pages/compatibilities/compatibilities.component';
 import { ComponentsComponent } from '@app/components/pages/components/components.component';
 import { SessionsComponent } from '@app/components/pages/components/sessions/sessions.component';
+import { MonitoringComponent } from '@app/components/pages/features/monitoring/monitoring.component';
+import { E2eComponent } from '@app/components/pages/features/e2e/e2e.component';
+import { AnalyticsComponent } from '@app/components/pages/features/analytics/analytics.component';
+import { HealthComponent } from '@app/components/pages/features/health/health.component';
+import { AutonomyComponent } from '@app/components/pages/features/autonomy/autonomy.component';
+import { TraceabilityComponent } from '@app/components/pages/features/traceability/traceability.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'features', component: FeaturesComponent },
+  { path: 'features/monitoring', component: MonitoringComponent },
+  { path: 'features/e2e', component: E2eComponent },
+  { path: 'features/analytics', component: AnalyticsComponent },
+  { path: 'features/health', component: HealthComponent },
+  { path: 'features/autonomy', component: AutonomyComponent },
+  { path: 'features/traceability', component: TraceabilityComponent },
   { path: 'installation', component: InstallationComponent },
   { path: 'compatibilities', component: CompatibilitiesComponent },
   { path: 'architecture', component: ArchitectureComponent },

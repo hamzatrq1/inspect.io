@@ -19,11 +19,8 @@ export class ScrollNavigationHandler {
     const currentScrollY =
       typeof window !== 'undefined' ? window.scrollY || document.documentElement.scrollTop || 0 : 0;
     if (currentScrollY < this.lastScrollY) {
-      this.options.isScrollUpVisible?.set(true);
-      this.options.isScrollDownVisible?.set(false);
-    } else if (currentScrollY > this.lastScrollY && currentScrollY > 20) {
       this.options.isScrollUpVisible?.set(false);
-      this.options.isScrollDownVisible?.set(true);
+      this.options.isScrollDownVisible?.set(false);
     }
     this.lastScrollY = currentScrollY;
   }

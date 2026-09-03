@@ -2,10 +2,24 @@ import {Component, HostListener, inject, signal } from '@angular/core';
 import { TranslatePipe, TranslateService} from '@ngx-translate/core';
 import { Router } from '@angular/router';
 import { goToPage, ScrollNavigationHandler } from '@utils/utils';
+import { MonitoringComponent } from '@app/components/pages/features/monitoring/monitoring.component';
+import { E2eComponent } from '@app/components/pages/features/e2e/e2e.component';
+import { AnalyticsComponent } from '@app/components/pages/features/analytics/analytics.component';
+import { HealthComponent } from '@app/components/pages/features/health/health.component';
+import { AutonomyComponent } from '@app/components/pages/features/autonomy/autonomy.component';
+import { TraceabilityComponent } from '@app/components/pages/features/traceability/traceability.component';
 
 @Component({
   selector: 'app-features',
-  imports: [TranslatePipe],
+  imports: [
+    TranslatePipe,
+    MonitoringComponent,
+    E2eComponent,
+    AnalyticsComponent,
+    HealthComponent,
+    AutonomyComponent,
+    TraceabilityComponent,
+  ],
   templateUrl: './features.component.html',
   styleUrls: ['./features.component.scss'],
 })

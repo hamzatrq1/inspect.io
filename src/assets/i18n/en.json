@@ -12,7 +12,15 @@
       }
     },
     "home": "Description",
-    "features": "Features",
+    "features": {
+      "title": "Features",
+      "monitoring": "Monitoring",
+      "e2e": "End to end tracing",
+      "analytics": "Analytics",
+      "health": "Application health",
+      "autonomy": "Self management",
+      "traceability": "Traceability"
+    },
     "installation": "Installation",
     "compatibilities": "Compatibilities",
     "architecture": {
@@ -21,7 +29,9 @@
       "collector": "Collector",
       "server": "Server"
     },
-    "technical-description": "Technical components",
+    "components": {
+      "title": "Technical components"
+    },
     "conduct-code": "Code of conduct",
     "contributing": "Contributing"
   },
@@ -75,7 +85,27 @@
   "features": {
     "title": "Features",
     "monitoring": {
-      "title": "Monitoring"
+      "title": "Monitoring",
+      "supervision": {
+        "title": "Vision & value",
+        "content": "INSPECT unify in an unique repository all observability signals: Traces, Resource Metrics (CPU, RAM, Threads), Typed Exceptions with complete stacktraces and Contextualized Logs.One of the major innovations is the Duel Event Trace mechanism (Signal / Update): ",
+        "subcontent": "Reliability against crashes & timeouts: Unlike traditional APMs that only emit at the end of a request, INSPECT emits a TraceSignal at the start of the operation (timestamp, thread, session, user, instance), then a TraceUpdate at the end (duration, status, command, exception). Asynchronous real-time reconciliation: The server (TraceBatchResolver) automatically reconciles Signal/Update pairs (Pair<Signal, Update>). If a process crashes or hangs, the partial trace is already recorded."
+      }
+    },
+    "e2e": {
+      "title": "End to end tracing"
+    },
+    "analytics": {
+      "title": "Analytics"
+    },
+    "health": {
+      "title": "Lifecycle and versions management"
+    },
+    "autonomy": {
+      "title": "Self management"
+    },
+    "traceability": {
+      "title": "Traceability"
     }
   },
   "installation": {

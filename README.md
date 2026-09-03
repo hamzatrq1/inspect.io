@@ -24,12 +24,12 @@ INSPECT.io is part of the INSPECT stack. It helps organize Kanban tasks and incl
 
 | Stack        | Package      | Version | Status | Comment |
 |--------------|--------------|---------|--------|---------|
-| inspect-core | jakarta.mail | 1.0.0   | -      | |
-|              |              |         | -      | |
-|              |              |         | -      | |
-|              |              |         | -      | |
-|              |              |         | -      | |
-|              |              |         | -      | |
+| inspect-core | jakarta.mail | 1.0.0   | -      |         |
+|              |              |         | -      |         |
+|              |              |         | -      |         |
+|              |              |         | -      |         |
+|              |              |         | -      |         |
+|              |              |         | -      |         |
 
 
 ---

@@ -6,9 +6,18 @@
     <div class="doc-menu__panel">
       <div class="doc-menu__dropdown">
         <div class="doc-menu__header">
+          <ng-icon name="remixCloseLargeFill" class="doc-menu-icon display" (click)="toggleMenuVisibility()"></ng-icon>
           <h2 class="doc-menu__title">Menu</h2>
-          <button type="button" class="doc-menu__expand-btn" (click)="toggleAllSections()">
-            {{ areAllSectionsOpen() ? 'Replier' : 'Déplier' }}
+          <button
+            type="button"
+            class="doc-menu__expand-btn"
+            (click)="toggleAllSections()">
+            <svg class="doc-menu__chevron"
+              [class.doc-menu__chevron--open]="areAllSectionsOpen()"
+              viewBox="0 0 24 24"
+              aria-hidden="true">
+              <path d="M7 10l5 5 5-5" />
+            </svg>
           </button>
         </div>
         <nav class="doc-menu__links" aria-label="Menu documentation">
@@ -17,20 +26,9 @@
             <div class="doc-menu__item">
               @if (item.children?.length) {
                 <div class="doc-menu__link-row">
-                  <a
-                    class="doc-menu__link doc-menu__link--main"
-                    [routerLink]="item.link"
-                    routerLinkActive="doc-menu__link--active"
-                    [routerLinkActiveOptions]="{ exact: item.link === '/' }"
-                  >
-                    @if (item.icon) {
-                      <ng-icon [name]="item.icon" class="doc-menu__icon"></ng-icon>
-                    }
-                    <span class="doc-menu__label">{{ item.label | translate }}</span>
-                  </a>
                   <button
                     type="button"
-                    class="doc-menu__link doc-menu__link--parent"
+                    class="doc-menu__link-chevron"
                     [attr.aria-expanded]="isSectionOpen(item.label)"
                     (click)="toggleSection(item.label)"
                     aria-label="Afficher les sous-menus"
@@ -44,19 +42,33 @@
                       <path d="M7 10l5 5 5-5" />
                     </svg>
                   </button>
+                  <a
+                    class="doc-menu__link doc-menu__link--main"
+                    [routerLink]="item.link"
+                    routerLinkActive="doc-menu__link--active"
+                    [routerLinkActiveOptions]="{ exact: item.link === '/' }"
+                  >
+                    @if (item.icon) {
+                      <ng-icon [name]="item.icon" class="doc-menu__icon"></ng-icon>
+                    }
+                    <span class="doc-menu__label">{{ item.label | translate }}</span>
+                  </a>
                 </div>
               } @else {
-                <a
-                  class="doc-menu__link"
-                  [routerLink]="item.link"
-                  routerLinkActive="doc-menu__link--active"
-                  [routerLinkActiveOptions]="{ exact: item.link === '/' }"
-                >
-                  @if (item.icon) {
-                    <ng-icon [name]="item.icon" class="doc-menu__icon"></ng-icon>
-                  }
-                  <span class="doc-menu__label">{{ item.label | translate }}</span>
-                </a>
+                <div class="doc-menu__link-row">
+                  <span class="doc-menu__spacer" aria-hidden="true"></span>
+                  <a
+                    class="doc-menu__link doc-menu__link--main"
+                    [routerLink]="item.link"
+                    routerLinkActive="doc-menu__link--active"
+                    [routerLinkActiveOptions]="{ exact: item.link === '/' }"
+                  >
+                    @if (item.icon) {
+                      <ng-icon [name]="item.icon" class="doc-menu__icon"></ng-icon>
+                    }
+                    <span class="doc-menu__label">{{ item.label | translate }}</span>
+                  </a>
+                </div>
               }
               @if (item.children?.length && isSectionOpen(item.label)) {
                 <div class="doc-menu__sublinks">
@@ -75,7 +87,6 @@
             </div>
           }
         </nav>
-        <ng-icon name="matArrowMenuCloseRound" class="doc-menu-icon display" (click)="toggleMenuVisibility()"></ng-icon>
       </div>
     </div>
   </aside>

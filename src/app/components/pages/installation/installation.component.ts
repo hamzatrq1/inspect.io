@@ -1,6 +1,6 @@
 import { Component, HostListener, inject, signal } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { MarkdownComponent } from 'ngx-markdown';
+import { MarkdownModule } from 'ngx-markdown';
 import { Router } from '@angular/router';
 import { goToPage, ScrollNavigationHandler } from '@utils/utils';
 
@@ -11,7 +11,8 @@ import { goToPage, ScrollNavigationHandler } from '@utils/utils';
   host: {
     '[class.installation-transitioning]': 'isTransitioning()',
   },
-  imports: [MarkdownComponent],
+  imports: [MarkdownModule],
+  standalone: true,
 })
 export class InstallationComponent {
   private readonly router = inject(Router);

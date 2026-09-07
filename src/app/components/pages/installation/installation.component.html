@@ -9,7 +9,7 @@
 <div class="installation">
   <markdown
     class="installation__doc"
-    [src]="'assets/pages/installation/installation_' + (translate.getCurrentLang()) + '.md'">
+    [src]="'assets/pages/installation/installation_' + (translate.currentLang || 'en') + '.md'">
   </markdown>
 </div>
 

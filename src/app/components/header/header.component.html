@@ -183,14 +183,10 @@
       </svg>
     </button>
 
-    @if (repoMenuOpen()) {
-      <nav class="menu-panel" aria-label="Inspect menu">
-        @for (item of menuItems; track item.label) {
-          <a [href]="item.link" target="_blank" rel="noopener noreferrer" (click)="closeMenu()">
-            {{ item.label }}
-          </a>
-        }
-      </nav>
-    }
+    <nav *ngIf="repoMenuOpen()" class="menu-panel" aria-label="Inspect menu">
+      <a *ngFor="let item of menuItems; trackBy: trackByLabel" [href]="item.link" target="_blank" rel="noopener noreferrer" (click)="closeMenu()">
+        {{ item.label }}
+      </a>
+    </nav>
   </div>
 </header>

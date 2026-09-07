@@ -1,5 +1,4 @@
-import {Component, HostListener, inject, signal } from '@angular/core';
-import { TranslatePipe, TranslateService} from '@ngx-translate/core';
+import { AfterViewInit, Component, ElementRef, HostListener, inject, OnDestroy, signal } from '@angular/core';
 import { Router } from '@angular/router';
 import { goToPage, ScrollNavigationHandler } from '@utils/utils';
 import { MonitoringComponent } from '@app/components/pages/features/monitoring/monitoring.component';
@@ -7,25 +6,26 @@ import { E2eComponent } from '@app/components/pages/features/e2e/e2e.component';
 import { AnalyticsComponent } from '@app/components/pages/features/analytics/analytics.component';
 import { HealthComponent } from '@app/components/pages/features/health/health.component';
 import { AutonomyComponent } from '@app/components/pages/features/autonomy/autonomy.component';
-import { TraceabilityComponent } from '@app/components/pages/features/traceability/traceability.component';
+import { ScrollspyService } from '@services/scrollspy.service';
 
 @Component({
   selector: 'app-features',
   imports: [
-    TranslatePipe,
     MonitoringComponent,
     E2eComponent,
     AnalyticsComponent,
     HealthComponent,
     AutonomyComponent,
-    TraceabilityComponent,
   ],
   templateUrl: './features.component.html',
   styleUrls: ['./features.component.scss'],
+  standalone: true,
 })
-export class FeaturesComponent {
+export class FeaturesComponent implements AfterViewInit, OnDestroy {
   private readonly router = inject(Router);
-  protected readonly translate = inject(TranslateService);
+  private readonly elementRef = inject(ElementRef);
+  private readonly scrollSpy = inject(ScrollspyService);
+  private observer?: IntersectionObserver;
 
   readonly isTransitioning = signal(false);
   readonly isScrollUpVisible = signal(false);
@@ -38,6 +38,43 @@ export class FeaturesComponent {
     onNavigateUp: () => this.goToHome(),
     onNavigateDown: () => this.goToInstallation(),
   });
+
+  ngAfterViewInit(): void {
+    if (typeof window === 'undefined') return;
+
+    const sections = [
+      { selector: 'app-monitoring', path: '/features/monitoring' },
+      { selector: 'app-e2e', path: '/features/e2e' },
+      { selector: 'app-analytics', path: '/features/analytics' },
+      { selector: 'app-health', path: '/features/health' },
+      { selector: 'app-autonomy', path: '/features/autonomy' },
+      { selector: 'app-traceability', path: '/features/traceability' },
+    ];
+
+    this.observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            const match = sections.find((s) => entry.target.matches(s.selector));
+            if (match) {
+              this.scrollSpy.setActivePath(match.path);
+            }
+          }
+        }
+      },
+      { rootMargin: '-20% 0px -70% 0px', threshold: 0 },
+    );
+
+    sections.forEach(({ selector }) => {
+      const el = this.elementRef.nativeElement.querySelector(selector);
+      if (el) this.observer?.observe(el);
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.observer?.disconnect();
+    this.scrollSpy.setActivePath(null);
+  }
 
   goToInstallation(): void {
     goToPage(this.isTransitioning(), this.router, '/installation');

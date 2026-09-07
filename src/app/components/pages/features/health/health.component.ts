@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { TranslatePipe } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  imports: [TranslatePipe],
+  imports: [TranslateModule],
   selector: 'app-health',
   styleUrls: ['./health.component.scss'],
   templateUrl: './health.component.html',
+  standalone: true,
 })
 export class HealthComponent {}

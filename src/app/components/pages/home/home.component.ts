@@ -1,6 +1,6 @@
 import { Component, HostListener, inject, signal } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
-import { TranslatePipe } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import { heroArrowLeftStartOnRectangleMicro } from '@ng-icons/heroicons/micro';
 import { bootstrapArrowDown } from '@ng-icons/bootstrap-icons';
@@ -8,7 +8,7 @@ import { goToPage, isAtBottom } from '@utils/utils';
 
 @Component({
   selector: 'app-home',
-  imports: [TranslatePipe, RouterLink, NgIcon],
+  imports: [TranslateModule, RouterLink, NgIcon],
   providers: [
     provideIcons({
       heroArrowLeftStartOnRectangleMicro,
@@ -20,6 +20,7 @@ import { goToPage, isAtBottom } from '@utils/utils';
   host: {
     '[class.home-transitioning]': 'isTransitioning()',
   },
+  standalone: true,
 })
 export class HomeComponent {
   private readonly router = inject(Router);

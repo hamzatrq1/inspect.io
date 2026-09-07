@@ -1,11 +1,13 @@
-import { Component, computed, EventEmitter, inject, Output, signal } from '@angular/core';
-import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { Component, EventEmitter, inject, Output, signal } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
-  imports: [TranslatePipe],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss',
+  styleUrls: ['./header.component.scss'],
+  standalone: true,
 })
 export class HeaderComponent {
   private readonly translate = inject(TranslateService);
@@ -14,7 +16,7 @@ export class HeaderComponent {
 
   readonly isFirefox = typeof navigator !== 'undefined' && /Firefox\//.test(navigator.userAgent);
   readonly repoMenuOpen = signal(false);
-  readonly currentLang = computed(() => this.translate.currentLang() ?? 'fr');
+  readonly currentLang = signal(this.translate.currentLang || this.translate.defaultLang || 'fr');
 
   // Redirect to the latest version of each component on Docker Hub, Maven Central, and npm
   readonly menuItems = [
@@ -32,6 +34,13 @@ export class HeaderComponent {
 
   constructor() {
     this.translate.addLangs(['fr', 'en']);
+    this.translate.onLangChange.subscribe((event) => {
+      this.currentLang.set(event.lang);
+    });
+  }
+
+  trackByLabel(index: number, item: { label: string; link: string }): string {
+    return item.label;
   }
 
   toggleMenu(): void {

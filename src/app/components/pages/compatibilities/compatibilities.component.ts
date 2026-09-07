@@ -1,13 +1,14 @@
 import { Component, HostListener, inject, signal } from '@angular/core';
-import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Router } from '@angular/router';
 import { goToPage, ScrollNavigationHandler } from '@utils/utils';
 
 @Component({
-  imports: [TranslatePipe],
+  imports: [TranslateModule],
   selector: 'app-compatibilities',
   styleUrls: ['./compatibilities.component.scss'],
   templateUrl: './compatibilities.component.html',
+  standalone: true,
 })
 export class CompatibilitiesComponent {
   private readonly router = inject(Router);

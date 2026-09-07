@@ -1,12 +1,13 @@
 import { Component, inject } from '@angular/core';
-import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { MarkdownComponent } from 'ngx-markdown';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { MarkdownModule } from 'ngx-markdown';
 
 @Component({
-  imports: [MarkdownComponent, TranslatePipe],
+  imports: [MarkdownModule, TranslateModule],
   selector: 'app-collector',
   styleUrls: ['./collector.component.scss'],
   templateUrl: './collector.component.html',
+  standalone: true,
 })
 export class CollectorComponent {
   protected readonly translate = inject(TranslateService);

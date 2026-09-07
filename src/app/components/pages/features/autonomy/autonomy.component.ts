@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { TranslatePipe } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  imports: [TranslatePipe],
+  imports: [TranslateModule],
   selector: 'app-autonomy',
   styleUrls: ['./autonomy.component.scss'],
   templateUrl: './autonomy.component.html',
+  standalone: true,
 })
 export class AutonomyComponent {}

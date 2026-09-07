@@ -7,13 +7,11 @@
   </div>
 </section>
 
-<div class="title"> {{ "features.title" | translate }}</div>
 <app-monitoring></app-monitoring>
 <app-e2e></app-e2e>
 <app-analytics></app-analytics>
 <app-health></app-health>
 <app-autonomy></app-autonomy>
-<app-traceability></app-traceability>
 
 <!-- Relink when scroll down -->
 <section class="scroll-trigger scroll-trigger--down" [class.is-visible]="isScrollDownVisible()" (click)="goToInstallation()">

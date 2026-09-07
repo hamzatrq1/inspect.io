@@ -1,16 +1,18 @@
-import { afterNextRender, Component, HostListener, inject, signal } from '@angular/core';
-import { TranslatePipe, TranslateService} from '@ngx-translate/core';
+import { AfterViewInit, Component, HostListener, inject, signal } from '@angular/core';
+import { TranslateModule, TranslateService} from '@ngx-translate/core';
 import mermaid from 'mermaid';
 import { goToPage, ScrollNavigationHandler } from '@utils/utils';
 import { Router } from '@angular/router';
+import { MarkdownModule } from 'ngx-markdown';
 
 @Component({
   selector: 'app-architecture',
-  imports: [TranslatePipe],
+  imports: [TranslateModule, MarkdownModule],
   templateUrl: './architecture.component.html',
   styleUrls: ['./architecture.component.scss'],
+  standalone: true,
 })
-export class ArchitectureComponent {
+export class ArchitectureComponent implements AfterViewInit {
   private readonly router = inject(Router);
   protected readonly translate = inject(TranslateService);
 
@@ -24,12 +26,10 @@ export class ArchitectureComponent {
     onNavigateDown: () => this.goToComponents(),
   });
 
-  constructor() {
-    afterNextRender({
-      read: () => {
-        void mermaid.run();
-      },
-    });
+  ngAfterViewInit(): void {
+    if (typeof window !== 'undefined') {
+      void mermaid.run();
+    }
   }
 
   goToCompatibilities(): void {

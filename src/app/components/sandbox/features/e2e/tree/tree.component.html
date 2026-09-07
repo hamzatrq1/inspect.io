@@ -1,0 +1,59 @@
+<div id="container" [class.fullscreen]="isFullscreen">
+  <div id="fixed-width-container">
+
+    <!-- Contrôles d'affichage -->
+    <div class="view-controls">
+      <div class="view-control-group">
+        <span class="view-group-label">Machine</span>
+        <div class="view-group-btns">
+          <button class="view-btn" [class.active]="ViewForm.controls.nodeView.value === Label.SERVER_IDENTITY"
+                  (click)="ViewForm.controls.nodeView.setValue(Label.SERVER_IDENTITY)">ID</button>
+          <button class="view-btn" [class.active]="ViewForm.controls.nodeView.value === Label.OS_RE"
+                  (click)="ViewForm.controls.nodeView.setValue(Label.OS_RE)">Env</button>
+          <button class="view-btn" [class.active]="ViewForm.controls.nodeView.value === Label.IP_PORT"
+                  (click)="ViewForm.controls.nodeView.setValue(Label.IP_PORT)">IP</button>
+        </div>
+      </div>
+
+      <div class="view-control-group">
+        <span class="view-group-label">Flux</span>
+        <div class="view-group-btns">
+          <button class="view-btn" [class.active]="ViewForm.controls.linkView.value === Label.ELAPSED_LATENSE"
+                  (click)="ViewForm.controls.linkView.setValue(Label.ELAPSED_LATENSE)">Temps</button>
+          <button class="view-btn" [class.active]="ViewForm.controls.linkView.value === Label.METHOD_RESOURCE"
+                  (click)="ViewForm.controls.linkView.setValue(Label.METHOD_RESOURCE)">Méthode</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contrôles de zoom & actions -->
+    <div class="zoom-controls">
+      <button mat-icon-button (click)="tree?.graph?.zoomIn()"><mat-icon>add</mat-icon></button>
+      <button mat-icon-button (click)="tree?.graph?.zoomOut()"><mat-icon>remove</mat-icon></button>
+      <button mat-icon-button (click)="tree?.resizeAndCenter()"><mat-icon>center_focus_strong</mat-icon></button>
+      <button mat-icon-button (click)="toggleMinimap()"><mat-icon>map</mat-icon></button>
+      <button mat-icon-button (click)="toggleFullscreen()"><mat-icon>{{ isFullscreen ? 'fullscreen_exit' : 'fullscreen' }}</mat-icon></button>
+    </div>
+
+    <!-- Minimap -->
+    <div #outlineContainer id="outlineContainer" [class.hidden]="!minimapVisible"></div>
+
+    <!-- Panneau de détail -->
+    <div class="detail-panel" *ngIf="detailPanelVisible && selectedCell">
+      <div class="detail-header">
+        <span>{{ getCellDetails().name }} ({{ getCellDetails().type }})</span>
+        <button mat-icon-button (click)="closeDetailPanel()"><mat-icon>close</mat-icon></button>
+      </div>
+      <div class="detail-body">
+        <div class="detail-row" *ngFor="let row of getCellDetails().rows">
+          <span>{{ row.label }}: </span>
+          <strong>{{ row.value }}</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- Conteneur mxGraph -->
+    <div #graphContainer id="graphContainer"></div>
+
+  </div>
+</div>

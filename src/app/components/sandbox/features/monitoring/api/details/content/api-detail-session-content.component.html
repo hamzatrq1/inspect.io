@@ -1,0 +1,79 @@
+<div class="tabs-container">
+  <!-- Navigation verticale -->
+  <div class="vertical-tabs">
+    <ng-container *ngFor="let tab of tabs; trackBy: trackByTab">
+      <div *ngIf="tab.visible"
+           class="tab-button"
+           [class.active]="selectedTabType === tab.type"
+           (click)="selectTab(tab.type)">
+        <mat-icon class="material-symbols-outlined">{{ tab.icon }}</mat-icon>
+        <div class="tab-label-container">
+          <span class="tab-label">{{ tab.label }}</span>
+          <mat-icon *ngIf="tab.hasError && tab.errorCount > 0"
+                    class="error-indicator material-symbols-outlined"
+                    [matTooltip]="tab.errorCount + ' erreur(s)'"
+                    matTooltipPosition="right">
+            error
+          </mat-icon>
+        </div>
+        <span *ngIf="tab.count > 0" class="tab-count">{{ tab.count | numberFormat:0:'≈' }}</span>
+      </div>
+    </ng-container>
+  </div>
+
+  <!-- Contenu des onglets -->
+  <div class="tab-content">
+    <rest-table *ngIf="selectedTabType === 'rest'"></rest-table>
+    <database-table *ngIf="selectedTabType === 'database'"></database-table>
+    <timeline *ngIf="selectedTabType === 'timeline'"></timeline>
+    <div *ngIf="selectedTabType === 'ftp'" class="tab-panel">
+      <div class="mock-card">
+        <h3>Requêtes FTP ({{ session.ftpRequests.length }})</h3>
+        <pre>{{ session.ftpRequests | json }}</pre>
+      </div>
+    </div>
+
+    <div *ngIf="selectedTabType === 'smtp'" class="tab-panel">
+      <div class="mock-card">
+        <h3>Requêtes SMTP ({{ session.mailRequests.length }})</h3>
+        <pre>{{ session.mailRequests | json }}</pre>
+      </div>
+    </div>
+
+    <div *ngIf="selectedTabType === 'ldap'" class="tab-panel">
+      <div class="mock-card">
+        <h3>Requêtes LDAP ({{ session.ldapRequests.length }})</h3>
+        <pre>{{ session.ldapRequests | json }}</pre>
+      </div>
+    </div>
+
+    <div *ngIf="selectedTabType === 'local'" class="tab-panel">
+      <div class="mock-card">
+        <h3>Requêtes Locales ({{ session.localRequests.length }})</h3>
+        <pre>{{ session.localRequests | json }}</pre>
+      </div>
+    </div>
+
+    <div *ngIf="selectedTabType === 'stage'" class="tab-panel">
+      <div class="mock-card">
+        <h3>Stages de Session ({{ session.httpSessionStages.length }})</h3>
+        <pre>{{ session.httpSessionStages | json }}</pre>
+      </div>
+    </div>
+
+    <div *ngIf="selectedTabType === 'action'" class="tab-panel">
+      <div class="mock-card">
+        <h3>Actions Utilisateur ({{ session.userActions.length }})</h3>
+        <pre>{{ session.userActions | json }}</pre>
+      </div>
+    </div>
+
+    <div *ngIf="selectedTabType === 'log'" class="tab-panel">
+      <div class="mock-card">
+        <h3>Logs ({{ session.logEntries.length }})</h3>
+        <pre>{{ session.logEntries | json }}</pre>
+      </div>
+    </div>
+
+  </div>
+</div>

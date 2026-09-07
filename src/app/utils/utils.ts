@@ -44,7 +44,7 @@ export class ScrollNavigationHandler {
       this.options.isScrollDownVisible?.set(true);
       if (event.deltaY > 50 && isAtBottom()) {
         this.wheelAccumulator += event.deltaY;
-        if (this.wheelAccumulator > 40) {
+        if (this.wheelAccumulator > 100) {
           this.options.onNavigateDown?.();
         }
       }

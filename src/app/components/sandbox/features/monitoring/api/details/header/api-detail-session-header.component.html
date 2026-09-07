@@ -1,0 +1,88 @@
+<div class="header-card">
+
+  <!-- ═══ CARTE SESSION MAIN ═══ -->
+  <div class="session-card" [ngClass]="currentStatus()">
+
+    <div class="session-card-inner">
+
+      <!-- En-tête -->
+      <div class="session-header">
+        <div class="session-title-row">
+          <div class="session-icon-wrap" [ngClass]="currentStatus()"
+               (click)="cycleStatus()"
+               matTooltip="Color adjusting to the status. Click to try">
+            <mat-icon class="material-symbols-outlined session-icon">call_received</mat-icon>
+          </div>
+          <div class="session-title-content">
+            <div class="session-name-row" [ngSwitch]="currentStatus()">
+              <span *ngSwitchCase="'success'" class="status-pill success" matTooltip="if successfull">2xx</span>
+              <span *ngSwitchCase="'fail'" class="status-pill fail" matTooltip="if server failure">5xx</span>
+              <span *ngSwitchCase="'warning'" class="status-pill warning" matTooltip="if client error">4xx</span>
+              <span *ngSwitchCase="'unavailable'" class="status-pill unavailable">N/A</span>
+              <span *ngSwitchCase="'in-progress'" class="status-pill in-progress" matTooltip="if in progress">...</span>
+              <span class="session-name ellipsis" matTooltip="Request type (GET, POST...) and service involved">
+                GET /api/v1/resource/example
+              </span>
+            </div>
+            <div class="session-url-row">
+              <span class="session-url ellipsis" matTooltip="Link of the API endpoint">
+                https://api.example.com/v1/resource/example
+              </span>
+            </div>
+          </div>
+        </div>
+        <button mat-icon-button [matMenuTriggerFor]="menuEndPoint" class="menu-btn">
+          <mat-icon class="material-symbols-outlined">more_vert</mat-icon>
+        </button>
+      </div>
+
+
+      <!-- Pied de carte -->
+      <div class="session-footer">
+        <div class="footer-section">
+          <div class="meta-chip" matTooltip="ID of the user if available">
+            <mat-icon class="material-symbols-outlined meta-icon">person</mat-icon>
+            <span>ID or N/A</span>
+          </div>
+          <div class="meta-chip" matTooltip="Timestamp of the session">
+            <mat-icon class="material-symbols-outlined meta-icon">schedule</mat-icon>
+            <span>DD/MM/AAAA hh:mm:sss.ZZZ</span>
+          </div>
+        </div>
+        <div class="footer-section data-stats">
+          <div class="stat-item">
+            <mat-icon class="material-symbols-outlined stat-icon">timer</mat-icon>
+            <span class="stat-value stat-duration" matTooltip="Call duration in ms" matTooltipClass="custom-tooltip">
+              xxx ms
+            </span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+<mat-menu #menuEndPoint="matMenu">
+  <button mat-menu-item matTooltip="TODO">
+    <mat-icon class="material-symbols-outlined">lan</mat-icon>
+    <span>Tree calls</span>
+  </button>
+  <button mat-menu-item matTooltip="TODO">
+    <mat-icon class="material-symbols-outlined">web_traffic</mat-icon>
+    <span>User Journey</span>
+  </button>
+  <button mat-menu-item matTooltip="TODO">
+    <mat-icon class="material-symbols-outlined">finance_mode</mat-icon>
+    <span>KPI</span>
+  </button>
+</mat-menu>
+
+<mat-menu #menuServer="matMenu">
+  <button mat-menu-item>
+    <mat-icon class="material-symbols-outlined">view_timeline</mat-icon>
+    <span>Pulse</span>
+  </button>
+</mat-menu>

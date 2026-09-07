@@ -1,3 +1,5 @@
+@use "@angular/material/prebuilt-themes/indigo-pink.css" as *;
+
 :host {
   --bright-blue: oklch(51.01% 0.274 263.83);
   --electric-violet: oklch(53.18% 0.28 296.97);
@@ -15,6 +17,8 @@
     var(--vivid-pink) 50%,
     var(--electric-violet) 100%
   );
+
+  --clr-surface-raised: white;
 
   --red-to-pink-to-purple-horizontal-gradient: linear-gradient(
     90deg,
@@ -51,7 +55,7 @@
   font-size: clamp(2rem, 5vw, 2rem);
   color: var(--clr-text-secondary, #000000);
   font-weight: 600;
-  margin: 10rem auto 2rem;
+  margin: 6rem auto 2rem;
   line-height: 1.7;
   strong { color: var(--clr-text-primary, #1e293b); font-weight: 600; }
   text-align: center;
@@ -72,7 +76,7 @@
   font-size: clamp(1.5rem, 1vw, 1.2rem);
   align-content: space-between;
   line-height: 2;
-  text-align: center;
+  text-align: justify;
   row-gap: 2rem;
   strong { color: var(--clr-text-primary, #1e293b); font-weight: 600; }
   margin-bottom: 2rem;
@@ -220,4 +224,84 @@
     opacity: 0;
     transform: translateY(0);
   }
+}
+
+.mat-mdc-cell, .mat-mdc-card {
+  &.success {
+    border-left: 3px solid #4caf50 !important;
+    background: linear-gradient(90deg, rgba(76, 175, 80, 0.08) 0%, transparent 100%) !important;
+  }
+
+  &.warning {
+    border-left: 3px solid #ff9800 !important;
+    background: linear-gradient(90deg, rgba(255, 165, 0, 0.08) 0%, transparent 100%) !important;
+  }
+
+  &.fail {
+    border-left: 3px solid #f44336 !important;
+    background: linear-gradient(90deg, rgba(244, 67, 54, 0.08) 0%, transparent 100%) !important;
+  }
+
+  &.unavailable {
+    border-left: 3px solid gray !important;
+    background: linear-gradient(90deg, rgba(128, 128, 128, 0.08) 0%, transparent 100%) !important;
+  }
+}
+
+.cdk-overlay-container {
+  position: fixed !important;
+  z-index: 10000 !important;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.cdk-overlay-pane {
+  position: absolute !important;
+  pointer-events: auto;
+  box-sizing: border-box;
+  z-index: 10000 !important;
+}
+
+.mat-mdc-tooltip {
+  --mdc-plain-tooltip-container-color: rgba(97, 97, 97, 0.95);
+  --mdc-plain-tooltip-supporting-text-color: #ffffff;
+  --mdc-plain-tooltip-supporting-text-font: 'Public sans', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  --mdc-plain-tooltip-supporting-text-size: 11px;
+  max-width: 400px;
+}
+
+.mat-mdc-tooltip.mat-mdc-tooltip-show {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+
+.mat-mdc-tooltip .mdc-tooltip__surface {
+  font-family: 'Public sans', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.03333em;
+  line-height: 1.4;
+  color: #ffffff;
+  background-color: rgba(97, 97, 97, 0.95);
+  border-radius: 4px;
+  padding: 4px 8px;
+  max-width: 400px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: pre-line;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.custom-tooltip {
+  max-width: 400px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: pre-line;
+}
+
+.mat-mdc-menu-panel {
+  background-color: var(--clr-background, #ffffff) !important;
 }

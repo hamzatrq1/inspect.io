@@ -1,0 +1,53 @@
+@use "src/assets/_card.scss" as *;
+
+::ng-deep .custom-tooltip {
+  max-width: 400px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header-card {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75em;
+  padding: 0.75em 0.75em 0.75em;
+}
+
+detail-session {
+  flex: 1 1 0;
+}
+
+.fail {
+  background: rgba(244, 67, 54, 0.07);
+  .bar-icon { color: #f44336; }
+  .exc-type  { color: #c62828; }
+}
+
+.warning {
+  background: rgba(255, 152, 0, 0.07);
+  .bar-icon { color: #ff9800; }
+  .exc-type  { color: #e65100; }
+}
+
+.success {
+  background: rgba(76, 175, 80, 0.07);
+  .bar-icon { color: #4caf50; }
+  .exc-type  { color: #2e7d32; }
+}
+
+button[mat-menu-item] {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  span {
+    overflow: visible;
+    position: relative;
+    z-index: 1;
+  }
+}

@@ -1,0 +1,47 @@
+@use "src/assets/_card.scss" as *;
+@use "@angular/material/prebuilt-themes/indigo-pink.css" as *;
+@use "src/styles.scss" as *;
+
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+::ng-deep .mat-mdc-tooltip .mdc-tooltip__surface {
+  font-family: 'Public sans', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.03333em;
+  line-height: 1.4;
+  color: #ffffff;
+  background-color: rgba(97, 97, 97, 0.95);
+  border-radius: 4px;
+  padding: 4px 8px;
+  max-width: 400px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: pre-line;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.flex-table {
+  flex: 1 1 0;
+  min-height: 0;
+
+}
+
+
+.container {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 4px;
+}
+
+.protocol {
+  font-weight: bold;
+  color: gray;
+}

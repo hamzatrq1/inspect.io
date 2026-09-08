@@ -85,10 +85,10 @@ export class AppComponent {
       icon: 'hugeComputerProgramming01',
       children: [
         { label: 'menu.features.monitoring.title', link: '/features/monitoring' },
-        { label: 'menu.features.e2e', link: '/features/e2e' },
-        { label: 'menu.features.metrics', link: '/features/metrics' },
-        { label: 'menu.features.health', link: '/features/health' },
-        { label: 'menu.features.autonomy', link: '/features/autonomy' }
+        { label: 'menu.features.e2e.title', link: '/features/e2e' },
+        { label: 'menu.features.metrics.title', link: '/features/metrics' },
+        { label: 'menu.features.health.title', link: '/features/health' },
+        { label: 'menu.features.autonomy.title', link: '/features/autonomy' }
       ],
     },
     { label: 'menu.installation', link: '/installation', icon: 'bootstrapRocketTakeoffFill' },

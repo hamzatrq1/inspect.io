@@ -12,21 +12,47 @@
         "open": "Ouvrir le menu"
       }
     },
-    "features": "Fonctionnalités",
+    "features": {
+      "title": "Fonctionnalités",
+      "monitoring": {
+        "title": "Monitoring",
+        "events": "Évènements & contextes d'exécution",
+        "workflow": "Flux sortants et dépendances systèmes",
+        "user": "Parcours utilisateur"
+      },
+      "e2e": {
+        "title": "Cartographie & Traçabilité",
+        "tree": "Arbre de traces",
+        "thread": "Suivi des traitements par thread",
+        "architecture": "Cartographie dynamique des systèmes"
+      },
+      "metrics": {
+        "title": "Métriques de performance & APM",
+        "availability": "Santé et disponibilité",
+        "performance": "Performance et temps de réponse",
+        "volume": "Volume et débit",
+        "resources": "Ressources systèmes et machines"
+      },
+      "health": {
+        "title": "Cycle de vie et état des versions",
+        "inventory": "Inventaire applicatif",
+        "events": "Historique des évènements"
+      },
+      "autonomy": {
+        "title": "Self Management & Autonomie",
+        "partitioning": "Partitionnement dynamique des données",
+        "purge": "Purge et rétention intelligente",
+        "self-reporting": "Auto-reporting"
+      }
+    },
     "installation": "Installation",
+    "compatibilities": "Compatibilités",
     "architecture": {
       "title": "Architecture",
       "application": "Application",
       "collector": "Collecteur",
       "server": "Serveur"
     },
-    "compatibilities": "Compatibilités",
-    "components": {
-      "title": "Composants techniques",
-      "session": "Session",
-      "request": "Requêtes",
-      "resource": "Métriques"
-      },
     "conduct-code": "Code de conduite",
     "contributing": "Contribuer"
   },
@@ -80,8 +106,64 @@
   "features": {
     "title": "Fonctionnalités",
     "monitoring": {
-      "title": "Monitoring",
-      "content": "INSPECT permet de surveiller et de suivre les performances de votre application en temps réel. Il fournit des informations détaillées sur les appels d'API, les requêtes et les métriques, ce qui vous permet de détecter rapidement les problèmes et d'y remédier avant qu'ils n'affectent vos utilisateurs."
+      "title": "Supervision",
+      "events": {
+        "title": "Évènements & contextes d'exécution"
+      },
+      "workflow": {
+        "title": "Flux sortants et dépendances systèmes"
+      },
+      "user": {
+        "title": "Parcours utilisateur"
+      }
+    },
+    "e2e": {
+      "title": "Cartographie & Traçabilité",
+      "tree": {
+        "title": "Arbre de traces"
+      },
+      "thread": {
+        "title": "Suivi des traitements par thread"
+      },
+      "architecture": {
+        "title": "Cartographie dynamique des systèmes"
+      }
+    },
+    "metrics": {
+      "title": "Métriques de performance & APM",
+      "availability": {
+        "title": "Santé et disponibilité"
+      },
+      "performance": {
+        "title": "Performance et temps de réponse"
+      },
+      "volume": {
+        "title": "Volume et débit"
+      },
+      "resources": {
+        "title": "Ressources systèmes et machines"
+      }
+    },
+    "health": {
+      "title": "Cycle de vie et état des versions",
+      "inventory": {
+        "title": "Inventaire applicatif"
+      },
+      "events": {
+        "title": "Historique des évènements"
+      }
+    },
+    "autonomy": {
+      "title": "Self Management & Autonomie",
+      "partitioning": {
+        "title": "Partitionnement dynamique des données"
+      },
+      "purge": {
+        "title": "Purge et rétention intelligente"
+      },
+      "self-reporting": {
+        "title": "Auto-reporting"
+      }
     }
   },
   "installation": {
@@ -89,7 +171,19 @@
     "content": "Pour installer INSPECT, il y a 2 dépendances à ajouter dans votre projet : inspect-core et inspect-ng-collector"
   },
   "compatibilities": {
-    "title": "Dépendances"
+    "title": "Compatibilités",
+    "table": {
+      "stack": "Stack d'INSPECT",
+      "dependency": "Dépendance",
+      "version": "Version",
+      "function": {
+        "title": "Utilité",
+        "angular": "Front end framework",
+        "inspect-ng-collector": "Collecteur pour les applications Angular",
+        "jquery-charts": "Graphiques pour générer les KPIs",
+        "jakarta": "API utilisée pour la gestion des emails"
+      }
+    }
   },
   "architecture": {
     "title": "Architecture",

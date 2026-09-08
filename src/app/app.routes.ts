@@ -21,7 +21,7 @@ export const routes: Routes = [
   { path: 'features/monitoring', component: MonitoringComponent },
   { path: 'features/monitoring/api', component: ApiComponent },
   { path: 'features/e2e', component: E2eComponent },
-  { path: 'features/analytics', component: MetricsComponent },
+  { path: 'features/metrics', component: MetricsComponent },
   { path: 'features/health', component: HealthComponent },
   { path: 'features/autonomy', component: AutonomyComponent },
   { path: 'installation', component: InstallationComponent },

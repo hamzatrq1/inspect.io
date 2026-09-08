@@ -16,15 +16,34 @@
       "title": "Features",
       "monitoring": {
         "title": "Monitoring",
-        "api": "API",
-        "batch": "Batch",
-        "tests": "Tests"
+        "events": "Events and executions context",
+        "workflow": "Outgoing flows and system dependencies",
+        "user": "User cases"
       },
-      "e2e": "End to end tracing",
-      "metrics": "Metrics",
-      "health": "Application health",
-      "autonomy": "Self management",
-      "traceability": "Traceability"
+      "e2e": {
+        "title": "Cartography and traceability",
+        "tree": "Trace tree",
+        "thread": "Thread execution tracking",
+        "architecture": "Dynamic system cartography"
+      },
+      "metrics": {
+        "title": "Performance metrics and APM",
+        "availability": "Health and availability",
+        "performance": "Performance and response time",
+        "volume": "Volume",
+        "resources": "System and machine resources"
+      },
+      "health": {
+        "title": "Lifecycle and version status",
+        "inventory": "Application inventory",
+        "events": "Event history"
+      },
+      "autonomy": {
+        "title": "Self Management and Autonomy",
+        "partitioning": "Dynamic data partitioning",
+        "purge": "Purge and intelligent retention",
+        "self-reporting": "Self reporting"
+      }
     },
     "installation": "Installation",
     "compatibilities": "Compatibilities",
@@ -33,9 +52,6 @@
       "application": "Application",
       "collector": "Collector",
       "server": "Server"
-    },
-    "components": {
-      "title": "Technical components"
     },
     "conduct-code": "Code of conduct",
     "contributing": "Contributing"
@@ -91,78 +107,63 @@
     "title": "Features",
     "monitoring": {
       "title": "Monitoring",
-      "supervision": {
-        "title": "Vision & value",
-        "content": "INSPECT unify in an unique repository all observability signals: Traces, Resource Metrics (CPU, RAM, Threads), Typed Exceptions with complete stack traces and contextualized logs.One of the major innovations is the Duel Event Trace mechanism (Signal / Update)",
-        "subcontent": "Unlike traditional APMs that only emit at the end of a request, INSPECT emits a TraceSignal at the start of the operation (timestamp, thread, session, user, instance), then a TraceUpdate at the end (duration, status, command, exception). The server (TraceBatchResolver) automatically reconciles Signal/Update pairs (Pair<Signal, Update>). If a process crashes or hangs, the partial trace is already recorded.",
-        "dashboard": {
-          "title": "Dashboard",
-          "description": "The first view of INSPECT is a dashboard that provides an overview of the system's health and performance. It displays key metrics, such as response times, error rates, and throughput, allowing users to quickly assess the state of their application."
-        }
+      "events": {
+        "title": "Events and executions context"
       },
-      "api": {
-        "title": "API",
-        "content": "INSPECT allows you to monitor all your API calls : HTTP, JDBC, SMTP, FTP. You can track the performance of each API call, identify slow or failing requests.",
-        "screenshot": {
-          "description": "Here is a view of what informations are displayed. They are similars for APIs or batches",
-          "host": "\"Hôte\" is the server that is called by the API",
-          "ressource": "\"Ressource\" is the type of request made (GET, POST, PUT...) and the API endpoint that is called",
-          "start": "\"Début\" is the time when the request was received by the server (at format DD/MM/YYYY HH:mm:ss.ZZZ)",
-          "duration": "\"Durée\" is the time taken to process the request (in milliseconds)",
-          "user": "\"Utilisateur\" is the id of user that made the request (if available)",
-          "status": "\"Statut\" and \"Exception\" are not displayed by default, you have to use the settings to watch them. These data showed the status code or the exception type returned by the server (200, 403, 500...). The classical status are used for the HTTP requests. But in case of any other requests (SMTP, JDBC for example), there is a mapping made by INSPECT. The details of each status code per request is defined in INSPECT-Core."
-        },
-        "details": {
-          "title": "Details view",
-          "description": "By clicking on a request, you can access to this view which provides more informations",
-          "screenshot": "You will find below each block with some details about the information available by reading the tooltip. You can also click on the arrow on the left to switch between the different responses that you can find"
-        }
+      "workflow": {
+        "title": "Outgoing flows and system dependencies"
       },
-      "batch": {
-        "title": "Batch",
-        "content": "INSPECT allows you to monitor your batch processes, including their execution time, success or failure status, and any errors that occur during processing."
-      },
-      "test": {
-        "title": "Tests",
-        "content": "INSPECT allows you to monitor your test executions, including their duration, success or failure status, and any errors that occur during testing."
-      },
-      "session": {
-        "header": {
-
-        },
-        "content": {
-          "host": "Host launching the request",
-          "resource": "In case of HTTP request, type of request and endpoint called",
-          "start": "Time when the request was received by the server",
-          "duration": "Time taken to process the request",
-          "user": "Id of user that made the request (if available)",
-          "status": "Status code or exception type returned by the server, if none : N/A",
-          "action": "Redirect to get details of the session"
-        }
+      "user": {
+        "title": "User cases"
       }
     },
     "e2e": {
-      "title": "End to end tracing",
-      "chronology": {
-        "title": "Chronology",
-        "content":"As said before, INSPECT is able to follow a request from its start to its end. This is possible because the trace id is propagated through the different calls. If the trace id is not propagated, INSPECT is able to find the next trace id by using the thread id and the timestamp of the request."
-      },
+      "title": "Cartography and traceability",
       "tree": {
-        "title": "Tree view",
-        "content":"INSPECT is able to display the chronology of a request in a tree view. This allows you to see the different calls made by the request and their duration. You can also see the status of each call and the exception if any."
+        "title": "Trace tree"
+      },
+      "thread": {
+        "title": "Thread execution tracking"
+      },
+      "architecture": {
+        "title": "Dynamic system cartography"
       }
     },
     "metrics": {
-      "title": "Analytics"
+      "title": "Metrics and APM",
+      "availability": {
+        "title": "Performance metrics and APM"
+      },
+      "performance": {
+        "title": "Performance and response time"
+      },
+      "volume": {
+        "title": "Volume"
+      },
+      "resources": {
+        "title": "System and machine resources"
+      }
     },
     "health": {
-      "title": "Lifecycle and versions management"
+      "title": "Lifecycle and version status",
+      "inventory": {
+        "title": "Application inventory"
+      },
+      "events": {
+        "title": "Event history"
+      }
     },
     "autonomy": {
-      "title": "Self management"
-    },
-    "traceability": {
-      "title": "Traceability"
+      "title": "Self Management and Autonomy",
+      "partitioning": {
+        "title": "Dynamic data partitioning"
+      },
+      "purge": {
+        "title": "Purge and intelligent retention"
+      },
+      "self-reporting": {
+        "title": "Self reporting"
+      }
     }
   },
   "installation": {

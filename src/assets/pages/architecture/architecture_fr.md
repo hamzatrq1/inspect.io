@@ -2,14 +2,16 @@
 
 ## Organisation
 
-INSPECT est divisé en 3 parties :
+INSPECT est composé de 3 composants principaux : le collecteur, le serveur et l'application.
+Le collecteur est responsable de la collecte des données à partir de diverses sources, telles que les journaux, les métriques et les traces.
+Le serveur est responsable du traitement et du stockage des données collectées, ainsi que de la fourniture d'une interface utilisateur pour visualiser et analyser les données.
+L'application est responsable de la génération des données collectées par le collecteur.
 
-- Les collecteurs
-- Le serveur
-- L'applicatif
+## Services d'INSPECT
+
 
 ```mermaid
-  flowchart TD
+ flowchart TD
 
   classDef IHM fill:#FDE7F3,stroke:#000000,color:#1f2937, font-family: Inter;
   classDef Angular_Collector fill:#FEF3C7,stroke:#000000,color:#1f2937, font-family: Inter;
@@ -50,27 +52,23 @@ INSPECT est divisé en 3 parties :
 ```mermaid
 %%{init: {'sequence': {'mirrorActors': false}}}%%
 sequenceDiagram
-    participant U as Utilisateur
-    participant A as Application Angular
-    participant NG as inspect-ng-collector
-    participant C as inspect-core
-    participant S as inspect-server
-    participant DB as Base de données
-    participant UI as inspect-app
+  participant U as Utilisateur
+  participant A as Application Angular
+  participant NG as inspect-ng-collector
+  participant C as inspect-core
+  participant S as inspect-server
+  participant DB as Base de données
+  participant UI as inspect-app
 
-    U->>A: Action dans l'application
-    A->>NG: Événement navigateur / interaction / HTTP
-    NG->>S: Envoi des traces front
+  U->>A: Action dans l'application
+  A->>NG: Événement navigateur / interaction / HTTP
+  NG->>S: Envoi des traces front
 
-    A->>C: Appel backend Java
-    C->>S: Session + requête + métriques
-    S->>DB: Persistance des traces
+  A->>C: Appel backend Java
+  C->>S: Session + requête + métriques
+  S->>DB: Persistance des traces
 
-    UI->>S: Requête d'analyse
-    S-->>UI: Données agrégées
-    UI-->>U: Dashboard / détails / architecture
+  UI->>S: Requête d'analyse
+  S-->>UI: Données agrégées
+  UI-->>U: Dashboard / détails / architecture
 ```
-
-
-
-

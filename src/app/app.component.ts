@@ -84,11 +84,31 @@ export class AppComponent {
       link: '/features',
       icon: 'hugeComputerProgramming01',
       children: [
-        { label: 'menu.features.monitoring.title', link: '/features/monitoring' },
-        { label: 'menu.features.e2e.title', link: '/features/e2e' },
-        { label: 'menu.features.metrics.title', link: '/features/metrics' },
-        { label: 'menu.features.health.title', link: '/features/health' },
-        { label: 'menu.features.autonomy.title', link: '/features/autonomy' }
+        { label: 'menu.features.monitoring.title', link: '/features/monitoring', children: [
+            { label: 'menu.features.monitoring.events', link: '/features/monitoring/events' },
+            { label: 'menu.features.monitoring.workflow', link: '/features/monitoring/workflow' },
+            { label: 'menu.features.monitoring.user', link: '/features/monitoring/user' },
+          ] },
+        { label: 'menu.features.e2e.title', link: '/features/e2e', children: [
+            { label: 'menu.features.e2e.tree', link: '/features/e2e/tree' },
+            { label: 'menu.features.e2e.thread', link: '/features/e2e/thread' },
+            { label: 'menu.features.e2e.architecture', link: '/features/e2e/architecture' },
+          ] },
+        { label: 'menu.features.metrics.title', link: '/features/metrics', children: [
+            { label: 'menu.features.metrics.availability', link: '/features/metrics/availability' },
+            { label: 'menu.features.metrics.performance', link: '/features/metrics/performance' },
+            { label: 'menu.features.metrics.volume', link: '/features/metrics/volume' },
+            { label: 'menu.features.metrics.resources', link: '/features/metrics/resources' },
+          ] },
+        { label: 'menu.features.health.title', link: '/features/health', children: [
+          { label: 'menu.features.health.inventory', link: '/features/health/inventory' },
+          { label: 'menu.features.health.events', link: '/features/health/events' },
+        ] },
+        { label: 'menu.features.autonomy.title', link: '/features/autonomy', children: [
+            { label: 'menu.features.autonomy.partitioning', link: '/features/autonomy/partitioning' },
+            { label: 'menu.features.autonomy.purge', link: '/features/autonomy/purge' },
+            { label: 'menu.features.autonomy.self-reporting', link: '/features/autonomy/self-reporting' }
+          ] }
       ],
     },
     { label: 'menu.installation', link: '/installation', icon: 'bootstrapRocketTakeoffFill' },

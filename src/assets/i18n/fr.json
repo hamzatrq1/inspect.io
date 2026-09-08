@@ -15,7 +15,7 @@
     "features": {
       "title": "Fonctionnalités",
       "monitoring": {
-        "title": "Monitoring",
+        "title": "Supervision",
         "events": "Évènements & contextes d'exécution",
         "workflow": "Flux sortants et dépendances systèmes",
         "user": "Parcours utilisateur"
@@ -58,13 +58,33 @@
   },
   "home": {
     "title": "INSPECT",
+    "badge": {
+      "first": "Observabilité & Télémétrie Nouvelle Génération",
+      "second": "Points forts",
+      "third": "Pour qui ?",
+      "realtime": "Temps réel",
+      "quick-deploiement": "Déploiement rapide"
+    },
+    "headline": {
+      "prefix": "Ne devinez plus.",
+      "highlight": "INSPECTez",
+      "suffix": "ce qui se passe réellement dans votre stack."
+    },
     "content": "INSPECT est une plateforme de suivi et d'analyse des appels d'API conçue pour offrir une visibilité approfondie sur les interactions entre les différents composants d'un système distribué. Quelques uns des points forts d'INSPECT :",
+    "cta": {
+      "explore": "Découvrir les fonctionnalités",
+      "architecture": "Explorer l'architecture",
+      "install": "Commencer l'installation",
+      "title": "Prêt à transformer votre observabilité ?",
+      "subtitle": "Intégrez INSPECT facilement et obtenez une visibilité totale sur vos microservices en quelques minutes."
+    },
     "redirect": {
       "services": "Plus de détails sur ces fonctionnalités",
       "profiles": "Plus de détails sur les scénarios d'utilisation"
     },
     "description": {
       "advantages": "Pourquoi utiliser INSPECT ? ",
+      "description": "Une suite d'outils complète pour observer, comprendre et optimiser vos architectures distribuées.",
       "observability": {
         "title": "Observabilité",
         "content": "INSPECT est un outil pouvant facilité l'observabilité de votre application. Elle permet de détecter et diagnostiquer les problèmes dans des systèmes complexes. Vous avez une observabilité optimale sur votre application"
@@ -94,12 +114,24 @@
       "title": "Qui peut utiliser INSPECT ?",
       "description": "À première vue, on peut penser qu'INSPECT est uniquement fait pour les développeurs. Mais sa plus-value réside dans le fait que tout le monde peut l'utiliser. Les développeurs sont, certes, ceux qui doivent l'implémenter dans le code. Mais après l'implémentation, tous les profils sont gagnants en l'utilisant.",
       "technical": {
-        "title": "Profils Technique",
-        "content": "Les profils techniques peuvent vérifier la santé des microservices, si le déploiement a des erreurs. INSPECT peut également être utilisé pour l'analyse des logs, afin de trouver la root cause. Plusieurs réponses de protocoles sont unifiées au maximum pour éviter une longue recherche dans plusieurs fichiers de logs volumineux."
+        "title": "Profil technique",
+        "people": "Développeurs et Ops",
+        "content": "Les profils techniques peuvent vérifier la santé des microservices, si le déploiement a des erreurs. INSPECT peut également être utilisé pour l'analyse des logs, afin de trouver la root cause. Plusieurs réponses de protocoles sont unifiées au maximum pour éviter une longue recherche dans plusieurs fichiers de logs volumineux.",
+        "description": {
+          "first": "Diagnostic rapide et isolation de la root-cause",
+          "second": "Suivi de l'état de santé des déploiements et des versions",
+          "third": "Centralisation et unification des logs hétérogènes"
+        }
       },
       "functional": {
-        "title": "Profils Fonctionnel",
-        "content": "Un profil fonctionnel peut facilement identifier un problème sans demander à l'équipe de développement de vérifier les logs, car INSPECT fournit des informations détaillées. Il est également possible de voir quelles requêtes sont les plus utilisées et quelles sont les plus critiques, ce qui aide à prioriser le backlog."
+        "title": "Profil fonctionnel",
+        "people": "PO, PM et métier",
+        "content": "Un profil fonctionnel peut facilement identifier un problème sans demander à l'équipe de développement de vérifier les logs, car INSPECT fournit des informations détaillées. Il est également possible de voir quelles requêtes sont les plus utilisées et quelles sont les plus critiques, ce qui aide à prioriser le backlog.",
+        "description": {
+          "first": "Visibilité claire sur les flux métier sans expertise technique",
+          "second": "Identification des requêtes et services les plus sollicités",
+          "third": "Priorisation éclairée du backlog basée sur des données réelles"
+        }
       }
     }
   },

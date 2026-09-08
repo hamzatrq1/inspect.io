@@ -66,7 +66,7 @@
         "content": "INSPECT is a tool that can facilitate the observability of your application. It allows you to detect and diagnose problems in complex systems. You have optimal observability on your application."
       },
       "metrics": {
-        "title": "Analytics",
+        "title": "Metrics",
         "content": "INSPECT allows you to extract useful insights from the collected data. This helps understand trends, identify queries more effectively, and improve system performance."
       },
       "time": {

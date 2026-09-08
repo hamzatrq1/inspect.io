@@ -305,3 +305,10 @@
 .mat-mdc-menu-panel {
   background-color: var(--clr-background, #ffffff) !important;
 }
+
+/* Responsive */
+@media(max-width: 768px) {
+  .title { font-size: 2.2rem; }
+  .subtitle { flex-direction: column; width: 100%; }
+  .btn-primary, .btn-secondary { width: 100%; text-align: center; }
+}

@@ -4,7 +4,7 @@ import { CommonModule, NgTemplateOutlet } from '@angular/common';
 import {HeaderComponent} from './components/header/header.component';
 import { NavigationEnd, Router, RouterLink, RouterOutlet} from '@angular/router';
 import { filter } from 'rxjs';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import { typBusinessCard } from '@ng-icons/typicons';
 import { hugeComputerProgramming01 } from '@ng-icons/huge-icons';
@@ -63,6 +63,7 @@ export class AppComponent {
   readonly scrollSpy = inject(ScrollspyService);
   private readonly router = inject(Router);
   private readonly destroyRef = inject(DestroyRef);
+  private readonly translate = inject(TranslateService);
 
   @HostListener('window:resize')
   onResize(): void {
@@ -144,6 +145,12 @@ export class AppComponent {
   });
 
   constructor() {
+    this.translate.addLangs(['en', 'fr']);
+    this.translate.setDefaultLang('en');
+    const browserLang = this.translate.getBrowserLang();
+    const langToUse = browserLang && ['en', 'fr'].includes(browserLang.toLowerCase()) ? browserLang.toLowerCase() : 'en';
+    this.translate.use(langToUse);
+
     this.router.events
       .pipe(
         filter((event): event is NavigationEnd => event instanceof NavigationEnd),

@@ -3,9 +3,9 @@ import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   imports: [TranslateModule],
-  selector: 'app-analytics',
-  styleUrls: ['./analytics.component.scss'],
-  templateUrl: './analytics.component.html',
+  selector: 'app-metrics',
+  styleUrls: ['./metrics.component.scss'],
+  templateUrl: './metrics.component.html',
   standalone: true,
 })
-export class AnalyticsComponent {}
+export class MetricsComponent {}

@@ -21,7 +21,7 @@
         "tests": "Tests"
       },
       "e2e": "End to end tracing",
-      "analytics": "Analytics",
+      "metrics": "Metrics",
       "health": "Application health",
       "autonomy": "Self management",
       "traceability": "Traceability"
@@ -65,7 +65,7 @@
         "title": "Observability",
         "content": "INSPECT is a tool that can facilitate the observability of your application. It allows you to detect and diagnose problems in complex systems. You have optimal observability on your application."
       },
-      "analytics": {
+      "metrics": {
         "title": "Analytics",
         "content": "INSPECT allows you to extract useful insights from the collected data. This helps understand trends, identify queries more effectively, and improve system performance."
       },
@@ -152,7 +152,7 @@
         "content":"INSPECT is able to display the chronology of a request in a tree view. This allows you to see the different calls made by the request and their duration. You can also see the status of each call and the exception if any."
       }
     },
-    "analytics": {
+    "metrics": {
       "title": "Analytics"
     },
     "health": {

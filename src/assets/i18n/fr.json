@@ -43,8 +43,8 @@
         "title": "Observabilité",
         "content": "INSPECT est un outil pouvant facilité l'observabilité de votre application. Elle permet de détecter et diagnostiquer les problèmes dans des systèmes complexes. Vous avez une observabilité optimale sur votre application"
       },
-      "analytics": {
-        "title": "Analyse",
+      "metrics": {
+        "title": "Métriques",
         "content": "INSPECT permet de récupérer de nombreuses informations et de quantifier les requêtes de votre application. Cela permet de comprendre les tendances, repérer au mieux les requêtes critiques et d'améliorer l'expérience utilisateur."
       },
       "time": {

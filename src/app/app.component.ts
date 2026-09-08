@@ -85,7 +85,7 @@ export class AppComponent {
       children: [
         { label: 'menu.features.monitoring.title', link: '/features/monitoring' },
         { label: 'menu.features.e2e', link: '/features/e2e' },
-        { label: 'menu.features.analytics', link: '/features/analytics' },
+        { label: 'menu.features.metrics', link: '/features/metrics' },
         { label: 'menu.features.health', link: '/features/health' },
         { label: 'menu.features.autonomy', link: '/features/autonomy' }
       ],
@@ -112,15 +112,6 @@ export class AppComponent {
         { label: 'menu.architecture.collector', link: '/architecture/collector' },
         { label: 'menu.architecture.server', link: '/architecture/server' },
       ],
-    },
-    {
-      label: 'menu.components.title',
-      link: '/components',
-      icon: 'fluentDocumentQueueMultiple',
-      // children: [
-      //   { label: 'menu.components.session', link: '/components/session' },
-      //   { label: 'menu.components.request', link: '/components/request' },
-      // ],
     },
     { label: 'menu.conduct-code', link: '/TODO', icon: 'matDocumentSearchRound' },
     { label: 'menu.contributing', link: '/TODO', icon: 'fluentPeopleTeam' },

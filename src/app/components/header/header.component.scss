@@ -1,12 +1,7 @@
-$text-primary: #0f172a;
-$surface: #ffffff;
-$surface-muted: #f8fafc;
-$border: rgba(15, 23, 42, 0.12);
-$shadow: rgba(15, 23, 42, 0.12);
+@use "src/styles.scss" as *;
 
 .site-header {
   position: fixed;
-
   top: 0;
   z-index: 1000;
   display: flex;
@@ -14,8 +9,9 @@ $shadow: rgba(15, 23, 42, 0.12);
   width: 100%;
   padding: 0.75rem 1.5rem;
   box-sizing: border-box;
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(8px);
+  background: var(--header-bg, rgba(255, 255, 255, 0.85));
+  border-bottom: 1px solid var(--clr-border);
 }
 
 // Bouton recherche rapide
@@ -71,7 +67,9 @@ $shadow: rgba(15, 23, 42, 0.12);
   height: 32px;
   width: auto;
   display: block;
-  color: $text-primary;
+  background: transparent;
+  color: var(--clr-text-primary);
+  cursor: pointer;
 }
 
 .home-button {
@@ -80,8 +78,8 @@ $shadow: rgba(15, 23, 42, 0.12);
   justify-content: center;
   width: 2.1rem;
   height: 2.1rem;
-  background: $surface;
-  color: $text-primary;
+  background: var(--clr-background);
+  color: var(--clr-text-primary);
   cursor: pointer;
   transition: border-color 0.2s ease, transform 0.2s ease;
   border: none;
@@ -98,21 +96,53 @@ $shadow: rgba(15, 23, 42, 0.12);
   }
 }
 
+// Theme switch button
+.theme-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  padding: 0.45rem 0.6rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md, 8px);
+  background: transparent;
+  color: var(--clr-text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: var(--clr-text-primary);
+    background: var(--clr-surface-muted);
+    border-color: var(--clr-border);
+    transform: translateY(-1px);
+  }
+
+  svg {
+    width: 18px;
+    height: 18px;
+    display: block;
+    flex-shrink: 0;
+  }
+}
+
 // Language switcher button
 .language-button {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  margin-left: auto;
+  margin-left: 0.4rem;
   padding: 0.45rem 0.7rem;
-  border: none;
-  background: $surface;
-  color: $text-primary;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md, 8px);
+  background: transparent;
+  color: var(--clr-text-secondary);
   cursor: pointer;
-  transition: border-color 0.2s ease, transform 0.2s ease;
+  transition: all 0.2s ease;
 
   &:hover {
-    border-color: rgba(15, 23, 42, 0.2);
+    color: var(--clr-text-primary);
+    background: var(--clr-surface-muted);
+    border-color: var(--clr-border);
     transform: translateY(-1px);
   }
 
@@ -126,12 +156,13 @@ $shadow: rgba(15, 23, 42, 0.12);
 
 .language-button__label {
   font-size: 0.85rem;
+  font-weight: 500;
   margin-right: auto;
 }
 
 .repo-menu {
   position: relative;
-  margin-left: 0.75rem;
+  margin-left: 0.5rem;
   display: flex;
   align-items: center;
   gap: 0.6rem;
@@ -142,20 +173,24 @@ $shadow: rgba(15, 23, 42, 0.12);
   align-items: center;
   gap: 0.35rem;
   padding: 0.45rem 0.7rem;
-  border: none;
-  background: $surface;
-  color: $text-primary;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md, 8px);
+  background: transparent;
+  color: var(--clr-text-primary);
   cursor: pointer;
   font-size: 0.9rem;
   font-weight: 500;
   line-height: 1;
+  transition: all 0.2s ease;
 
   &:hover {
+    background: var(--clr-surface-muted);
+    border-color: var(--clr-border);
     transform: translateY(-1px);
   }
 
   &:focus-visible {
-    outline: 2px solid rgba(15, 23, 42, 0.45);
+    outline: 2px solid var(--clr-primary, #6366f1);
     outline-offset: 2px;
   }
 
@@ -173,27 +208,41 @@ $shadow: rgba(15, 23, 42, 0.12);
   }
 }
 
-
 .social-links {
   display: flex;
   align-items: center;
-  gap: 0.73rem;
+  justify-content: center;
+  margin-left: 0.4rem;
+  padding: 0.45rem;
+  border-radius: var(--radius-md, 8px);
   cursor: pointer;
-  border: none;
+  border: 1px solid transparent;
   background-color: transparent;
-}
+  color: var(--clr-text-secondary);
+  transition: all 0.2s ease;
 
-.social-links path {
-  transition: fill 0.3s ease;
-}
+  &:hover {
+    color: var(--clr-text-primary);
+    background: var(--clr-surface-muted);
+    border-color: var(--clr-border);
+    transform: translateY(-1px);
+  }
 
-.social-links svg path {
-  fill: var(--gray-900);
+  svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+  }
+
+  svg path {
+    fill: currentColor;
+    transition: fill 0.2s ease;
+  }
 }
 
 .menu-label {
   font-size: 0.9rem;
-  color: $text-primary;
+  color: var(--clr-text-primary);
   font-weight: 400;
   line-height: 1;
 }
@@ -206,15 +255,15 @@ $shadow: rgba(15, 23, 42, 0.12);
   flex-direction: column;
   min-width: 220px;
   padding: 0.5rem;
-  background: $surface;
-  border: 1px solid $border;
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
   border-radius: 12px;
-  box-shadow: 0 18px 30px $shadow;
+  box-shadow: 0 18px 30px var(--shadow-lg);
   z-index: 10;
 }
 
 .menu-panel a {
-  color: $text-primary;
+  color: var(--clr-text-primary);
   text-decoration: none;
   padding: 0.7rem 0.9rem;
   border-radius: 8px;
@@ -224,7 +273,8 @@ $shadow: rgba(15, 23, 42, 0.12);
   transition: background 0.2s ease, color 0.2s ease;
 
   &:hover {
-    background: $surface-muted;
+    background: var(--clr-surface-muted);
+    color: var(--clr-primary, #6366f1);
   }
 }
 
@@ -242,12 +292,11 @@ $shadow: rgba(15, 23, 42, 0.12);
   padding: 0.1rem 0;
 }
 
-
 .doc-menu__title {
   font-size: 0.95rem;
   font-weight: 700;
   margin: 0 0 0.4rem;
-  color: #0f172a;
+  color: var(--clr-text-primary);
 }
 
 .doc-menu__dropdown {
@@ -257,13 +306,13 @@ $shadow: rgba(15, 23, 42, 0.12);
   width: 18rem;
   max-height: min(68vh, 34rem);
   overflow: auto;
-  background: #ffffff;
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
   border-radius: 12px;
   padding: 0.75rem;
-  box-shadow: 0 18px 30px rgba(15, 23, 42, 0.12);
+  box-shadow: 0 18px 30px var(--shadow-lg);
   z-index: 30;
 }
-
 
 .doc-menu__links {
   display: flex;
@@ -274,14 +323,15 @@ $shadow: rgba(15, 23, 42, 0.12);
 .doc-menu__link {
   display: flex;
   text-decoration: none;
-  color: #0f172a;
+  color: var(--clr-text-primary);
   font-size: 0.9rem;
   border-radius: 8px;
   padding: 0.45rem 0.6rem;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
 
   &:hover {
-    background: #f8fafc;
+    background: var(--clr-surface-muted);
+    color: var(--clr-primary, #6366f1);
   }
 }
 
@@ -295,13 +345,14 @@ $shadow: rgba(15, 23, 42, 0.12);
 .doc-menu__sublink {
   display: block;
   text-decoration: none;
-  color: #334155;
+  color: var(--clr-text-secondary);
   font-size: 0.82rem;
   border-radius: 8px;
   padding: 0.35rem 0.6rem;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
 
   &:hover {
-    background: #f8fafc;
+    background: var(--clr-surface-muted);
+    color: var(--clr-primary, #6366f1);
   }
 }

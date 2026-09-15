@@ -2,6 +2,7 @@
   "header": {
     "search": "Rechercher",
     "language-tooltip": "Changer la langue",
+    "theme-toggle": "Changer de thème",
     "repo": "Projets"
   },
   "common": {

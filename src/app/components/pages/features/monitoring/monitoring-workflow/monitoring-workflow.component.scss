@@ -25,17 +25,17 @@
     opacity: 0.15;
     pointer-events: none;
     z-index: 0;
+    animation: pulse-glow 8s ease-in-out infinite alternate;
 
     &--primary {
       top: -100px;
       left: 15%;
-      background: var(--brand-primary, #6366f1);
     }
 
     &--secondary {
       top: 50px;
       right: 15%;
-      background: var(--brand-accent, #06b6d4);
+      animation-delay: -4s;
     }
   }
 

@@ -12,7 +12,7 @@
     h2,
     h3 {
       margin: 1.5rem 0 0.75rem;
-      color: #0f172a;
+      color: var(--clr-text-primary, #0f172a);
     }
 
     h1 {
@@ -29,7 +29,7 @@
 
     p {
       margin: 0 0 1rem;
-      color: #334155;
+      color: var(--clr-text-secondary, #334155);
       line-height: 2.2;
     }
 
@@ -44,7 +44,7 @@
 
     li {
       line-height: 2.2;
-      color: #334155;
+      color: var(--clr-text-secondary, #334155);
     }
 
     pre {

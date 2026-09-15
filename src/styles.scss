@@ -1,5 +1,212 @@
 @use "@angular/material/prebuilt-themes/indigo-pink.css" as *;
 
+:root {
+  /* Brand colors */
+  --primary: #6366f1;
+  --primary-hover: #4f46e5;
+  --primary-glow: rgba(99, 102, 241, 0.22);
+  --secondary: #06b6d4;
+  --secondary-glow: rgba(6, 182, 212, 0.18);
+  --accent: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+
+  /* Surfaces & Backgrounds */
+  --clr-background: #ffffff;
+  --clr-surface: #f8fafc;
+  --clr-surface-subtle: #f1f5f9;
+  --clr-surface-raised: #ffffff;
+  --clr-surface-translucent: rgba(255, 255, 255, 0.85);
+  --bg-surface: #ffffff;
+  --bg-surface-hover: #f8fafc;
+  --bg-surface-subtle: #f1f5f9;
+  --bg-color: #ffffff;
+
+  /* Typography */
+  --clr-text-primary: #0f172a;
+  --clr-text-secondary: #475569;
+  --clr-text-tertiary: #64748b;
+  --clr-text-muted: #64748b;
+  --clr-text-disabled: #94a3b8;
+  --text-color: #0f172a;
+  --text-muted: #64748b;
+
+  /* Borders */
+  --clr-border: #e2e8f0;
+  --clr-border-subtle: rgba(226, 232, 240, 0.8);
+  --clr-border-hover: #cbd5e1;
+  --clr-border-active: #94a3b8;
+  --clr-border-focus: #6366f1;
+  --border-color: #e2e8f0;
+  --border-color-hover: #cbd5e1;
+
+  /* Cards */
+  --card-bg: #ffffff;
+  --card-bg-subtle: #f8fafc;
+  --card-border: rgba(226, 232, 240, 0.9);
+  --card-border-hover: rgba(99, 102, 241, 0.4);
+
+  /* Shadows */
+  --clr-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --clr-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  --clr-shadow-lg: 0 18px 30px rgba(15, 23, 42, 0.08);
+
+  /* Badges & Code */
+  --badge-bg: rgba(99, 102, 241, 0.08);
+  --badge-border: rgba(99, 102, 241, 0.25);
+  --badge-color: #6366f1;
+  --clr-code-bg: rgba(99, 102, 241, 0.08);
+  --clr-code-text: #4f46e5;
+  --brand-primary: #6366f1;
+  --brand-accent: #06b6d4;
+
+  /* Header & Navigation */
+  --header-bg: rgba(255, 255, 255, 0.85);
+  --header-border: rgba(15, 23, 42, 0.08);
+  --sidebar-bg: rgba(255, 255, 255, 0.7);
+  --sidebar-border: rgba(15, 23, 42, 0.08);
+}
+
+:root[data-theme="dark"],
+.dark,
+.dark-theme {
+  --primary: #818cf8;
+  --primary-hover: #6366f1;
+  --primary-glow: rgba(129, 140, 248, 0.28);
+  --secondary: #22d3ee;
+  --secondary-glow: rgba(34, 211, 238, 0.22);
+  --accent: #34d399;
+  --warning: #fbbf24;
+  --danger: #f87171;
+
+  /* Dark theme surfaces - elegant dark slate & midnight navy */
+  --clr-background: #090d16;
+  --clr-surface: #0f172a;
+  --clr-surface-subtle: #1e293b;
+  --clr-surface-raised: #141e33;
+  --clr-surface-translucent: rgba(9, 13, 22, 0.88);
+  --bg-surface: #141e33;
+  --bg-surface-hover: #1e293b;
+  --bg-surface-subtle: #0f172a;
+  --bg-color: #090d16;
+
+  /* Legible high-contrast typography */
+  --clr-text-primary: #f8fafc;
+  --clr-text-secondary: #cbd5e1;
+  --clr-text-tertiary: #94a3b8;
+  --clr-text-muted: #94a3b8;
+  --clr-text-disabled: #64748b;
+  --text-color: #f8fafc;
+  --text-muted: #cbd5e1;
+
+  /* Borders with subtle glow */
+  --clr-border: #1e293b;
+  --clr-border-subtle: rgba(51, 65, 85, 0.6);
+  --clr-border-hover: #334155;
+  --clr-border-active: #475569;
+  --clr-border-focus: #818cf8;
+  --border-color: #1e293b;
+  --border-color-hover: #334155;
+
+  /* Cards */
+  --card-bg: #141e33;
+  --card-bg-subtle: #0f172a;
+  --card-border: rgba(51, 65, 85, 0.7);
+  --card-border-hover: rgba(129, 140, 248, 0.5);
+
+  /* Deep shadows */
+  --clr-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --clr-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  --clr-shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.7);
+
+  /* Badges & Code */
+  --badge-bg: rgba(99, 102, 241, 0.15);
+  --badge-border: rgba(129, 140, 248, 0.35);
+  --badge-color: #a5b4fc;
+  --clr-code-bg: rgba(99, 102, 241, 0.2);
+  --clr-code-text: #a5b4fc;
+  --brand-primary: #818cf8;
+  --brand-accent: #22d3ee;
+
+  /* Header & Navigation */
+  --header-bg: rgba(9, 13, 22, 0.88);
+  --header-border: rgba(51, 65, 85, 0.5);
+  --sidebar-bg: rgba(15, 23, 42, 0.8);
+  --sidebar-border: rgba(51, 65, 85, 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --primary: #818cf8;
+    --primary-hover: #6366f1;
+    --primary-glow: rgba(129, 140, 248, 0.28);
+    --secondary: #22d3ee;
+    --secondary-glow: rgba(34, 211, 238, 0.22);
+    --accent: #34d399;
+    --warning: #fbbf24;
+    --danger: #f87171;
+
+    --clr-background: #090d16;
+    --clr-surface: #0f172a;
+    --clr-surface-subtle: #1e293b;
+    --clr-surface-raised: #141e33;
+    --clr-surface-translucent: rgba(9, 13, 22, 0.88);
+    --bg-surface: #141e33;
+    --bg-surface-hover: #1e293b;
+    --bg-surface-subtle: #0f172a;
+    --bg-color: #090d16;
+
+    --clr-text-primary: #f8fafc;
+    --clr-text-secondary: #cbd5e1;
+    --clr-text-tertiary: #94a3b8;
+    --clr-text-muted: #94a3b8;
+    --clr-text-disabled: #64748b;
+    --text-color: #f8fafc;
+    --text-muted: #cbd5e1;
+
+    --clr-border: #1e293b;
+    --clr-border-subtle: rgba(51, 65, 85, 0.6);
+    --clr-border-hover: #334155;
+    --clr-border-active: #475569;
+    --clr-border-focus: #818cf8;
+    --border-color: #1e293b;
+    --border-color-hover: #334155;
+
+    --card-bg: #141e33;
+    --card-bg-subtle: #0f172a;
+    --card-border: rgba(51, 65, 85, 0.7);
+    --card-border-hover: rgba(129, 140, 248, 0.5);
+
+    --clr-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+    --clr-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    --clr-shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.7);
+
+    --badge-bg: rgba(99, 102, 241, 0.15);
+    --badge-border: rgba(129, 140, 248, 0.35);
+    --badge-color: #a5b4fc;
+    --clr-code-bg: rgba(99, 102, 241, 0.2);
+    --clr-code-text: #a5b4fc;
+    --brand-primary: #818cf8;
+    --brand-accent: #22d3ee;
+
+    --header-bg: rgba(9, 13, 22, 0.88);
+    --header-border: rgba(51, 65, 85, 0.5);
+    --sidebar-bg: rgba(15, 23, 42, 0.8);
+    --sidebar-border: rgba(51, 65, 85, 0.5);
+  }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: var(--clr-background, #ffffff);
+  color: var(--clr-text-primary, #0f172a);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
 :host {
   --bright-blue: oklch(51.01% 0.274 263.83);
   --electric-violet: oklch(53.18% 0.28 296.97);
@@ -18,7 +225,7 @@
     var(--electric-violet) 100%
   );
 
-  --clr-surface-raised: white;
+  --clr-surface-raised: var(--card-bg);
 
   --red-to-pink-to-purple-horizontal-gradient: linear-gradient(
     90deg,
@@ -26,7 +233,6 @@
     var(--vivid-pink) 50%,
     var(--electric-violet) 100%
   );
-
 
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
   Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
@@ -52,47 +258,47 @@
 }
 
 .subtitle {
-  font-size: clamp(2rem, 5vw, 2rem);
-  color: var(--clr-text-secondary, #000000);
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  color: var(--clr-text-secondary, #64748b);
   font-weight: 600;
-  margin: 6rem auto 2rem;
+  margin: 3rem auto 2rem;
   line-height: 1.7;
-  strong { color: var(--clr-text-primary, #1e293b); font-weight: 600; }
+  strong { color: var(--clr-text-primary, #0f172a); font-weight: 600; }
   text-align: center;
 }
 
 .second_title {
-  font-size: clamp(1rem, 1vw, 3rem);
+  font-size: clamp(1rem, 2vw, 2rem);
   font-weight: 800;
-  color: var(--clr-text-secondary, #000000);
-  margin: 10rem auto 2rem;
+  color: var(--clr-text-primary, #0f172a);
+  margin: 4rem auto 2rem;
   line-height: 1.7;
-  strong { color: var(--clr-text-primary, #1e293b); font-weight: 600; }
+  strong { color: var(--clr-text-primary, #0f172a); font-weight: 600; }
 }
 
 .text {
   display: block;
-  margin-top: 4rem;
-  font-size: clamp(1.5rem, 1vw, 1.2rem);
+  margin-top: 2rem;
+  font-size: clamp(1rem, 1vw, 1.15rem);
   align-content: space-between;
-  line-height: 2;
+  line-height: 1.8;
   text-align: justify;
   row-gap: 2rem;
-  strong { color: var(--clr-text-primary, #1e293b); font-weight: 600; }
+  color: var(--clr-text-secondary, #475569);
+  strong { color: var(--clr-text-primary, #0f172a); font-weight: 600; }
   margin-bottom: 2rem;
-  padding: 2rem 3rem 3rem;
-
+  padding: 1rem 2rem 2rem;
 }
 
 .classical-text {
   margin-top: 2rem;
   display: block;
   text-align: center;
-  font-size: 1.5rem;
-  max-width: 500px;
+  font-size: 1.25rem;
+  max-width: 600px;
   line-height: 1.7;
-  padding: 2rem 3rem 3rem;
-
+  color: var(--clr-text-secondary, #475569);
+  padding: 1rem 2rem 2rem;
 }
 
 @keyframes tui-entrance {

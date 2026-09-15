@@ -144,7 +144,7 @@ $card-border-hover: var(--clr-primary, rgba(99, 102, 241, 0.4));
 
 .pillars-grid {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   margin-top: 1rem;
 
@@ -153,19 +153,21 @@ $card-border-hover: var(--clr-primary, rgba(99, 102, 241, 0.4));
   }
 }
 
+// Card Observability and Telemetry
 .pillar-card {
-  background: $card-bg;
   border-radius: 18px;
   padding: 1.8rem;
   display: flex;
   flex-direction: column;
+  text-align: center;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 
   &__top {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     margin-bottom: 1.2rem;
+    justify-content: center;
+
   }
 
   &__icon-wrap {
@@ -239,25 +241,26 @@ $card-border-hover: var(--clr-primary, rgba(99, 102, 241, 0.4));
   }
 
   &__points {
+    align-content: space-between;
     list-style: none;
     padding: 1rem;
-    margin: 0 0 1rem;
     display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-    text-align: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
     color: var(--clr-text-secondary, #475569);
 
     li {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.5rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
       font-size: 1rem;
       line-height: 1.45;
 
       .check-icon {
         color: $accent;
-        font-size: 1rem;
+        font-size: 1.1rem;
+        flex-shrink: 0;
       }
     }
   }

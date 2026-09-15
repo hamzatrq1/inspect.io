@@ -213,20 +213,18 @@
       "events": {
         "title": "Événements et contextes d'exécution",
         "subtitle": "API, BATCH, Démarrage, Tests : Comprendre tous les types d'activité",
-        "description": "Toute application ne se limite pas à quelques redirections vers des onglets, et des pop up. Il y a quasi systématiquement beaucoup de traitements de fonds, ou d'exécutions nocturnes qui sont indispensables et qu'il faut superviser",
+        "description": "Toute application ne se limite pas à quelques redirections vers des onglets : il y a quasi systématiquement beaucoup de traitements de fonds, ou d'exécutions nocturnes qui sont indispensables et qu'il faut superviser",
         "concept": {
-          "title": "Comprendre les contextes d'exécution",
-          "desc": "Un contexte d'exécution est la manière dont un programme informatique est réveillé pour travailler.",
           "batch": {
             "title": "Requêtes web et traitements réguliers",
             "desc": "Toute application exécute des requêtes web, qui passent par des API. Mais il y a aussi des batchs qui permettent d'exécuter des tâches de manière synchrone, par exemple des purges de données obsolètes ayant lieu tous les mois ou tous les ans. Ces API et ces batchs sont supervisables avec INSPECT."
           },
           "startup": {
-            "title": "Démarrage & Initialisation",
+            "title": "Démarrage et initialisation",
             "desc": "Le moment où l'application se charge, se connecte aux bases de données et vérifie sa configuration. INSPECT identifie immédiatement les composants qui retardent le démarrage."
           },
           "tests": {
-            "title": "Tests Automatisés",
+            "title": "Tests automatisés",
             "desc": "Les vérifications automatiques exécutées avant une mise en production. INSPECT capture les régressions de performance et les erreurs dès la phase de test."
           }
         },

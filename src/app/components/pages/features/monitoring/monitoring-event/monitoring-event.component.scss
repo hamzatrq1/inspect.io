@@ -465,13 +465,11 @@ $card-border-hover: rgba(99, 102, 241, 0.4);
 // 4 Contexts Pillars Grid
 .contexts-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+  margin-top: 1rem;
   gap: 1.75rem;
   width: 100%;
 
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-  }
 }
 
 .context-card {
@@ -481,6 +479,7 @@ $card-border-hover: rgba(99, 102, 241, 0.4);
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  text-align: center;
 
   &::before {
     content: '';
@@ -497,7 +496,7 @@ $card-border-hover: rgba(99, 102, 241, 0.4);
   &__top {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 1.25rem;
   }
 
@@ -511,7 +510,7 @@ $card-border-hover: rgba(99, 102, 241, 0.4);
     font-size: 1.4rem;
   }
 
-  &--api &__icon-wrap { background: rgba(99, 102, 241, 0.1); color: $primary; }
+
   &--batch &__icon-wrap { background: rgba(139, 92, 246, 0.1); color: #8b5cf6; }
   &--startup &__icon-wrap { background: rgba(14, 165, 233, 0.1); color: #0ea5e9; }
   &--test &__icon-wrap { background: rgba(16, 185, 129, 0.1); color: $accent; }

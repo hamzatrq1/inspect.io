@@ -168,7 +168,6 @@
       }
     },
     "solution": {
-      "badge": "La Solution INSPECT",
       "title": "Comment INSPECT unifie observabilité et télémétrie",
       "subtitle": "La passerelle universelle entre la réalité technique et vos enjeux métier",
       "description": "INSPECT collecte automatiquement toute la télémétrie, et la transforme instantanément en une observabilité limpide et visuelle.",
@@ -217,13 +216,9 @@
         "concept": {
           "title": "Comprendre les contextes d'exécution",
           "desc": "Un contexte d'exécution est la manière dont un programme informatique est réveillé pour travailler.",
-          "api": {
-            "title": "API & Requêtes Web",
-            "desc": "Une API est une porte d'entrée par laquelle un utilisateur ou une autre application demande un service ponctuel (ex: consulter un solde bancaire). INSPECT mesure chaque requête et alerte en cas d'erreur."
-          },
           "batch": {
-            "title": "Traitements BATCH ",
-            "desc": "Un Batch est une tâche lourde exécutée en arrière-plan sans intervention humaine (ex: générer 50 000 factures à 2h du matin). INSPECT suit la progression, le nombre d'éléments traités et le succès de chaque lot."
+            "title": "Requêtes web et traitements réguliers",
+            "desc": "Toute application exécute des requêtes web, qui passent par des API. Mais il y a aussi des batchs qui permettent d'exécuter des tâches de manière synchrone, par exemple des purges de données obsolètes ayant lieu tous les mois ou tous les ans. Ces API et ces batchs sont supervisables avec INSPECT."
           },
           "startup": {
             "title": "Démarrage & Initialisation",

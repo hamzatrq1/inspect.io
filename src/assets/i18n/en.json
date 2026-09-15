@@ -215,13 +215,9 @@
         "concept": {
           "title": "Understanding execution contexts",
           "desc": "An execution context is the mechanism through which a software program is triggered to perform work.",
-          "api": {
-            "title": "API & Web Requests",
-            "desc": "An API is a doorway through which a user or another application requests a service (e.g., checking a bank balance). INSPECT measures every request and alerts on failures."
-          },
           "batch": {
-            "title": "BATCH Processing",
-            "desc": "A Batch is a heavy task executed in the background without human intervention (e.g., generating 50,000 invoices at 2 AM). INSPECT tracks progress, item counts, and completion status."
+            "title": "Web requests and regular tasks",
+            "desc": "Every application executes web requests, using API. But there are also batchs jobs, who execute synchronously tasks, as for example deleting old datas every month or every year. These APIs and these batches can be monitored by INSPECT."
           },
           "startup": {
             "title": "Startup & Initialization",

@@ -16,9 +16,6 @@ $card-border-hover: rgba(99, 102, 241, 0.4);
 
 // Container
 .home-container {
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
   padding: 1.5rem 1rem 4rem;
   box-sizing: border-box;
   position: relative;
@@ -144,7 +141,6 @@ $card-border-hover: rgba(99, 102, 241, 0.4);
     color: $text-main;
     line-height: 1.18;
     max-width: 860px;
-    margin: 0 auto 1.5rem;
     letter-spacing: -0.02em;
   }
 
@@ -160,7 +156,6 @@ $card-border-hover: rgba(99, 102, 241, 0.4);
     font-size: clamp(1rem, 1.3vw, 1.15rem);
     color: $text-muted;
     max-width: 720px;
-    margin: 0 auto 2.5rem;
     line-height: 1.7;
   }
 
@@ -347,7 +342,7 @@ $card-border-hover: rgba(99, 102, 241, 0.4);
 
 // Sections Shared Styling
 .section {
-  padding: 4.5rem 0 2rem;
+  padding: 1.5rem 0 1.5rem;
   position: relative;
 
   &__header {
@@ -375,14 +370,12 @@ $card-border-hover: rgba(99, 102, 241, 0.4);
     font-weight: 800;
     color: $text-main;
     margin-bottom: 0.75rem;
-    letter-spacing: -0.01em;
   }
 
   &__subtitle {
     font-size: 1.05rem;
     color: $text-muted;
     line-height: 1.6;
-    margin: 0 auto;
   }
 
   &__action {
@@ -401,11 +394,8 @@ $card-border-hover: rgba(99, 102, 241, 0.4);
 }
 
 .feature-card {
-  background: $card-bg;
-  border: 1px solid $card-border;
   border-radius: 16px;
   padding: 1.75rem;
-  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
@@ -422,21 +412,6 @@ $card-border-hover: rgba(99, 102, 241, 0.4);
     background: linear-gradient(90deg, transparent 0%, rgba(99, 102, 241, 0.5) 50%, transparent 100%);
     opacity: 0;
     transition: opacity 0.3s ease;
-  }
-
-  &:hover {
-    transform: translateY(-6px);
-    border-color: $card-border-hover;
-    box-shadow: 0 14px 30px rgba(99, 102, 241, 0.12);
-
-    &::before {
-      opacity: 1;
-    }
-
-    .feature-card__icon-wrap {
-      transform: scale(1.05);
-      background: rgba(99, 102, 241, 0.12);
-    }
   }
 
   &__top {
@@ -540,36 +515,12 @@ $card-border-hover: rgba(99, 102, 241, 0.4);
 }
 
 .profile-card {
-  background: $card-bg;
-  border: 1px solid $card-border;
   border-radius: 18px;
   padding: 2rem;
-  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.04);
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
   flex-direction: column;
   position: relative;
-
-  &:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 16px 36px rgba(15, 23, 42, 0.1);
-  }
-
-  &--tech {
-    border-left: 4px solid #6366f1;
-
-    &:hover {
-      border-color: #6366f1;
-    }
-  }
-
-  &--func {
-    border-left: 4px solid #06b6d4;
-
-    &:hover {
-      border-color: #06b6d4;
-    }
-  }
 
   &__header {
     display: flex;

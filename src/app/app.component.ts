@@ -58,8 +58,8 @@ import { ScrollspyService } from '@services/scrollspy.service';
 export class AppComponent {
   @Output() tabName: string | undefined;
 
-  private readonly mobileBreakpoint = 1024;
-  readonly menuVisible = signal(typeof window !== 'undefined' ? window.innerWidth >= 1024 : true);
+  private readonly mobileBreakpoint = 768; // px
+  readonly menuVisible = signal(typeof window !== 'undefined' ? window.innerWidth >= 768 : true);
   readonly scrollSpy = inject(ScrollspyService);
   private readonly router = inject(Router);
   private readonly destroyRef = inject(DestroyRef);
@@ -148,20 +148,11 @@ export class AppComponent {
     return labels;
   }
 
-  readonly openSections = signal<Record<string, boolean>>(
-    AppComponent.collectExpandableLabels(this.docMenuItems).reduce<Record<string, boolean>>(
-      (sections, label) => {
-        sections[label] = false;
-        return sections;
-      },
-      {},
-    ),
-  );
+  readonly openSections = signal<Record<string, boolean>>({});
 
   readonly areAllSectionsOpen = computed(() => {
-    const sections = this.openSections();
-    const keys = Object.keys(sections);
-    return keys.length > 0 && keys.every((key) => sections[key]);
+    const allLabels = AppComponent.collectExpandableLabels(this.docMenuItems);
+    return allLabels.length > 0 && allLabels.every((label) => this.isSectionOpen(label));
   });
 
   constructor() {
@@ -190,6 +181,17 @@ export class AppComponent {
     this.openAncestorsForUrl(this.router.url);
   }
 
+  private findMenuItemByLabel(label: string, items: MenuItem[] = this.docMenuItems): MenuItem | undefined {
+    for (const item of items) {
+      if (item.label === label) return item;
+      if (item.children?.length) {
+        const found = this.findMenuItemByLabel(label, item.children);
+        if (found) return found;
+      }
+    }
+    return undefined;
+  }
+
   private openAncestorsForUrl(url: string): void {
     const cleanUrl = url.split('?')[0].split('#')[0];
     if (!cleanUrl || cleanUrl === '/') {
@@ -197,32 +199,6 @@ export class AppComponent {
     }
 
     const labelsToOpen = new Set<string>();
-
-    const checkItem = (item: MenuItem): boolean => {
-      const matchesSelf = item.link !== '/' && (cleanUrl === item.link || cleanUrl.startsWith(item.link + '/'));
-      let matchesChild = false;
-
-      if (item.children && item.children.length > 0) {
-        for (const child of item.children) {
-          if (checkItem(child)) {
-            matchesChild = true;
-          }
-        }
-      }
-
-      if (matchesChild || matchesSelf) {
-        if (item.children && item.children.length > 0) {
-          labelsToOpen.add(item.label);
-        }
-        return true;
-      }
-
-      return false;
-    };
-
-    for (const item of this.docMenuItems) {
-      checkItem(item);
-    }
 
     if (labelsToOpen.size > 0) {
       this.openSections.update((sections) => {
@@ -259,25 +235,33 @@ export class AppComponent {
   }
 
   isSectionOpen(label: string): boolean {
-    return this.openSections()[label] ?? false;
+    const explicit = this.openSections()[label];
+    if (explicit !== undefined) {
+      return explicit;
+    }
+    const item = this.findMenuItemByLabel(label);
+    if (item && this.isItemActive(item)) {
+      return true;
+    }
+    return false;
   }
 
   toggleSection(label: string): void {
+    const currentState = this.isSectionOpen(label);
     this.openSections.update((sections) => ({
       ...sections,
-      [label]: !sections[label],
+      [label]: !currentState,
     }));
   }
 
   toggleAllSections(): void {
     const shouldOpen = !this.areAllSectionsOpen();
+    const allLabels = AppComponent.collectExpandableLabels(this.docMenuItems);
     const updated: Record<string, boolean> = {};
-    this.openSections.update((sections) => {
-      for (const key of Object.keys(sections)) {
-        updated[key] = shouldOpen;
-      }
-      return updated;
-    });
+    for (const label of allLabels) {
+      updated[label] = shouldOpen;
+    }
+    this.openSections.set(updated);
   }
 
   toggleMenuVisibility(): void {

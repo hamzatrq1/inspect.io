@@ -43,11 +43,11 @@
   }
 }
 .title {
-  font-size: clamp(2rem, 2vw, 3rem);
+  font-size: clamp(2rem, 2vw, 2.4rem);
   font-weight: 800;
   color: var(--clr-text-primary, #0f172a);
   display: block;
-  margin-top: 3rem;
+  margin-top: 2.5rem;
   text-align: center;
 }
 
@@ -80,6 +80,8 @@
   row-gap: 2rem;
   strong { color: var(--clr-text-primary, #1e293b); font-weight: 600; }
   margin-bottom: 2rem;
+  padding: 2rem 3rem 3rem;
+
 }
 
 .classical-text {
@@ -89,6 +91,8 @@
   font-size: 1.5rem;
   max-width: 500px;
   line-height: 1.7;
+  padding: 2rem 3rem 3rem;
+
 }
 
 @keyframes tui-entrance {
@@ -287,7 +291,6 @@
   color: #ffffff;
   background-color: rgba(97, 97, 97, 0.95);
   border-radius: 4px;
-  padding: 4px 8px;
   max-width: 400px;
   text-overflow: ellipsis;
   overflow: hidden;

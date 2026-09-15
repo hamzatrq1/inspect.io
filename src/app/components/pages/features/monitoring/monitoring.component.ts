@@ -1,11 +1,30 @@
-import { Component, ElementRef, inject, AfterViewInit, OnDestroy } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, inject, OnDestroy } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-import { ApiComponent } from '@app/components/pages/features/monitoring/api/api.component';
-import { ScrollspyService } from '@app/services/scrollspy.service';
+import { NgIcon, provideIcons } from '@ng-icons/core';
+import {
+  bootstrapCheckCircleFill,
+  bootstrapSearch,
+  bootstrapBarChartFill,
+  bootstrapExclamationTriangleFill,
+  bootstrapLightningChargeFill,
+} from '@ng-icons/bootstrap-icons';
+import { ScrollspyService } from '@services/scrollspy.service';
 
 @Component({
   selector: 'app-monitoring',
-  imports: [TranslateModule, ApiComponent],
+  imports: [
+    TranslateModule,
+    NgIcon
+  ],
+  providers: [
+    provideIcons({
+      bootstrapCheckCircleFill,
+      bootstrapSearch,
+      bootstrapBarChartFill,
+      bootstrapExclamationTriangleFill,
+      bootstrapLightningChargeFill,
+    }),
+  ],
   templateUrl: './monitoring.component.html',
   styleUrls: ['./monitoring.component.scss'],
   standalone: true,
@@ -16,10 +35,11 @@ export class MonitoringComponent implements AfterViewInit, OnDestroy {
   private observer?: IntersectionObserver;
 
   ngAfterViewInit(): void {
+    if (typeof window === 'undefined') return;
     const sections = [
-      { selector: 'app-api', path: '/features/monitoring/api' },
-      { selector: 'app-batch', path: '/features/monitoring/batch' },
-      { selector: 'app-tests', path: '/features/monitoring/tests' },
+      { selector: 'app-monitoring-event', path: '/features/monitoring/event' },
+      { selector: 'app-monitoring-workflow', path: '/features/monitoring/workflow' },
+      { selector: 'app-monitoring-user', path: '/features/monitoring/user' },
     ];
 
     this.observer = new IntersectionObserver(

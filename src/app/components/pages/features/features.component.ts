@@ -1,27 +1,39 @@
 import { AfterViewInit, Component, ElementRef, HostListener, inject, OnDestroy, signal } from '@angular/core';
 import { Router } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
+import { NgIcon, provideIcons } from '@ng-icons/core';
+import {
+  bootstrapRocketTakeoffFill,
+  bootstrapArrowRight,
+  bootstrapEyeFill,
+  bootstrapActivity,
+  bootstrapShieldCheck,
+  bootstrapCheckCircleFill,
+} from '@ng-icons/bootstrap-icons';
 import { goToPage, ScrollNavigationHandler } from '@utils/utils';
-import { MonitoringComponent } from '@app/components/pages/features/monitoring/monitoring.component';
-import { E2eComponent } from '@app/components/pages/features/e2e/e2e.component';
-import { MetricsComponent } from '@app/components/pages/features/metrics/metrics.component';
-import { HealthComponent } from '@app/components/pages/features/health/health.component';
-import { AutonomyComponent } from '@app/components/pages/features/autonomy/autonomy.component';
 import { ScrollspyService } from '@services/scrollspy.service';
 
 @Component({
   selector: 'app-features',
   imports: [
-    MonitoringComponent,
-    E2eComponent,
-    MetricsComponent,
-    HealthComponent,
-    AutonomyComponent,
+    TranslateModule,
+    NgIcon,
+  ],
+  providers: [
+    provideIcons({
+      bootstrapRocketTakeoffFill,
+      bootstrapArrowRight,
+      bootstrapEyeFill,
+      bootstrapActivity,
+      bootstrapShieldCheck,
+      bootstrapCheckCircleFill,
+    }),
   ],
   templateUrl: './features.component.html',
   styleUrls: ['./features.component.scss'],
   standalone: true,
 })
-export class FeaturesComponent implements AfterViewInit, OnDestroy {
+export class FeaturesComponent {
   private readonly router = inject(Router);
   private readonly elementRef = inject(ElementRef);
   private readonly scrollSpy = inject(ScrollspyService);
@@ -36,7 +48,7 @@ export class FeaturesComponent implements AfterViewInit, OnDestroy {
     isScrollUpVisible: this.isScrollUpVisible,
     isScrollDownVisible: this.isScrollDownVisible,
     onNavigateUp: () => this.goToHome(),
-    onNavigateDown: () => this.goToInstallation(),
+    onNavigateDown: () => this.goToNext(),
   });
 
   ngAfterViewInit(): void {
@@ -45,10 +57,9 @@ export class FeaturesComponent implements AfterViewInit, OnDestroy {
     const sections = [
       { selector: 'app-monitoring', path: '/features/monitoring' },
       { selector: 'app-e2e', path: '/features/e2e' },
-      { selector: 'app-analytics', path: '/features/analytics' },
+      { selector: 'app-metrics', path: '/features/metrics' },
       { selector: 'app-health', path: '/features/health' },
       { selector: 'app-autonomy', path: '/features/autonomy' },
-      { selector: 'app-traceability', path: '/features/traceability' },
     ];
 
     this.observer = new IntersectionObserver(
@@ -76,9 +87,14 @@ export class FeaturesComponent implements AfterViewInit, OnDestroy {
     this.scrollSpy.setActivePath(null);
   }
 
+  goToNext(): void {
+    goToPage(this.isTransitioning(), this.router, '/features/monitoring');
+  }
+
   goToInstallation(): void {
     goToPage(this.isTransitioning(), this.router, '/installation');
   }
+
 
   goToHome(): void {
     goToPage(this.isTransitioning(), this.router, '/');

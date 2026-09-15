@@ -4,6 +4,14 @@
     "language-tooltip": "Change language",
     "repo": "Repositories"
   },
+  "common": {
+    "function": "Functionality",
+    "button": {
+      "install": "Install INSPECT",
+      "architecture": "Discover architecture",
+      "compatibilities": "Discover compatibilities"
+    }
+  },
   "menu": {
     "button": {
       "tooltip": {
@@ -39,7 +47,7 @@
         "events": "Event history"
       },
       "autonomy": {
-        "title": "Self Management and Autonomy",
+        "title": "Self management and autonomy",
         "partitioning": "Dynamic data partitioning",
         "purge": "Purge and intelligent retention",
         "self-reporting": "Self reporting"
@@ -59,23 +67,22 @@
   "home": {
     "title": "INSPECT",
     "badge": {
-      "first": "Next-Gen Observability & Telemetry",
-      "second": "Strenghts",
-      "third": "For who ?",
+      "title": "DESCRIPTION",
+      "e2e": "Start to end",
       "realtime": "Real time",
       "quick-deploiement": "Quick deployment"
     },
     "headline": {
       "prefix": "Stop guessing.",
       "highlight": "INSPECT",
-      "suffix": "what is truly happening in your stack."
+      "suffix": "what is truly happening in your application."
     },
     "content": "INSPECT is a platform for monitoring and analyzing multiple types of calls and designed to provide deep visibility into the interactions between different components of a distributed system. INSPECT allows you to monitor and analyze the performance of your application, identify potential issues, and optimize your system's performance.",
     "cta": {
       "explore": "Explore features",
       "architecture": "Explore architecture",
       "install": "Get started with installation",
-      "title": "Ready to transform your observability?",
+      "title": "Ready to transform your observability and a lot more?",
       "subtitle": "Integrate INSPECT easily and get total visibility over your microservices in minutes."
     },
     "profiles": {
@@ -119,15 +126,15 @@
       },
       "time": {
         "title": "Real time",
-        "content": "INSPECT allows you to follow in real time the api calls and the global performances. It helps for detecting quickly some issues and to resolve them before your users are getting impacted from it"
+        "content": "INSPECT allows you to follow in real time the API calls and the global performances. It helps for detecting quickly some issues and to resolve them before your users are getting impacted from it"
       },
       "e2e": {
         "title": "Start to end informations",
         "content": "When you are trying to find the root cause of an issue, you might be used to look for one log in a lot of files and lines. INSPECT makes you improve time because it's able to follow an action to it's start until it's end, even if the trace id are changing."
       },
       "uniformize": {
-        "title": "Data Uniformization",
-        "content": "Request analyzed are uniformized at a maximum level. If the callback are HTTP requests, JDBC, SMTP... the responses are studied so you can understand easily where the issue is located, even without any technical knowledge."
+        "title": "Data uniformization",
+        "content": "Request analyzed are uniformized at a maximum level. If the callback are HTTP requests, JDBC, SMTP... The responses are studied so you can understand easily where the issue is located, even without any technical knowledge."
       },
       "heartbeat": {
         "title": "Monitoring",
@@ -136,71 +143,704 @@
     }
   },
   "features": {
-    "title": "Features",
+    "title": "INSPECT : a tool for telemetry, observability, and monitoring",
+    "subtitle": "Total visibility for technical and functional teams, with zero code modifications.",
+    "badge": {
+      "title": "FEATURES"
+    },
+    "observability": {
+      "title": "Observability",
+      "subtitle": "Understanding internal system state through external signals",
+      "description": "Observability is the ability to understand a software system's internal health, behavior, and failures simply by analyzing its external outputs.",
+      "value": {
+        "title": "What it brings to you:",
+        "desc": "No more crisis meetings where teams blame each other. Observability enables everyone (business, support, developers) to understand within seconds what truly happened during an incident."
+      }
+    },
+    "telemetry": {
+      "title": "Telemetry",
+      "subtitle": "Automatic and continuous collection of vital signals",
+      "description": "Telemetry refers to the automated collection of raw measurements and signals from the core of your applications: execution times, errors encountered, memory consumption, or the journey taken by a transaction.",
+      "value": {
+        "title": "What it brings to you:",
+        "desc": "Telemetry provides objective, indisputable facts. You no longer rely on assumptions: every user action or nightly batch job has a timestamped factual record."
+      }
+    },
+    "solution": {
+      "title": "How INSPECT unifies observability and telemetry",
+      "subtitle": "The universal bridge between technical reality and business stakes",
+      "description": "INSPECT gathers all telemetry, transforming it instantly into clear, visual observability.",
+      "points": {
+        "zerocode": "Zero code changes: installs as a lightweight agent without disrupting existing applications.",
+        "holistic": "Unified view: seamlessly links user actions, background batch processing, and database calls in real time.",
+        "functional": "Universal: translates technical events into functional business milestones understandable by product managers and business stakeholders."
+      }
+    },
     "monitoring": {
       "title": "Monitoring",
+      "badges": {
+        "title": "MONITORING"
+      },
+      "intro": {
+        "title": "Global supervision and real-time activity tracking",
+        "subtitle": "Traces, Metrics, Exceptions, and Dual Event Trace explained simply",
+        "description": "Monitoring an application means keeping a constant watch on its heartbeat. INSPECT automatically captures every event (success or failure), execution speed metric, and anomaly, correlating business events with their technical traces."
+      },
+      "pillars": {
+        "traces": {
+          "title": "Execution Traces",
+          "description": "The complete chronological journey of a request across the application, step by step.",
+          "benefit": "Know exactly where and why a transaction slowed down or failed."
+        },
+        "metrics": {
+          "title": "Performance Metrics",
+          "description": "Periodic numerical indicators: active users, average latency, request volume.",
+          "benefit": "Assess overall application health and plan future capacity needs."
+        },
+        "exceptions": {
+          "title": "Exceptions & Errors",
+          "description": "Automatic capture of system errors with the exact context of the failure.",
+          "benefit": "Diagnose root cause without having to manually reproduce the bug."
+        },
+        "dualtrace": {
+          "title": "Dual Event Trace",
+          "description": "The unique bridge reconciling functional business events (e.g. order placed) with technical traces.",
+          "benefit": "Instant shared understanding between business and technical teams."
+        }
+      },
       "events": {
-        "title": "Events and executions context"
+        "title": "Events and execution contexts",
+        "subtitle": "API, BATCH, Startup, Tests: understanding all forms of system activity",
+        "description": "An application doesn't limit itself at only a few clicks and some pop-ups. There are, almost always, a lot of batchs and tasks in background or during the night who are necessary and need to be monitored",
+        "concept": {
+          "title": "Understanding execution contexts",
+          "desc": "An execution context is the mechanism through which a software program is triggered to perform work.",
+          "api": {
+            "title": "API & Web Requests",
+            "desc": "An API is a doorway through which a user or another application requests a service (e.g., checking a bank balance). INSPECT measures every request and alerts on failures."
+          },
+          "batch": {
+            "title": "BATCH Processing",
+            "desc": "A Batch is a heavy task executed in the background without human intervention (e.g., generating 50,000 invoices at 2 AM). INSPECT tracks progress, item counts, and completion status."
+          },
+          "startup": {
+            "title": "Startup & Initialization",
+            "desc": "The moment the application boots up, connects to databases, and loads configurations. INSPECT highlights components causing slow boot times."
+          },
+          "tests": {
+            "title": "Automated Tests",
+            "desc": "Automated checks run before releasing to production. INSPECT detects performance regressions and bugs during staging."
+          }
+        },
+        "value": {
+          "title": "The INSPECT Advantage for Your Teams",
+          "first": {
+            "title": "Total visibility into batches",
+            "desc": "Never discover too late that some task failed at 3 AM. INSPECT gives you full status, duration, and the exact failing item."
+          },
+          "second": {
+            "title": "Instant API diagnostics",
+            "desc": "Instantly pinpoint whether latency comes from your server, the network, or a third-party partner service."
+          },
+          "third": {
+            "title": "Continuous quality validation",
+            "desc": "Compare performance between releases during QA tests to prevent regressions from reaching production."
+          }
+        }
       },
       "workflow": {
-        "title": "Outgoing flows and system dependencies"
+        "title": "Outbound flows and system dependencies",
+        "subtitle": "Stage analysis: JDBC, FTP, SMTP, REST...",
+        "description": "No application lives in isolation. To operate, it queries databases, sends emails, transfers files, and calls external services. INSPECT maps and measures every outbound stream.",
+        "concept": {
+          "title": "Understanding outbound flows and stages",
+          "desc": "An 'outbound flow' is a call made by your application to an external system. A 'stage' is a chronological step in that processing. The workflow can be treat by multiple ways and protocols",
+          "jdbc": {
+            "title": "JDBC / Database",
+            "desc": "The protocol used to read or store data. INSPECT measures exact SQL execution time and detects slow queries."
+          },
+          "rest": {
+            "title": "REST / Web Services",
+            "desc": "Calls to partner applications (e.g. payment gateway). INSPECT isolates delays caused by external partners."
+          },
+          "ftp": {
+            "title": "FTP / SFTP",
+            "desc": "Sending or fetching files from remote servers. INSPECT monitors throughput, file sizes, and network connection errors."
+          },
+          "smtp": {
+            "title": "SMTP / Emails",
+            "desc": "Sending notifications, order confirmations, and alerts. INSPECT ensures emails are dispatched and tracks delivery latencies."
+          },
+          "stages": {
+            "title": "Stage analysis",
+            "desc": "Breaking down a complex transaction into clear consecutive steps to immediately spot which step took the most time."
+          }
+        },
+        "value": {
+          "title": "The INSPECT Advantage for Your Teams",
+          "first": {
+            "title": "No more endless exchanges about a bug responsibility",
+            "desc": "Find immediately  if an issue stems from your app, the network, the file server, or the database."
+          },
+          "second": {
+            "title": "Detect bottlenecks early",
+            "desc": "Identify slow SQL queries or external API calls penalizing user experience."
+          },
+          "third": {
+            "title": "Resilience and foresight",
+            "desc": "Detect unstable third-party dependencies before they trigger complete system outages."
+          }
+        }
       },
       "user": {
-        "title": "User cases"
+        "badges": {
+          "title": "USER EXPERIENCE"
+        },
+        "title": "User Experience & Journey Analytics",
+        "subtitle": "Navigation and Product Analytics to maximize customer satisfaction",
+        "description": "Technical performance only matters if it delivers value to the end user. INSPECT links navigation journeys directly to the real performance felt by your customers.",
+        "concept": {
+          "title": "Understanding user journey analytics",
+          "desc": "A user journey represents the sequence of screens and actions taken by a customer (e.g., search item -> add to cart -> checkout).",
+          "journey": {
+            "title": "User Journeys & Navigation (The Customer Path)",
+            "desc": "Tracking step-by-step navigation to discover where users encounter roadblocks, errors, or slow screens."
+          },
+          "analytics": {
+            "title": "Product Analytics (Usage Insights)",
+            "desc": "Measuring which features are most used, at what times, and identifying drop-off rates during critical business funnels."
+          }
+        },
+        "value": {
+          "title": "The INSPECT Advantage for Your Teams",
+          "subtitle": "Align product decisions with real customer behavior",
+          "first": {
+            "title": "Understand the business impact of bugs",
+            "desc": "Measure exactly how many customers were blocked by a technical issue and the associated revenue impact."
+          },
+          "second": {
+            "title": "Optimize conversion funnels",
+            "desc": "Detect slow pages that frustrate users and cause checkout abandonment."
+          },
+          "third": {
+            "title": "Empowered customer support",
+            "desc": "When a customer contacts support, view their full session history and the exact error encountered in a few clicks."
+          }
+        }
       }
     },
     "e2e": {
-      "title": "Cartography and traceability",
+      "title": "End-to-End Cartography & Tracing",
+      "badges": {
+        "title": "END-TO-END TRACEABILITY"
+      },
+      "intro": {
+        "title": "End-to-End vision across your information systems",
+        "subtitle": "Track transactions from the user click down to the database",
+        "description": "In modern multi-service architectures, following the path of an operation can be daunting. INSPECT provides continuous, seamless visibility across the entire chain."
+      },
       "tree": {
-        "title": "Trace tree"
+        "badges": {
+          "title": "TRACE TREE"
+        },
+        "title": "Detailed Trace Tree",
+        "subtitle": "Component-by-call view: An X-ray of your transactions",
+        "description": "The trace tree decomposes an operation into a visual hierarchy showing every component involved, each step's duration, and the exact failure point.",
+        "concept": {
+          "title": "Understanding the Trace Tree",
+          "desc": "A trace tree is like an itemized receipt or a family tree of execution: the parent action triggers child sub-actions.",
+          "span": {
+            "title": "Traces & Spans (The Building Blocks)",
+            "desc": "A trace represents the complete journey of a request. Each sub-step (database call, calculation, external request) is an accurately timed 'span'."
+          },
+          "hierarchy": {
+            "title": "Hierarchical View (Who called what?)",
+            "desc": "A clean visual tree showing how components execute sequentially or concurrently."
+          }
+        },
+        "value": {
+          "title": "The INSPECT Advantage for Your Teams",
+          "subtitle": "Pinpoint the failing line of code in 3 clicks",
+          "first": {
+            "title": "Ultra-fast MTTR (Mean Time to Resolution)",
+            "desc": "No need to read thousands of obscure log lines: the trace tree highlights the exact failing call in bright red."
+          },
+          "second": {
+            "title": "Understand latency breakdown",
+            "desc": "See at a glance if a 3-second operation spent 2.8 seconds waiting for a third-party response."
+          },
+          "third": {
+            "title": "Bridging business and engineering",
+            "desc": "A universal visual representation that allows business analysts to clearly point out failing steps to engineers."
+          }
+        }
       },
       "thread": {
-        "title": "Thread execution tracking"
+        "badges": {
+          "title": "THREAD TRACKING & ASYNCHRONISM"
+        },
+        "title": "Thread Processing & Tracking",
+        "subtitle": "Asynchronism & Multi-threading: Never lose the thread",
+        "description": "To achieve high performance, modern applications distribute work across multiple virtual 'workers' (threads) running concurrently. INSPECT maintains unbroken traceability across thread boundaries.",
+        "concept": {
+          "title": "What are Threads and Asynchronism?",
+          "desc": "Simple explanations to understand how servers handle multiple tasks at once.",
+          "thread": {
+            "title": "What is a Thread? (The Kitchen Chef)",
+            "desc": "A thread is an autonomous execution worker. Think of a restaurant kitchen brigade: each chef is a thread preparing a specific recipe alongside others."
+          },
+          "async": {
+            "title": "What is Asynchronism? (The Order Buzzer)",
+            "desc": "Delegating a heavy task to the background (e.g. generating a PDF report) and immediately freeing the user with an order buzzer without freezing their screen."
+          },
+          "context": {
+            "title": "The Common Pitfall: Context Loss",
+            "desc": "In most tools, when a task hops to a background worker, the correlation thread is lost. INSPECT solves this by seamlessly propagating the Trace ID."
+          }
+        },
+        "value": {
+          "title": "The INSPECT Advantage for Your Teams",
+          "subtitle": "Unbroken traceability even in complex async architectures",
+          "first": {
+            "title": "Full tracking of background tasks",
+            "desc": "Follow transactions through message queues, background executors, and reactive pipelines."
+          },
+          "second": {
+            "title": "Detection of thread locks (Deadlocks)",
+            "desc": "Identify situations where workers wait on each other indefinitely, causing application freezes."
+          },
+          "third": {
+            "title": "Native support for modern standards",
+            "desc": "Compatible with standard threads and modern Virtual Threads (Java 21 Loom) with zero complex setup."
+          }
+        }
       },
-      "architecture": {
-        "title": "Dynamic system cartography"
+      "cartography": {
+        "badges": {
+          "title": "DYNAMIC CARTOGRAPHY"
+        },
+        "title": "Global Architecture Map",
+        "subtitle": "Dynamic real-time mapping of systems and dependencies",
+        "description": "Say goodbye to outdated PowerPoint architecture diagrams. INSPECT automatically draws a living, real-time map of your system based on actual traffic.",
+        "concept": {
+          "title": "Understanding Dynamic Cartography",
+          "desc": "Dynamic cartography is the interactive, always up-to-date subway map of your software ecosystem.",
+          "map": {
+            "title": "The Flow Map (The Information Highway Map)",
+            "desc": "A graphical diagram where each node is an application, service, or database, and each line reflects live communication."
+          },
+          "health": {
+            "title": "Live Health Status (Traffic Color Codes)",
+            "desc": "Nodes and connections change color (green, yellow, red) depending on live saturation and error rates."
+          }
+        },
+        "value": {
+          "title": "The INSPECT Advantage for Your Teams",
+          "subtitle": "Simplified governance and risk management",
+          "first": {
+            "title": "Always up-to-date documentation",
+            "desc": "Get the true map of your architecture without relying on manual diagrams that quickly become obsolete."
+          },
+          "second": {
+            "title": "Impact analysis before changes",
+            "desc": "Before modifying or deprecating a service, instantly visualize every upstream application depending on it."
+          },
+          "third": {
+            "title": "Clear communication with stakeholders",
+            "desc": "Present the state of your infrastructure clearly and visually to leadership and audit committees."
+          }
+        }
       }
     },
     "metrics": {
-      "title": "Metrics and APM",
-      "availability": {
-        "title": "Performance metrics and APM"
+      "title": "Performance Metrics & APM",
+      "badges": {
+        "title": "PERFORMANCE METRICS & APM"
+      },
+      "intro": {
+        "title": "Proactive performance and health monitoring",
+        "subtitle": "Measure, anticipate, and guarantee service quality",
+        "description": "APM (Application Performance Monitoring) continuously measures the vitality of your software to detect performance degradations before users suffer."
+      },
+      "sla": {
+        "badges": {
+          "title": "HEALTH & AVAILABILITY"
+        },
+        "title": "Health & Availability",
+        "subtitle": "SLA, Uptime, Error Rates, and Error Budgets",
+        "description": "Objectively measure compliance with service commitments and the reliability of your applications for customers and partners.",
+        "concept": {
+          "title": "Understanding availability and SLA concepts",
+          "desc": "Simple terms to measure if a service performs as promised.",
+          "sla": {
+            "title": "What is an SLA? (The Quality Commitment)",
+            "desc": "Service Level Agreement: The formal commitment of uptime (e.g., 99.9% guaranteed monthly availability)."
+          },
+          "uptime": {
+            "title": "What is Uptime? (Active Service Time)",
+            "desc": "The percentage of time an application is accessible and fully operational without outages."
+          },
+          "budget": {
+            "title": "What is an Error Budget? (The Safety Cushion)",
+            "desc": "The maximum number of incidents or minutes of downtime tolerated over a period before breaching contracts."
+          }
+        },
+        "value": {
+          "title": "The INSPECT Advantage for Your Teams",
+          "subtitle": "Ensure customer trust with verifiable metrics",
+          "first": {
+            "title": "Objective compliance reporting",
+            "desc": "Generate reliable reports proving adherence to SLAs for clients and business partners."
+          },
+          "second": {
+            "title": "Proactive alerts before SLA breach",
+            "desc": "Get notified the moment error rates spike, well before your error budget is exhausted."
+          },
+          "third": {
+            "title": "Data-driven service reviews",
+            "desc": "Provide indisputable figures during quarterly performance reviews with business leaders."
+          }
+        }
       },
       "performance": {
-        "title": "Performance and response time"
+        "badges": {
+          "title": "RESPONSE TIME & LATENCY"
+        },
+        "title": "Performance & Response Times",
+        "subtitle": "Latency, Percentiles (P95, P99), and Bottlenecks",
+        "description": "Understand the true speed experienced by your users and uncover sneaky slowdowns hidden behind simple averages.",
+        "concept": {
+          "title": "Understanding latency and percentiles",
+          "desc": "Why averages can be misleading and how to measure true user experience.",
+          "latency": {
+            "title": "What is Latency? (The Waiting Time)",
+            "desc": "The delay between when a user clicks and when the response appears on screen."
+          },
+          "percentile": {
+            "title": "Why Averages Lie: Percentiles (P95, P99)",
+            "desc": "If 99 people wait 1s and 1 person waits 60s, the average looks decent. The P99 percentile reveals the reality of that slowest user."
+          },
+          "bottleneck": {
+            "title": "What is a Bottleneck? (The Funnel)",
+            "desc": "The specific component (database, network, heavy computation) slowing down the whole chain, like a lane closure on a highway."
+          }
+        },
+        "value": {
+          "title": "The INSPECT Advantage for Your Teams",
+          "subtitle": "Eliminate slowdowns frustrating your users",
+          "first": {
+            "title": "Detect isolated performance drops",
+            "desc": "Spot the 1% or 5% of users experiencing unacceptable load times even when averages seem fine."
+          },
+          "second": {
+            "title": "Surgical bottleneck identification",
+            "desc": "Instantly pinpoint the component causing overall transaction delays."
+          },
+          "third": {
+            "title": "Track optimization gains",
+            "desc": "Immediately measure the impact of engineering optimizations on live user responsiveness."
+          }
+        }
       },
       "volume": {
-        "title": "Volume"
+        "badges": {
+          "title": "VOLUME & THROUGHPUT"
+        },
+        "title": "Volume & Throughput",
+        "subtitle": "Overall load, request throughput, and traffic spikes",
+        "description": "Track the volume of transactions processed per second and anticipate traffic spikes to ensure seamless service.",
+        "concept": {
+          "title": "Understanding throughput and load",
+          "desc": "Measuring your systems' ability to absorb customer activity.",
+          "rps": {
+            "title": "What is Throughput? (The Traffic Flow)",
+            "desc": "The number of requests, orders, or transactions successfully processed per time unit (e.g. 2,000 requests/sec)."
+          },
+          "spike": {
+            "title": "What is a Load Peak? (Rush Hour)",
+            "desc": "Moments of surge traffic (Black Friday sales, ticketing releases, monthly accounting closing)."
+          },
+          "capacity": {
+            "title": "Capacity Planning (Future-proofing)",
+            "desc": "Anticipating traffic growth and scaling resources before infrastructure saturation occurs."
+          }
+        },
+        "value": {
+          "title": "The INSPECT Advantage for Your Teams",
+          "subtitle": "Prepare your infrastructure for high-stakes business events",
+          "first": {
+            "title": "Accurate infrastructure sizing",
+            "desc": "Avoid overpaying for unnecessary cloud servers or undersizing machines using real load data."
+          },
+          "second": {
+            "title": "Anticipate capacity limits",
+            "desc": "Detect traffic growth trends weeks in advance to adjust server capacity comfortably."
+          },
+          "third": {
+            "title": "Peace of mind during peak events",
+            "desc": "Monitor live application behavior in real-time during product launches and promotional sales."
+          }
+        }
       },
       "resources": {
-        "title": "System and machine resources"
+        "badges": {
+          "title": "SYSTEM RESOURCES"
+        },
+        "title": "System & Machine Resources",
+        "subtitle": "CPU consumption, JVM Memory, Active Threads, and Garbage Collector",
+        "description": "Monitor the physical health of machines hosting your software to prevent hardware crashes and memory leaks.",
+        "concept": {
+          "title": "Understanding system resources",
+          "desc": "The essential hardware elements powering your software applications.",
+          "cpu": {
+            "title": "The CPU (The Brain & Computing Power)",
+            "desc": "The processor executing calculations. A CPU running at 100% slows down every application on that server."
+          },
+          "ram": {
+            "title": "RAM / JVM Memory (The Desk Workspace)",
+            "desc": "The space where active data is held. If memory fills up (Out of Memory), the application immediately crashes."
+          },
+          "gc": {
+            "title": "The Garbage Collector (Clearing the Desk)",
+            "desc": "The automated mechanism freeing unused memory. If it takes too long to clean, it causes noticeable micro-pauses."
+          },
+          "threads": {
+            "title": "Active Threads (Working Hands)",
+            "desc": "The count of concurrent tasks currently executing on the machine."
+          }
+        },
+        "value": {
+          "title": "The INSPECT Advantage for Your Teams",
+          "subtitle": "Prevent hardware outages before services stop",
+          "first": {
+            "title": "Early warning on memory leaks",
+            "desc": "Detect steadily creeping memory usage before it triggers an application crash."
+          },
+          "second": {
+            "title": "Cloud cost optimization",
+            "desc": "Right-size server instances based on actual resource consumption to lower cloud bills."
+          },
+          "third": {
+            "title": "Continuous service stability",
+            "desc": "Ensure maximum uptime by flagging overloaded nodes before they buckle under traffic."
+          }
+        }
       }
     },
     "health": {
-      "title": "Lifecycle and version status",
+      "title": "Lifecycle & Version Governance",
+      "badges": {
+        "title": "VERSION GOVERNANCE & LIFECYCLE"
+      },
+      "intro": {
+        "title": "Application governance and deployment control",
+        "subtitle": "Real-time inventory and lifecycle event correlation",
+        "description": "Knowing exactly what version of software is running where and correlating issues with recent deployments is key to serene operations."
+      },
       "inventory": {
-        "title": "Application inventory"
+        "badges": {
+          "title": "APPLICATION INVENTORY"
+        },
+        "title": "Application Inventory",
+        "subtitle": "Complete inventory of your application estate by environment",
+        "description": "A consolidated, live view of all your applications organized by environment (Development, Staging, Pre-production, Production).",
+        "concept": {
+          "title": "Understanding application inventory",
+          "desc": "The comprehensive and live record of all software assets across your company.",
+          "environments": {
+            "title": "Environments (The Validation Stages)",
+            "desc": "Dev (coding), Staging (testing), Pre-prod (qualification), and Production (live customers)."
+          },
+          "versioning": {
+            "title": "Version Governance (The Release Numbers)",
+            "desc": "Knowing whether version 2.4.1 or 2.4.0 is deployed on each server to prevent discrepancies."
+          }
+        },
+        "value": {
+          "title": "The INSPECT Advantage for Your Teams",
+          "subtitle": "No more doubts about what is running on your servers",
+          "first": {
+            "title": "Instant visibility across the whole estate",
+            "desc": "Find all deployed modules across the enterprise in a few clicks without bothering system administrators."
+          },
+          "second": {
+            "title": "Detect version drift",
+            "desc": "Immediately spot if a production server was missed during a security patch rollout."
+          },
+          "third": {
+            "title": "Simplified audits and compliance",
+            "desc": "Provide exact lists of running software during security reviews and governance audits."
+          }
+        }
       },
       "events": {
-        "title": "Event history"
+        "badges": {
+          "title": "LIFECYCLE EVENTS"
+        },
+        "title": "Lifecycle Events History",
+        "subtitle": "Restarts, version upgrades, deployments, and unexpected stops",
+        "description": "Keep a historical record of every major lifecycle event to instantly correlate a technical change with its performance impact.",
+        "concept": {
+          "title": "Understanding lifecycle events",
+          "desc": "Any event that modifies the operational state of an application over time.",
+          "deployments": {
+            "title": "Deployments (Going Live)",
+            "desc": "The exact moment a new software version is installed and activated."
+          },
+          "restarts": {
+            "title": "Restarts (Planned or Accidental)",
+            "desc": "Knowing whether a server restarted due to planned maintenance or an unexpected crash."
+          },
+          "correlation": {
+            "title": "Temporal Correlation (Cause and Effect)",
+            "desc": "Chronologically linking a sudden spike in errors to a deployment made 5 minutes earlier."
+          }
+        },
+        "value": {
+          "title": "The INSPECT Advantage for Your Teams",
+          "subtitle": "Know immediately what changed in your systems",
+          "first": {
+            "title": "Instant regression identification",
+            "desc": "If error rates jump after a 2 PM release, INSPECT immediately highlights the causal deployment link."
+          },
+          "second": {
+            "title": "Informed rollback decisions",
+            "desc": "Empowers managers to quickly decide on rolling back a release before customer impact escalates."
+          },
+          "third": {
+            "title": "Continuous stability auditing",
+            "desc": "Track unexpected restart frequencies to identify fundamentally unstable services."
+          }
+        }
       }
     },
     "autonomy": {
-      "title": "Self Management and Autonomy",
+      "title": "Self Management & Autonomy",
+      "badges": {
+        "title": "SELF MANAGEMENT & AUTONOMY"
+      },
+      "intro": {
+        "title": "Zero administrative overhead and intelligent self-management",
+        "subtitle": "An autonomous system that self-optimizes, self-purges, and self-monitors",
+        "description": "Adopting an observability tool should never increase administrative burden. INSPECT autonomously manages its storage, database, and operational resilience."
+      },
       "partitioning": {
-        "title": "Dynamic data partitioning"
+        "badges": {
+          "title": "DYNAMIC PARTITIONING"
+        },
+        "title": "Dynamic Data Partitioning",
+        "subtitle": "Automatic creation of Day/Month partitions without human intervention",
+        "description": "To remain blazing fast even with billions of records, INSPECT automatically organizes data into chronological compartments.",
+        "concept": {
+          "title": "What is Data Partitioning?",
+          "desc": "An essential technique to ensure search queries remain lightning fast over time.",
+          "partition": {
+            "title": "The Partition Concept (Monthly Filing Cabinets)",
+            "desc": "Instead of throwing every document into a giant 10-meter-high box, you maintain a folder per day or month. Searches only look in the target folder."
+          },
+          "dynamic": {
+            "title": "Dynamic Automation (Zero Manual Work)",
+            "desc": "INSPECT automatically generates upcoming partitions ahead of time without needing database administrators (DBAs)."
+          }
+        },
+        "value": {
+          "title": "The INSPECT Advantage for Your Teams",
+          "subtitle": "Constant performance with zero database maintenance",
+          "first": {
+            "title": "Instant search performance year-round",
+            "desc": "Query a 3-month-old trace just as quickly as a trace recorded 5 seconds ago."
+          },
+          "second": {
+            "title": "Zero DBA administrative cost",
+            "desc": "Your database teams do not need to write or maintain partition maintenance scripts."
+          },
+          "third": {
+            "title": "Limitless scalability",
+            "desc": "Easily accommodates massive data volumes without ever saturating storage access."
+          }
+        }
       },
-      "purge": {
-        "title": "Purge and intelligent retention"
+      "retention": {
+        "badges": {
+          "title": "SMART RETENTION & PURGE"
+        },
+        "title": "Smart Retention & Purge",
+        "subtitle": "Distributed configuration and differentiated retention: Technical vs Functional",
+        "description": "Optimize storage costs by keeping short-lived technical traces for diagnostics and long-term functional business records for audits and compliance.",
+        "concept": {
+          "title": "Understanding differentiated retention and purge",
+          "desc": "Keep the right level of information without wasting expensive disk space.",
+          "retention": {
+            "title": "What is Retention? (Storage Duration)",
+            "desc": "The policy determining how many days records are kept before automated cleanup."
+          },
+          "differentiated": {
+            "title": "Differentiated Retention (Tech vs Business)",
+            "desc": "Keep heavy microsecond technical spans for 7 to 14 days, while preserving business transactions for 6 to 12 months."
+          },
+          "purge": {
+            "title": "Smart Purge (Automated Cleanup)",
+            "desc": "Instantly and cleanly dropping expired partition tables in milliseconds without CPU spikes."
+          }
+        },
+        "value": {
+          "title": "The INSPECT Advantage for Your Teams",
+          "subtitle": "Storage cost control and regulatory compliance",
+          "first": {
+            "title": "Substantial disk storage savings",
+            "desc": "Prevent disk bloat by automatically pruning heavy, expired technical spans."
+          },
+          "second": {
+            "title": "Regulatory compliance (GDPR & Audits)",
+            "desc": "Meet data retention rules reliably without risking compliance oversights."
+          },
+          "third": {
+            "title": "Simple centralized rules",
+            "desc": "Define retention policies per module and let INSPECT enforce them automatically."
+          }
+        }
       },
-      "self-reporting": {
-        "title": "Self reporting"
+      "reporting": {
+        "badges": {
+          "title": "SELF-REPORTING & RESILIENCE"
+        },
+        "title": "Collector Self-Reporting",
+        "subtitle": "Embedded anomaly reporting and circuit-breaker safety",
+        "description": "Who watches the watcher? INSPECT agents continuously self-diagnose and protect host applications from any performance impact.",
+        "concept": {
+          "title": "Understanding Self-Reporting and resilience",
+          "desc": "The guarantee that observability will never slow down or crash your business applications.",
+          "report": {
+            "title": "What is Self-Reporting? (Self-Diagnosis)",
+            "desc": "The INSPECT agent's ability to measure its own resource usage and report transmission backpressure."
+          },
+          "circuit": {
+            "title": "Circuit-Breaker (The Safety Fuse)",
+            "desc": "Just like a circuit breaker in your home: if the backend is saturated, the agent temporarily throttles collection to protect 100% of the host app's CPU and RAM."
+          }
+        },
+        "value": {
+          "title": "The INSPECT Advantage for Your Teams",
+          "subtitle": "Complete peace of mind for production operations",
+          "first": {
+            "title": "Guaranteed zero-impact in production",
+            "desc": "INSPECT will never consume critical resources during high-traffic crisis situations."
+          },
+          "second": {
+            "title": "Total operational transparency",
+            "desc": "Inspect the health of collectors and data transmission queues at any time."
+          },
+          "third": {
+            "title": "Self-healing and seamless recovery",
+            "desc": "Automatically resumes full telemetry transmission once backend capacity normalizes."
+          }
+        }
       }
     }
   },
   "installation": {
     "title": "Installation",
-    "content": "To install INSPECT, there are 2 dependencies to add to your project: inspect-core and inspect-ng-collector"
+    "content": "To install INSPECT, there are 2 dependencies to add to your project: INSPECT-core and INSPECT-ng-collector"
   },
   "compatibilities": {
     "title": "Compatibilities",
@@ -211,7 +851,7 @@
       "function": {
         "title": "Function",
         "angular": "Front end framework",
-        "inspect-ng-collector": "Collector for Angular applications",
+        "inspect-ng-collector": "Collector for angular applications",
         "jquery-charts": "Charts for generating KPIs",
         "jakarta": "API used for the email management"
       }

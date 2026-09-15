@@ -1,8 +1,30 @@
-<div class="title"> {{ "features.e2e.title" | translate }}</div>
-<div class="subtitle"> {{ "features.e2e.chronology.title" | translate }}</div>
-<div class="text"> {{ "features.e2e.chronology.content" | translate }}</div>
-<detail-session-content config="e2e"></detail-session-content>
-<div class="title">  {{ "features.e2e.tree.title" | translate }}</div>
-<div class="text"> {{ "features.e2e.tree.content" | translate }}</div>
-<img src="assets/icons/features/e2e/tree/tree-screenshot.png" alt="Tree" class="screenshot" />
-<app-tree></app-tree>
+<div class="e2e-intro-container">
+  <section class="hero" id="e2e-hero">
+    <div class="hero__glow hero__glow--primary"></div>
+    <div class="hero__glow hero__glow--secondary"></div>
+
+    <div class="hero__badge">
+      <span class="hero__badge-dot"></span>
+      <span>{{ "features.e2e.badges.title" | translate }}</span>
+    </div>
+
+    <h1 class="hero__headline">
+      {{ "features.e2e.intro.title" | translate }}
+    </h1>
+
+    <h2 class="hero__gradient">
+      {{ "features.e2e.intro.subtitle" | translate }}
+    </h2>
+
+    <p class="hero__desc">
+      {{ "features.e2e.intro.description" | translate }}
+    </p>
+  </section>
+</div>
+
+<!-- Relink when scroll down -->
+<section class="scroll-trigger scroll-trigger--down" [class.is-visible]="isScrollDownVisible()" (click)="goToNext()">
+  <div class="tui-scroll-indicator tui-scroll-indicator--down" [class.tui-scroll-indicator--active]="isTransitioning()">
+    <div class="tui-scroll-indicator__wheel"></div>
+  </div>
+</section>

@@ -7,15 +7,104 @@
   </div>
 </section>
 
-<app-monitoring></app-monitoring>
-<app-e2e></app-e2e>
-<app-metrics></app-metrics>
-<app-health></app-health>
-<app-autonomy></app-autonomy>
+<!-- Hero Section: Observability, Telemetry & INSPECT -->
+<div class="features-intro-container">
+  <section class="hero" id="features-hero">
+    <div class="hero__glow hero__glow--primary"></div>
+    <div class="hero__glow hero__glow--secondary"></div>
 
-<!-- Relink when scroll down -->
-<section class="scroll-trigger scroll-trigger--down" [class.is-visible]="isScrollDownVisible()" (click)="goToInstallation()">
-  <div class="tui-scroll-indicator tui-scroll-indicator--down" [class.tui-scroll-indicator--active]="isTransitioning()">
-    <div class="tui-scroll-indicator__wheel"></div>
-  </div>
-</section>
+    <div class="hero__badge">
+      <span class="hero__badge-dot"></span>
+      <span>{{ "features.badge.title" | translate }}</span>
+    </div>
+
+    <h1 class="hero__headline">
+      {{ "features.hero.title" | translate }}
+    </h1>
+
+    <h2 class="hero__gradient">
+      {{ "features.hero.subtitle" | translate }}
+    </h2>
+
+    <div class="hero__cta-group">
+      <button type="button" class="btn btn--primary" (click)="goToInstallation()">
+        <ng-icon name="bootstrapRocketTakeoffFill" class="btn__icon"></ng-icon>
+        <span>{{ "common.button.install" | translate }}</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Observability, Telemetry & INSPECT Pillar Cards -->
+  <section class="section" id="features-pillars">
+    <div class="pillars-grid">
+      <!-- Card 1: Observability -->
+      <article class="pillar-card pillar-card--observability">
+        <div class="pillar-card__top">
+          <div class="pillar-card__icon-wrap icon--indigo">
+            <ng-icon name="bootstrapEyeFill" class="pillar-card__icon"></ng-icon>
+          </div>
+        </div>
+        <h3 class="pillar-card__title">{{ "features.observability.title" | translate }}</h3>
+        <p class="pillar-card__summary">{{ "features.observability.subtitle" | translate }}</p>
+        <p class="pillar-card__desc">{{ "features.observability.description" | translate }}</p>
+        <div class="pillar-card__benefit">
+          <ng-icon name="bootstrapCheckCircleFill" class="benefit-icon"></ng-icon>
+          <span>{{ "features.observability.value.desc" | translate }}</span>
+        </div>
+      </article>
+
+      <!-- Card 2: Telemetry -->
+      <article class="pillar-card pillar-card--telemetry">
+        <div class="pillar-card__top">
+          <div class="pillar-card__icon-wrap icon--cyan">
+            <ng-icon name="bootstrapActivity" class="pillar-card__icon"></ng-icon>
+          </div>
+        </div>
+        <h3 class="pillar-card__title">{{ "features.telemetry.title" | translate }}</h3>
+        <p class="pillar-card__summary">{{ "features.telemetry.subtitle" | translate }}</p>
+        <p class="pillar-card__desc">{{ "features.telemetry.description" | translate }}</p>
+        <div class="pillar-card__benefit">
+          <ng-icon name="bootstrapCheckCircleFill" class="benefit-icon"></ng-icon>
+          <span>{{ "features.telemetry.value.desc" | translate }}</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="hero" id="features-hero">
+    <div class="hero__glow hero__glow--primary"></div>
+    <div class="hero__glow hero__glow--secondary"></div>
+
+    <h1 class="hero__headline">
+      {{ "features.solution.title" | translate }}
+    </h1>
+
+    <h2 class="hero__gradient">
+      {{ "features.solution.subtitle" | translate }}
+    </h2>
+
+    <p class="hero__desc">
+      {{ "features.solution.description" | translate }}
+    </p>
+    <ul class="pillar-card__points">
+      <li>
+        <ng-icon name="bootstrapCheckCircleFill" class="check-icon"></ng-icon>
+        <span>{{ "features.solution.points.zerocode" | translate }}</span>
+      </li>
+      <li>
+        <ng-icon name="bootstrapCheckCircleFill" class="check-icon"></ng-icon>
+        <span>{{ "features.solution.points.holistic" | translate }}</span>
+      </li>
+      <li>
+        <ng-icon name="bootstrapCheckCircleFill" class="check-icon"></ng-icon>
+        <span>{{ "features.solution.points.functional" | translate }}</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Relink when scroll down -->
+  <section class="scroll-trigger scroll-trigger--down" [class.is-visible]="isScrollDownVisible()" (click)="goToNext()">
+    <div class="tui-scroll-indicator tui-scroll-indicator--down" [class.tui-scroll-indicator--active]="isTransitioning()">
+      <div class="tui-scroll-indicator__wheel"></div>
+    </div>
+  </section>

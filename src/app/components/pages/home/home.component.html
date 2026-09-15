@@ -7,7 +7,7 @@
 
     <div class="hero__badge reveal">
       <span class="hero__badge-dot"></span>
-      <span>{{ "home.badge.first" | translate }}</span>
+      <span>{{ "home.badge.title" | translate }}</span>
     </div>
 
     <div class="hero__logo-wrapper reveal">
@@ -32,63 +32,11 @@
     <p class="hero__desc reveal">
       {{ "home.content" | translate }}
     </p>
-
-    <div class="hero__cta-group reveal">
-      <button type="button" class="btn btn--primary" (click)="goToFeatures()">
-        <span>{{ "home.cta.explore" | translate }}</span>
-        <ng-icon name="bootstrapArrowRight" class="btn__icon"></ng-icon>
-      </button>
-      <button type="button" class="btn btn--secondary" (click)="goToArchitecture()">
-        <span>{{ "home.cta.architecture" | translate }}</span>
-      </button>
-      <button type="button" class="btn btn--ghost" (click)="goToInstallation()">
-        <ng-icon name="bootstrapRocketTakeoffFill" class="btn__icon"></ng-icon>
-        <span>{{ "home.cta.install" | translate }}</span>
-      </button>
-    </div>
-
-    <!-- Live Telemetry Terminal Mockup -->
-    <div class="dashboard-mockup reveal">
-      <div class="dashboard-mockup__header">
-        <div class="dashboard-mockup__controls">
-          <span class="dot dot--red"></span>
-          <span class="dot dot--yellow"></span>
-          <span class="dot dot--green"></span>
-        </div>
-        <div class="dashboard-mockup__title">
-          <span class="dashboard-mockup__pulse"></span>
-          inspect-agent · live telemetry stream
-        </div>
-        <div class="dashboard-mockup__badge">v1.0.0</div>
-      </div>
-      <div class="dashboard-mockup__body">
-        <div class="terminal-line">
-          <span class="term-cyan">[INSPECT-AGENT]</span>
-          <span class="term-white">Connected to cluster production-cluster · Traces active</span>
-        </div>
-        <div class="terminal-line">
-          <span class="term-green">✓ 100% Traces captured</span>
-          <span class="term-muted">|</span>
-          <span class="term-yellow">Latency: 12ms p99</span>
-          <span class="term-muted">|</span>
-          <span class="term-blue">Active threads: 142</span>
-        </div>
-        <div class="terminal-line">
-          <span class="term-cyan">→ Auto-partitioning:</span>
-          <span class="term-green">Active (Dynamic daily storage initialized)</span>
-        </div>
-        <div class="terminal-line">
-          <span class="term-yellow">⚡ Multi-protocol Trace:</span>
-          <span class="term-white">HTTP 200 · JDBC 4ms · SMTP success · Context unified</span>
-        </div>
-      </div>
-    </div>
   </section>
 
   <!-- Section 1: Advantages / Points forts -->
   <section class="section">
     <div class="section__header reveal">
-      <div class="section__badge">{{ "home.badge.second" | translate }}</div>
       <h2 class="section__title">{{ "home.description.advantages" | translate }}</h2>
       <p class="section__subtitle"> {{ "home.description.description" | translate }} </p>
     </div>
@@ -136,7 +84,7 @@
           <div class="feature-card__icon-wrap">
             <img [src]="'assets/icons/home/e2e.png'" alt="End to End" class="feature-card__icon" />
           </div>
-          <span class="feature-card__tag">E2E Tracing</span>
+          <span class="feature-card__tag"> {{ "home.badge.e2e" | translate }}</span>
         </div>
         <h3 class="feature-card__title">{{ "home.description.e2e.title" | translate }}</h3>
         <p class="feature-card__content">{{ "home.description.e2e.content" | translate }}</p>
@@ -179,7 +127,6 @@
   <!-- Section 2: Profiles / Use cases -->
   <section class="section">
     <div class="section__header reveal">
-      <div class="section__badge"> {{ "home.badge.third" | translate }} </div>
       <h2 class="section__title">{{ "home.profiles.title" | translate }}</h2>
       <p class="section__subtitle">{{ "home.profiles.description" | translate }}</p>
     </div>
@@ -240,14 +187,6 @@
           </li>
         </ul>
       </article>
-    </div>
-
-    <!-- Redirect to Architecture -->
-    <div class="section__action reveal">
-      <button type="button" class="action-link-btn" (click)="goToArchitecture()">
-        <span>{{ "home.redirect.profiles" | translate }}</span>
-        <ng-icon name="bootstrapArrowRight" class="action-link-btn__icon"></ng-icon>
-      </button>
     </div>
   </section>
 

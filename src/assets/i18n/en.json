@@ -147,7 +147,8 @@
     "title": "INSPECT : a tool for telemetry, observability, and monitoring",
     "subtitle": "Total visibility for technical and functional teams, with zero code modifications.",
     "badge": {
-      "title": "FEATURES"
+      "title": "FEATURES",
+      "redirect": "more features"
     },
     "observability": {
       "title": "Observability",
@@ -168,13 +169,12 @@
       }
     },
     "solution": {
-      "title": "How INSPECT unifies observability and telemetry",
+      "title": "INSPECT unifies these two principles",
       "subtitle": "The universal bridge between technical reality and business stakes",
       "description": "INSPECT gathers all telemetry, transforming it instantly into clear, visual observability.",
       "points": {
-        "zerocode": "Zero code changes: installs as a lightweight agent without disrupting existing applications.",
-        "holistic": "Unified view: seamlessly links user actions, background batch processing, and database calls in real time.",
-        "functional": "Universal: translates technical events into functional business milestones understandable by product managers and business stakeholders."
+        "observability": "Observability: you can observe the health of your services throw INSPECT. You can tell immediately if some requests are failing.",
+        "telemetry": "Telemetry: you have access to all the telemetry data, like execution time, errors, and memory consumption."
       }
     },
     "monitoring": {

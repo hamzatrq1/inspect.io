@@ -147,13 +147,13 @@
     "title": "INSPECT : un outil de télémétrie, d'observabilité et de supervision",
     "subtitle": "Une visibilité totale pour les équipes techniques et fonctionnelles, sans toucher au code.",
     "badge": {
-      "title": "FONCTIONNALITÉS"
+      "title": "FONCTIONNALITÉS",
+      "redirect": "+ de fonctionnalités"
     },
     "observability": {
       "title": "Observabilité",
       "subtitle": "Comprendre l'état interne de vos systèmes à travers leurs signaux",
       "description": "L'observabilité est la capacité à déduire l'état de santé, le comportement et les dysfonctionnements internes d'un système informatique complexe uniquement en observant ses sorties externes.",
-      "analogy": "Analogie simple : C'est comme le tableau de bord d'un avion ou un bilan médical complet. Au lieu de deviner ce qui ne va pas, vous disposez d'indicateurs précis pour identifier la cause exacte d'une anomalie.",
       "value": {
         "title": "L'apport pour vous :",
         "desc": "Fini les réunions de crise où chacun se renvoie la responsabilité. L'observabilité permet à toute l'équipe (métier, support, développeurs) de comprendre en quelques secondes ce qui s'est réellement passé lors d'un incident."
@@ -169,13 +169,10 @@
       }
     },
     "solution": {
-      "title": "Comment INSPECT unifie observabilité et télémétrie",
-      "subtitle": "La passerelle universelle entre la réalité technique et vos enjeux métier",
-      "description": "INSPECT collecte automatiquement toute la télémétrie, et la transforme instantanément en une observabilité limpide et visuelle.",
+      "title": "INSPECT unifie ces 2 principes",
       "points": {
-        "zerocode": "Zéro modification de code : s'installe sans perturber vos applications existantes.",
-        "holistic": "Vision globale : relie en temps réel les actions des utilisateurs, les traitements d'arrière-plan et les appels aux bases de données.",
-        "functional": "Universel : traduit les événements techniques en étapes métier compréhensibles par un chef de projet ou un responsable fonctionnel."
+        "observability": "Observabilité : vous pouvez observer l'état de vos services à travers INSPECT. Vous pouvez voir immédiatement si des requêtes ne passent plus.",
+        "telemetry": "Télémétrie : vous avez accès à toutes les données télémétriques. Vous pouvez voir les métriques, les temps d'exécution, le nombre d'erreurs et la consommation en termes de performances."
       }
     },
     "monitoring": {

@@ -374,17 +374,17 @@ h1 {
   transition: background-color 0.2s ease, color 0.2s ease;
 
   &:hover {
-    background: var(--clr-surface-muted, #f8fafc);
-    color: var(--clr-primary, #6366f1);
+    background: var(--badge-bg);
+    color: var(--primary, #6366f1);
   }
 
   &--active {
-    background: var(--clr-primary-subtle, #eef2ff);
-    color: var(--clr-primary, #4f46e5);
+    background: var(--primary-glow);
+    color: var(--primary);
     font-weight: 600;
 
     .doc-menu__icon {
-      color: var(--clr-primary, #4f46e5);
+      color: var(--primary);
     }
   }
 
@@ -395,8 +395,8 @@ h1 {
     padding: 0.3rem 0.4rem;
 
     &.doc-menu__link--active {
-      background: var(--clr-primary-subtle, #eef2ff);
-      color: var(--clr-primary, #4f46e5);
+      background: var(--primary-glow);
+      color: var(--primary-hover);
       font-weight: 600;
     }
   }

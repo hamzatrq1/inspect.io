@@ -125,6 +125,7 @@ $card-border-hover: var(--clr-primary, rgba(99, 102, 241, 0.4));
   cursor: pointer;
   transition: all 0.25s ease;
   border: none;
+  margin: 1rem 0 3rem;
 
   &--primary {
     background: linear-gradient(135deg, $primary 0%, #4f46e5 100%);

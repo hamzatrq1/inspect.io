@@ -248,18 +248,17 @@
       },
       "workflow": {
         "title": "Outbound flows and system dependencies",
-        "subtitle": "Stage analysis: JDBC, FTP, SMTP, REST...",
-        "description": "No application lives in isolation. To operate, it queries databases, sends emails, transfers files, and calls external services. INSPECT maps and measures every outbound stream.",
+        "subtitle": "Multi protocols",
+        "description": "No application lives in isolation. It's complicated to have a unique method to analyze all flows because there is no unique exchange protocol. There are multiples. INSPECT takes in consideration this issue by handling multiple protocols.",
         "concept": {
-          "title": "Understanding outbound flows and stages",
-          "desc": "An 'outbound flow' is a call made by your application to an external system. A 'stage' is a chronological step in that processing. The workflow can be treat by multiple ways and protocols",
+          "title": "INSPECT compatible protocols",
           "jdbc": {
             "title": "JDBC / Database",
-            "desc": "The protocol used to read or store data. INSPECT measures exact SQL execution time and detects slow queries."
+            "desc": "INSPECT can read and analyze queries executed in your database. If transactions take time, it becomes easily noticeable and actions can be taken (such as adding indexes)."
           },
           "rest": {
-            "title": "REST / Web Services",
-            "desc": "Calls to partner applications (e.g. payment gateway). INSPECT isolates delays caused by external partners."
+            "title": "HTTP Requests",
+            "desc": "Monitor calls to partner applications. Response codes are taken into account (200, 400, 500...)"
           },
           "ftp": {
             "title": "FTP / SFTP",
@@ -268,25 +267,12 @@
           "smtp": {
             "title": "SMTP / Emails",
             "desc": "Sending notifications, order confirmations, and alerts. INSPECT ensures emails are dispatched and tracks delivery latencies."
-          },
-          "stages": {
-            "title": "Stage analysis",
-            "desc": "Breaking down a complex transaction into clear consecutive steps to immediately spot which step took the most time."
           }
         },
-        "value": {
-          "title": "The INSPECT Advantage for Your Teams",
-          "first": {
-            "title": "No more endless exchanges about a bug responsibility",
-            "desc": "Find immediately  if an issue stems from your app, the network, the file server, or the database."
-          },
-          "second": {
-            "title": "Detect bottlenecks early",
-            "desc": "Identify slow SQL queries or external API calls penalizing user experience."
-          },
-          "third": {
-            "title": "Resilience and foresight",
-            "desc": "Detect unstable third-party dependencies before they trigger complete system outages."
+        "stages": {
+          "title": "Stages analysis",
+          "subtitle": "How should we do when a single action launches multiple protocols at one time?",
+          "desc": "Key concept of INSPECT is the ability to track down a complete feature execution, even if it involves multiple protocols and services. If a user launch one http request, and that request makes an action in the database, INSPECT tracks the whole flow and show exactly what happened in a tab called 'Stages'. All chain is available to understand how it's organized."
           }
         }
       },
@@ -834,8 +820,7 @@
           }
         }
       }
-    }
-  },
+    },
   "installation": {
     "title": "Installation",
     "content": "To install INSPECT, there are 2 dependencies to add to your project: INSPECT-core and INSPECT-ng-collector"

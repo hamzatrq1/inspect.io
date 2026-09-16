@@ -67,8 +67,8 @@ export class MonitoringEventComponent implements AfterViewInit {
 
       const spySections = [
         { selector: 'app-monitoring-events', path: '/features/monitoring/events' },
-        { selector: 'app-monitoring-workflow', path: '/features/monitoring/events' },
-        { selector: 'app-monitoring-user', path: '/features/monitoring/events' },
+        { selector: 'app-monitoring-workflow', path: '/features/monitoring/workflow' },
+        { selector: 'app-monitoring-user', path: '/features/monitoring/user' },
       ];
 
       // Automatically activate and expand the section upon entering

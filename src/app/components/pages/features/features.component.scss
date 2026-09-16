@@ -13,11 +13,10 @@ $card-border-hover: var(--clr-primary, rgba(99, 102, 241, 0.4));
 
 .features-intro-container {
   width: 100%;
-  margin: 0 auto;
   max-width: 1600px;
-  padding: 0 1rem 2rem;
+  margin: 0 auto;
+  padding: 2rem 1rem 2rem;
   box-sizing: border-box;
-  position: relative;
 }
 
 .hero {

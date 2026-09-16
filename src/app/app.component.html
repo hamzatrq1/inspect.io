@@ -68,7 +68,7 @@
     </div>
   </aside>
 </ng-template>
-<main>
+<main class="main-container" [class.main-container--menu-open]="menuVisible()">
   <div class="main">
     <div class="content">
       <router-outlet></router-outlet>

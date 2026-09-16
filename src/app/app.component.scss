@@ -29,7 +29,7 @@ h1 {
   width: auto;
   box-sizing: border-box;
   transition: margin-left 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-              width 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  width 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 
   &--menu-open {
     @media screen and (min-width: 769px) {
@@ -134,9 +134,11 @@ h1 {
   border: none;
 
   &--primary {
-    background: var(--clr-primary, #6366f1);
-    color: #ffffff;
-    &:hover { background: var(--clr-primary-hover, #4f46e5); transform: translateY(-1px); }
+    background: var(--primary);
+    color: var(--primary-glow);
+    &:hover {
+      background: var(--bg-color);
+      transform: translateY(-1px); }
   }
   &--ghost {
     background: transparent;
@@ -281,8 +283,8 @@ h1 {
   transition: background-color 0.2s ease, color 0.2s ease;
 
   &:hover {
-    background: var(--clr-surface-muted, #f1f5f9);
-    color: var(--clr-primary-hover, #4f46e5);
+    background: var(--badge-bg);
+    color: var(--primary, #6366f1);
   }
 }
 
@@ -345,8 +347,8 @@ h1 {
   transition: background-color 0.2s ease, color 0.2s ease;
 
   &:hover {
-    background: var(--clr-surface-muted, #f1f5f9);
-    color: var(--clr-text-primary, #0f172a);
+    background: var(--badge-bg);
+    color: var(--primary, #6366f1);
   }
 }
 
@@ -461,13 +463,13 @@ h1 {
   transition: background-color 0.2s ease, color 0.2s ease;
 
   &:hover {
-    background: var(--clr-surface-muted, #f8fafc);
-    color: var(--clr-text-primary, #0f172a);
+    background: var(--badge-bg);
+    color: var(--primary, #6366f1);
   }
 
   &--active {
-    background: var(--clr-primary-subtle, #f1f5f9);
-    color: var(--clr-primary, #6366f1);
+    background: var(--primary-glow);
+    color: var(--primary);
   }
 }
 

@@ -11,7 +11,8 @@
       "install": "Install INSPECT",
       "architecture": "Discover architecture",
       "compatibilities": "Discover compatibilities",
-      "details": "more details"
+      "details": "more details",
+      "next": "next"
     }
   },
   "menu": {
@@ -215,8 +216,7 @@
         "subtitle": "API, BATCH, Startup, Tests: understanding all forms of system activity",
         "description": "An application doesn't limit itself at only a few clicks and some pop-ups. There are, almost always, a lot of batchs and tasks in background or during the night who are necessary and need to be monitored",
         "concept": {
-          "title": "Understanding execution contexts",
-          "desc": "An execution context is the mechanism through which a software program is triggered to perform work.",
+          "title": "Some events monitored by INSPECT",
           "batch": {
             "title": "Web requests and regular tasks",
             "desc": "Every application executes web requests, using API. But there are also batchs jobs, who execute synchronously tasks, as for example deleting old datas every month or every year. These APIs and these batches can be monitored by INSPECT."

@@ -11,7 +11,8 @@
       "install": "Installer INSPECT",
       "architecture": "Découvrir l'architecture",
       "compatibilities": "Découvrir les compatibilités",
-      "details": "+ de détails"
+      "details": "+ de détails",
+      "next": "suivant"
     }
   },
   "menu": {
@@ -210,12 +211,13 @@
       },
       "events": {
         "title": "Événements et contextes d'exécution",
-        "subtitle": "API, BATCH, Démarrage, Tests : Comprendre tous les types d'activité",
-        "description": "Toute application ne se limite pas à quelques redirections vers des onglets : il y a quasi systématiquement beaucoup de traitements de fonds, ou d'exécutions nocturnes qui sont indispensables et qu'il faut superviser",
+        "subtitle": "API, BATCH, Démarrage, Tests : comprendre tous les types d'activité",
+        "description": "Une application se limite rarement à quelques redirections vers des onglets : il y a quasi systématiquement beaucoup de traitements de fonds, ou d'exécutions nocturnes qui sont indispensables et qu'il faut superviser",
         "concept": {
+          "title": "Quelques événements supervisés par INSPECT",
           "batch": {
             "title": "Requêtes web et traitements réguliers",
-            "desc": "Toute application exécute des requêtes web, qui passent par des API. Mais il y a aussi des batchs qui permettent d'exécuter des tâches de manière synchrone, par exemple des purges de données obsolètes ayant lieu tous les mois ou tous les ans. Ces API et ces batchs sont supervisables avec INSPECT."
+            "desc": "Les requêtes exécutées par les utilisateurs et les batch réguliers exécutés selon une fréquence déterminée sont correctement supervisés."
           },
           "startup": {
             "title": "Démarrage et initialisation",

@@ -20,12 +20,11 @@ $card-border-hover: var(--clr-primary, rgba(99, 102, 241, 0.4));
 // Container
 .monitoring-event-container {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 1.5rem 1rem 4rem;
+  padding: 0 1rem 2rem;
   box-sizing: border-box;
   position: relative;
-  overflow: visible;
 }
 
 // Scroll Reveal
@@ -74,6 +73,7 @@ $card-border-hover: var(--clr-primary, rgba(99, 102, 241, 0.4));
   }
 
   &__badge {
+    cursor: pointer;
     position: relative;
     z-index: 1;
     display: inline-flex;
@@ -82,6 +82,7 @@ $card-border-hover: var(--clr-primary, rgba(99, 102, 241, 0.4));
     padding: 0.45rem 1.15rem;
     border-radius: 999px;
     background: rgba(99, 102, 241, 0.08);
+    border: 1px solid rgba(99, 102, 241, 0.25);
     color: $primary;
     font-size: 0.85rem;
     font-weight: 600;
@@ -94,7 +95,7 @@ $card-border-hover: var(--clr-primary, rgba(99, 102, 241, 0.4));
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    animation: live-pulse 2s infinite ease-in-out;
+    background: $primary;
   }
 
   &__headline {
@@ -110,10 +111,14 @@ $card-border-hover: var(--clr-primary, rgba(99, 102, 241, 0.4));
   }
 
   &__gradient {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    font-weight: 700;
     background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #06b6d4 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin: 0 0 1rem;
   }
+
 
   &__desc {
     position: relative;
@@ -186,154 +191,7 @@ $card-border-hover: var(--clr-primary, rgba(99, 102, 241, 0.4));
       transform: translateY(0);
     }
   }
-}
 
-// Telemetry Interactive Mockup Switcher
-
-.dot {
-  width: 11px;
-  height: 11px;
-  border-radius: 50%;
-
-  &--red { background: #ef4444; }
-  &--yellow { background: #f59e0b; }
-  &--green { background: #10b981; }
-}
-
-.pulse-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #10b981;
-  box-shadow: 0 0 6px #10b981;
-  animation: live-pulse 1.8s infinite ease-in-out;
-}
-
-// Context switcher tabs
-.context-switcher {
-  display: flex;
-  gap: 0.4rem;
-  background: rgba(10, 12, 16, 0.7);
-  padding: 3px;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.context-btn {
-  background: transparent;
-  border: none;
-  color: #94a3b8;
-  font-size: 0.82rem;
-  font-weight: 600;
-  padding: 0.4rem 0.9rem;
-  border-radius: 7px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  transition: all 0.2s ease;
-
-  &__icon {
-    font-size: 0.95rem;
-    line-height: 1;
-  }
-
-  &--active {
-    background: $primary;
-    color: #ffffff;
-    box-shadow: 0 2px 10px rgba(99, 102, 241, 0.4);
-  }
-}
-
-// Trace console & pills
-.trace-console {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 0.84rem;
-  color: #e2e8f0;
-  line-height: 1.8;
-  display: flex;
-  flex-direction: column;
-  gap: 0.45rem;
-}
-
-.trace-line {
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.trace-time {
-  color: #64748b;
-  font-size: 0.75rem;
-}
-
-.trace-pill {
-  padding: 2px 7px;
-  border-radius: 4px;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-}
-
-.pill-api { background: rgba(99, 102, 241, 0.25); color: #a5b4fc; border: 1px solid rgba(99, 102, 241, 0.4); }
-.pill-batch { background: rgba(139, 92, 246, 0.25); color: #c4b5fd; border: 1px solid rgba(139, 92, 246, 0.4); }
-.pill-startup { background: rgba(14, 165, 233, 0.25); color: #7dd3fc; border: 1px solid rgba(14, 165, 233, 0.4); }
-.pill-test { background: rgba(16, 185, 129, 0.25); color: #6ee7b7; border: 1px solid rgba(16, 185, 129, 0.4); }
-.pill-success { background: rgba(16, 185, 129, 0.15); color: #34d399; }
-.pill-warn { background: rgba(245, 158, 11, 0.15); color: #fbbf24; }
-
-.trace-text {
-  color: #f1f5f9;
-}
-
-// Preview Metrics Side Panel
-.preview-metrics {
-  background: rgba(18, 22, 31, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
-  padding: 1.15rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.metrics-header {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #38bdf8;
-  letter-spacing: 0.05em;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  padding-bottom: 0.5rem;
-}
-
-.metric-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0.5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-  padding-bottom: 0.45rem;
-
-  &:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-  }
-}
-
-.metric-label {
-  font-size: 0.8rem;
-  color: #94a3b8;
-}
-
-.metric-val {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: #f8fafc;
-  text-align: right;
 }
 
 // Section General Style
@@ -383,7 +241,6 @@ $card-border-hover: var(--clr-primary, rgba(99, 102, 241, 0.4));
 
 .context-card {
   padding: 2rem;
-  background: $card-bg;
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
@@ -399,7 +256,6 @@ $card-border-hover: var(--clr-primary, rgba(99, 102, 241, 0.4));
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, #6366f1, #06b6d4);
     opacity: 0;
     transition: opacity 0.3s ease;
   }
@@ -490,18 +346,16 @@ $card-border-hover: var(--clr-primary, rgba(99, 102, 241, 0.4));
 
 // ROI Cards Grid
 .roi-grid {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.75rem;
   width: 100%;
 }
 
 .roi-card {
-  background: $card-bg;
-  border: 1px solid $card-border;
   padding: 2rem;
-  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
   transition: all 0.3s ease;
+  text-align: center;
 
   h4 {
     font-size: 1.2rem;
@@ -520,7 +374,6 @@ $card-border-hover: var(--clr-primary, rgba(99, 102, 241, 0.4));
 .roi-metric {
   font-size: 2.6rem;
   font-weight: 800;
-  background: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 0.5rem;
@@ -532,7 +385,6 @@ $card-border-hover: var(--clr-primary, rgba(99, 102, 241, 0.4));
   margin: 4.5rem 0 2rem;
 
   &__inner {
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.06) 0%, rgba(6, 182, 212, 0.06) 100%);
     border: 1px solid rgba(99, 102, 241, 0.25);
     border-radius: 22px;
     padding: 3.5rem 2rem;
@@ -548,7 +400,6 @@ $card-border-hover: var(--clr-primary, rgba(99, 102, 241, 0.4));
       left: -50%;
       width: 200%;
       height: 200%;
-      background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, transparent 60%);
       pointer-events: none;
     }
   }
@@ -594,23 +445,6 @@ $card-border-hover: var(--clr-primary, rgba(99, 102, 241, 0.4));
   }
 }
 
-// Animations Keyframes
-@keyframes pulse-glow {
-  0% { transform: scale(0.9); opacity: 0.3; }
-  100% { transform: scale(1.15); opacity: 0.55; }
-}
-
-@keyframes live-pulse {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(0.8); opacity: 0.4; }
-}
-
-// Responsive
-@media (max-width: 900px) {
-  .telemetry-mockup__body {
-    grid-template-columns: 1fr;
-  }
-}
 
 @media (max-width: 768px) {
   .hero__cta-group {

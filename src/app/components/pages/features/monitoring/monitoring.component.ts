@@ -6,7 +6,7 @@ import {
   bootstrapSearch,
   bootstrapBarChartFill,
   bootstrapExclamationTriangleFill,
-  bootstrapLightningChargeFill,
+  bootstrapLightningChargeFill, bootstrapArrowDown,
 } from '@ng-icons/bootstrap-icons';
 import { ScrollspyService } from '@services/scrollspy.service';
 import { goToPage } from '@utils/utils';
@@ -25,6 +25,7 @@ import { Router } from '@angular/router';
       bootstrapBarChartFill,
       bootstrapExclamationTriangleFill,
       bootstrapLightningChargeFill,
+      bootstrapArrowDown
     }),
   ],
   templateUrl: './monitoring.component.html',

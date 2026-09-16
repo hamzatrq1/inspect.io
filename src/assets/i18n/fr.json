@@ -186,6 +186,7 @@
         "description": "Superviser une application consiste à surveiller son état en continu. INSPECT détecte chaque événement (succès ou échec), chaque métrique de rapidité et chaque anomalie, en corrélant les événements métier avec leurs traces techniques."
       },
       "pillars": {
+        "title": "Comment INSPECT garantit la supervision",
         "traces": {
           "title": "Traces d'exécution",
           "description": "Le parcours chronologique complet d'une demande à travers l'application, étape par étape.",
@@ -198,12 +199,12 @@
         },
         "exceptions": {
           "title": "Exceptions et erreurs",
-          "description": "La capture automatique des pannes et anomalies, avec le contexte exact du problème.",
-          "benefit": "Diagnostiquer la cause racine sans avoir à reproduire le bug manuellement."
+          "description": "Les exceptions et les erreurs sont repérées et détaillées pour comprendre au mieux l'origine d'une anomalie.",
+          "benefit": "Être capable de faire un premier travail d'analyse sans compétences techniques, juste avec des connaissances fonctionnelles de votre application."
         },
         "dualtrace": {
-          "title": "Dual Event Trace",
-          "description": "La réconciliation unique entre la vision fonctionnelle (ex: création de commande) et la trace technique sous-jacente.",
+          "title": "Suivi de trace",
+          "description": "Le suivi d'événements est possible entre plusieurs briques différentes à travers un seul identifiant quelle que soit la technologie utilisée.",
           "benefit": "Une compréhension commune immédiate entre les équipes métier et techniques."
         }
       },

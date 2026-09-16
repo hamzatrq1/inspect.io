@@ -188,6 +188,7 @@
         "description": "Monitoring an application means keeping a constant watch on its state. INSPECT automatically detects every event (success or failure), execution speed metric, and anomaly, correlating business events with their technical traces."
       },
       "pillars": {
+        "title": "How INSPECT guarantees the monitoring",
         "traces": {
           "title": "Execution traces",
           "description": "The complete chronological journey of a request across the application, step by step.",
@@ -200,12 +201,12 @@
         },
         "exceptions": {
           "title": "Exceptions and errors",
-          "description": "Automatic capture of system errors with the exact context of the failure.",
-          "benefit": "Diagnose root cause without having to manually reproduce the bug."
+          "description": "Exceptions and errors are detected and logged with details to understand fully an anomaly",
+          "benefit": "Being able to make a diagnosis without technical skills, just by knowing how your application works functionnaly."
         },
         "dualtrace": {
           "title": "Dual Event Trace",
-          "description": "The unique bridge reconciling functional business events (e.g. order placed) with technical traces.",
+          "description": "Event trace is possible between multiple applications no matter if there are multiple protocols involved.",
           "benefit": "Instant shared understanding between business and technical teams."
         }
       },

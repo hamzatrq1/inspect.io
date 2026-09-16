@@ -3,27 +3,23 @@
     <div class="hero__glow hero__glow--primary"></div>
     <div class="hero__glow hero__glow--secondary"></div>
 
-    <div class="hero__badge">
+    <div class="hero__badge reveal">
       <span class="hero__badge-dot"></span>
       <span>{{ "features.monitoring.badges.title" | translate }}</span>
     </div>
 
-    <h1 class="hero__headline">
-      {{ "features.monitoring.intro.title" | translate }}
-    </h1>
-
-    <h2 class="hero__gradient">
+    <h2 class="hero__gradient reveal">
       {{ "features.monitoring.intro.subtitle" | translate }}
     </h2>
 
-    <p class="hero__desc">
+    <p class="hero__desc reveal">
       {{ "features.monitoring.intro.description" | translate }}
     </p>
   </section>
 
   <!-- 4 Core Pillars: Traces, Metrics, Exceptions, Dual Event Trace -->
   <section class="section" id="monitoring-intro-pillars">
-    <div class="intro-grid">
+    <div class="intro-grid reveal">
       <article class="intro-card">
         <div class="intro-card__header">
           <span class="intro-card__icon-badge icon--indigo">
@@ -82,3 +78,9 @@
     </div>
   </section>
 </div>
+
+<!-- Relink when scroll down -->
+<section class="scroll-trigger scroll-trigger--down" (click)="goToNext()">
+  <span class="scroll-trigger__label"> {{ "common.button.details" | translate }}</span>
+  <ng-icon name="bootstrapArrowDown" class="scroll-trigger__icon"></ng-icon>
+</section>

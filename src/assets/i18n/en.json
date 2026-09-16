@@ -10,7 +10,8 @@
     "button": {
       "install": "Install INSPECT",
       "architecture": "Discover architecture",
-      "compatibilities": "Discover compatibilities"
+      "compatibilities": "Discover compatibilities",
+      "details": "more details"
     }
   },
   "menu": {
@@ -173,7 +174,7 @@
       "subtitle": "The universal bridge between technical reality and business stakes",
       "description": "INSPECT gathers all telemetry, transforming it instantly into clear, visual observability.",
       "points": {
-        "observability": "Observability: you can observe the health of your services throw INSPECT. You can tell immediately if some requests are failing.",
+        "observability": "Observability: you can observe the health of your services through INSPECT. You can tell immediately if some requests are failing.",
         "telemetry": "Telemetry: you have access to all the telemetry data, like execution time, errors, and memory consumption."
       }
     },
@@ -183,23 +184,22 @@
         "title": "MONITORING"
       },
       "intro": {
-        "title": "Global supervision and real-time activity tracking",
-        "subtitle": "Traces, Metrics, Exceptions, and Dual Event Trace explained simply",
-        "description": "Monitoring an application means keeping a constant watch on its heartbeat. INSPECT automatically captures every event (success or failure), execution speed metric, and anomaly, correlating business events with their technical traces."
+        "subtitle": "Continuous visibility into your application health",
+        "description": "Monitoring an application means keeping a constant watch on its state. INSPECT automatically detects every event (success or failure), execution speed metric, and anomaly, correlating business events with their technical traces."
       },
       "pillars": {
         "traces": {
-          "title": "Execution Traces",
+          "title": "Execution traces",
           "description": "The complete chronological journey of a request across the application, step by step.",
           "benefit": "Know exactly where and why a transaction slowed down or failed."
         },
         "metrics": {
-          "title": "Performance Metrics",
-          "description": "Periodic numerical indicators: active users, average latency, request volume.",
+          "title": "Performance metrics",
+          "description": "Periodic numerical indicators: average execution latency, request volume.",
           "benefit": "Assess overall application health and plan future capacity needs."
         },
         "exceptions": {
-          "title": "Exceptions & Errors",
+          "title": "Exceptions and errors",
           "description": "Automatic capture of system errors with the exact context of the failure.",
           "benefit": "Diagnose root cause without having to manually reproduce the bug."
         },

@@ -19,6 +19,19 @@ $card-border-hover: var(--clr-primary, rgba(99, 102, 241, 0.4));
   box-sizing: border-box;
 }
 
+// Scroll Reveal
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+
+  &.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .hero {
   position: relative;
   display: flex;
@@ -249,6 +262,43 @@ $card-border-hover: var(--clr-primary, rgba(99, 102, 241, 0.4));
     margin-top: 1rem;
     text-align: justify;
     line-height: 2;
+  }
+}
+
+.scroll-trigger--down {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translateY(0) !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  margin: 2.5rem 0 1.5rem;
+  color: $primary;
+  transition: all 0.25s ease;
+
+  &:hover {
+    transform: translateY(4px) !important;
+    color: var(--clr-primary-hover, #4f46e5);
+
+    .scroll-trigger__icon {
+      transform: translateY(3px);
+    }
+  }
+
+  .scroll-trigger__label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+
+  .scroll-trigger__icon {
+    font-size: 1.4rem;
+    transition: transform 0.25s ease;
+    animation: bounce-down 2s infinite ease-in-out;
   }
 }
 

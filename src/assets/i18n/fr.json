@@ -10,7 +10,8 @@
     "button": {
       "install": "Installer INSPECT",
       "architecture": "Découvrir l'architecture",
-      "compatibilities": "Découvrir les compatibilités"
+      "compatibilities": "Découvrir les compatibilités",
+      "details": "+ de détails"
     }
   },
   "menu": {
@@ -181,9 +182,8 @@
         "title": "SUPERVISION"
       },
       "intro": {
-        "title": "Supervision globale et suivi d'activité en temps réel",
-        "subtitle": "Traces, Métriques, Exceptions et Dual Event Trace expliqués simplement",
-        "description": "Superviser une application consiste à surveiller son pouls en continu. INSPECT capture automatiquement chaque événement (succès ou échec), chaque métrique de rapidité et chaque anomalie, en corrélant les événements métier avec leurs traces techniques."
+        "subtitle": "Visibilité continue sur la santé de l'application.",
+        "description": "Superviser une application consiste à surveiller son état en continu. INSPECT détecte chaque événement (succès ou échec), chaque métrique de rapidité et chaque anomalie, en corrélant les événements métier avec leurs traces techniques."
       },
       "pillars": {
         "traces": {
@@ -193,7 +193,7 @@
         },
         "metrics": {
           "title": "Métriques de performance",
-          "description": "Les indicateurs chiffrés réguliers : nombre d'utilisateurs connectés, temps moyen, volume de requêtes.",
+          "description": "Les indicateurs chiffrés réguliers : temps moyen d'exécution, volume de requêtes.",
           "benefit": "Évaluer la santé globale et anticiper les besoins d'évolution."
         },
         "exceptions": {

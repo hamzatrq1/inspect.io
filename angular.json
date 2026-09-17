@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "@oneteme/inspect-demo": {
+    "@oneteme/inspect.io": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/inspect-demo",
+            "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "@oneteme/inspect-demo:build:production"
+              "browserTarget": "@oneteme/inspect.io:build:production"
             },
             "development": {
-              "browserTarget": "@oneteme/inspect-demo:build:development"
+              "browserTarget": "@oneteme/inspect.io:build:development"
             }
           },
           "defaultConfiguration": "development"

@@ -1,0 +1,864 @@
+{
+  "header": {
+    "search": "Rechercher",
+    "language-tooltip": "Changer la langue",
+    "theme-toggle": "Changer de thème",
+    "repo": "Projets"
+  },
+  "common": {
+    "function": "Fonctionnalité",
+    "button": {
+      "install": "Installer INSPECT",
+      "architecture": "Découvrir l'architecture",
+      "compatibilities": "Découvrir les compatibilités",
+      "details": "+ de détails",
+      "next": "suivant"
+    }
+  },
+  "menu": {
+    "home": "Description",
+    "button": {
+      "tooltip": {
+        "close": "Fermer le menu",
+        "open": "Ouvrir le menu"
+      }
+    },
+    "features": {
+      "title": "Fonctionnalités",
+      "monitoring": {
+        "title": "Supervision",
+        "events": "Événements et contextes d'exécution",
+        "workflow": "Flux sortants et dépendances systèmes",
+        "user": "Parcours utilisateur"
+      },
+      "e2e": {
+        "title": "Cartographie et traçabilité",
+        "tree": "Arbre de traces",
+        "thread": "Suivi des traitements par thread",
+        "architecture": "Cartographie dynamique des systèmes"
+      },
+      "metrics": {
+        "title": "Métriques de performance et APM",
+        "availability": "Santé et disponibilité",
+        "performance": "Performance et temps de réponse",
+        "volume": "Volume et débit",
+        "resources": "Ressources systèmes et machines"
+      },
+      "health": {
+        "title": "Cycle de vie et état des versions",
+        "inventory": "Inventaire applicatif",
+        "events": "Historique des événements"
+      },
+      "autonomy": {
+        "title": "Self management et autonomie",
+        "partitioning": "Partitionnement dynamique des données",
+        "purge": "Purge et rétention intelligente",
+        "self-reporting": "Auto-reporting"
+      }
+    },
+    "installation": "Installation",
+    "compatibilities": "Compatibilités",
+    "architecture": {
+      "title": "Architecture",
+      "application": "Application",
+      "collector": "Collecteur",
+      "server": "Serveur"
+    },
+    "conduct-code": "Code de conduite",
+    "contributing": "Contribuer"
+  },
+  "home": {
+    "title": "INSPECT",
+    "badge": {
+      "title": "DESCRIPTION",
+      "e2e": "Début - Fin",
+      "realtime": "Temps réel",
+      "quick-deploiement": "Déploiement rapide"
+    },
+    "headline": {
+      "prefix": "Ne devinez plus.",
+      "highlight": "INSPECTez",
+      "suffix": "ce qui se passe réellement dans votre application."
+    },
+    "content": "INSPECT est une plateforme de suivi et d'analyse des appels d'API conçue pour offrir une visibilité approfondie sur les interactions entre les différents composants d'un système distribué.",
+    "cta": {
+      "explore": "Découvrir les fonctionnalités",
+      "architecture": "Explorer l'architecture",
+      "install": "Commencer l'installation",
+      "title": "Prêt à transformer votre observabilité et plus encore ?",
+      "subtitle": "Intégrez INSPECT facilement et obtenez une visibilité totale sur vos microservices en quelques minutes."
+    },
+    "redirect": {
+      "services": "Plus de détails sur ces fonctionnalités",
+      "profiles": "Plus de détails sur les scénarios d'utilisation"
+    },
+    "description": {
+      "advantages": "Pourquoi utiliser INSPECT ? ",
+      "description": "Une suite d'outils complète pour observer, comprendre et optimiser vos architectures distribuées.",
+      "observability": {
+        "title": "Observabilité",
+        "content": "INSPECT est un outil pouvant facilité l'observabilité de votre application. Elle permet de détecter et diagnostiquer les problèmes dans des systèmes complexes. Vous avez une observabilité optimale sur votre application"
+      },
+      "metrics": {
+        "title": "Métriques",
+        "content": "INSPECT permet de récupérer de nombreuses informations et de quantifier les requêtes de votre application. Cela permet de comprendre les tendances, repérer au mieux les requêtes critiques et d'améliorer l'expérience utilisateur."
+      },
+      "time": {
+        "title": "Temps réel",
+        "content": "INSPECT permet de suivre en temps réel les appels d'API et les performances de votre application. Cela permet de détecter rapidement les problèmes et d'y remédier avant qu'ils n'affectent les utilisateurs finaux."
+      },
+      "e2e": {
+        "title": "Suivi de bout en bout",
+        "content": "Lors d'une analyse de logs classique, il faut repérer une erreur spécifique dans des milliers de lignes des logs, puis chercher la suite des événements à l'aide d'un fil rouge difficilement repérable. INSPECT vous épargne ce travail car il y a un suivi de bout en bout entre une première action et sa fin."
+      },
+      "uniformize": {
+        "title": "Uniformisation des données",
+        "content": "INSPECT uniformise au maximum les types de requêtes analysées. Que ce soit des retours HTTP, PostgreSQL, Oracle, les codes réponses sont adaptés au maximum pour que vous puissiez comprendre l'origine de l'erreur, même sans connaissance technique particulière."
+      },
+      "heartbeat": {
+        "title": "Monitoring",
+        "content": "Avec INSPECT, vous pourrez surveiller et monitorer l'ensemble des microservices de votre projet, voir le dernier redémarrage, la version déployée, le nombre de tentatives, tout ça en quelques secondes."
+      }
+    },
+    "profiles": {
+      "title": "Qui peut utiliser INSPECT ?",
+      "description": "À première vue, on peut penser qu'INSPECT est uniquement fait pour les développeurs. Mais sa plus-value réside dans le fait que tout le monde peut l'utiliser. Les développeurs sont, certes, ceux qui doivent l'implémenter dans le code. Mais après l'implémentation, tous les profils sont gagnants en l'utilisant.",
+      "technical": {
+        "title": "Profil technique",
+        "people": "Développeurs et Ops",
+        "content": "Les profils techniques peuvent vérifier la santé des microservices, si le déploiement a des erreurs. INSPECT peut également être utilisé pour l'analyse des logs, afin de trouver la root cause. Plusieurs réponses de protocoles sont unifiées au maximum pour éviter une longue recherche dans plusieurs fichiers de logs volumineux.",
+        "description": {
+          "first": "Diagnostic rapide et isolation de la root-cause",
+          "second": "Suivi de l'état de santé des déploiements et des versions",
+          "third": "Centralisation et unification des logs hétérogènes"
+        }
+      },
+      "functional": {
+        "title": "Profil fonctionnel",
+        "people": "PO, PM et métier",
+        "content": "Un profil fonctionnel peut facilement identifier un problème sans demander à l'équipe de développement de vérifier les logs, car INSPECT fournit des informations détaillées. Il est également possible de voir quelles requêtes sont les plus utilisées et quelles sont les plus critiques, ce qui aide à prioriser le backlog.",
+        "description": {
+          "first": "Visibilité claire sur les flux métier sans expertise technique",
+          "second": "Identification des requêtes et services les plus sollicités",
+          "third": "Priorisation éclairée du backlog basée sur des données réelles"
+        }
+      }
+    }
+  },
+  "features": {
+    "title": "INSPECT : un outil de télémétrie, d'observabilité et de supervision",
+    "subtitle": "Une visibilité totale pour les équipes techniques et fonctionnelles, sans toucher au code.",
+    "badge": {
+      "title": "FONCTIONNALITÉS",
+      "redirect": "+ de fonctionnalités"
+    },
+    "observability": {
+      "title": "Observabilité",
+      "subtitle": "Comprendre l'état interne de vos systèmes à travers leurs signaux",
+      "description": "L'observabilité est la capacité à déduire l'état de santé, le comportement et les dysfonctionnements internes d'un système informatique complexe uniquement en observant ses sorties externes.",
+      "value": {
+        "title": "L'apport pour vous :",
+        "desc": "Fini les réunions de crise où chacun se renvoie la responsabilité. L'observabilité permet à toute l'équipe (métier, support, développeurs) de comprendre en quelques secondes ce qui s'est réellement passé lors d'un incident."
+      }
+    },
+    "telemetry": {
+      "title": "Télémétrie",
+      "subtitle": "La collecte automatique et continue des signaux vitaux",
+      "description": "La télémétrie désigne l'ensemble des mesures, signaux et données brutes capturés automatiquement au cœur des applications : le temps d'exécution d'une tâche, les erreurs rencontrées, la consommation de mémoire ou le chemin emprunté par une transaction.",
+      "value": {
+        "title": "L'apport pour vous :",
+        "desc": "La télémétrie fournit les faits bruts et objectifs. Vous ne dépendez plus d'hypothèses : chaque action utilisateur ou traitement de nuit dispose d'un enregistrement factuel et horodaté."
+      }
+    },
+    "solution": {
+      "title": "INSPECT unifie ces 2 principes",
+      "points": {
+        "observability": "Observabilité : vous pouvez observer l'état de vos services à travers INSPECT. Vous pouvez voir immédiatement si des requêtes ne passent plus.",
+        "telemetry": "Télémétrie : vous avez accès à toutes les données télémétriques. Vous pouvez voir les métriques, les temps d'exécution, le nombre d'erreurs et la consommation en termes de performances."
+      }
+    },
+    "monitoring": {
+      "title": "Supervision",
+      "badges": {
+        "title": "SUPERVISION"
+      },
+      "intro": {
+        "subtitle": "Visibilité continue sur la santé de l'application.",
+        "description": "Superviser une application consiste à surveiller son état en continu. INSPECT détecte chaque événement (succès ou échec), chaque métrique de rapidité et chaque anomalie, en corrélant les événements métier avec leurs traces techniques."
+      },
+      "pillars": {
+        "title": "Comment INSPECT garantit la supervision",
+        "traces": {
+          "title": "Traces d'exécution",
+          "description": "Le parcours chronologique complet d'une demande à travers l'application, étape par étape.",
+          "benefit": "Savoir exactement où et pourquoi un traitement a ralenti ou échoué."
+        },
+        "metrics": {
+          "title": "Métriques de performance",
+          "description": "Les indicateurs chiffrés réguliers : temps moyen d'exécution, volume de requêtes.",
+          "benefit": "Évaluer la santé globale et anticiper les besoins d'évolution."
+        },
+        "exceptions": {
+          "title": "Exceptions et erreurs",
+          "description": "Les exceptions et les erreurs sont repérées et détaillées pour comprendre au mieux l'origine d'une anomalie.",
+          "benefit": "Être capable de faire un premier travail d'analyse sans compétences techniques, juste avec des connaissances fonctionnelles de votre application."
+        },
+        "dualtrace": {
+          "title": "Suivi de trace",
+          "description": "Le suivi d'événements est possible entre plusieurs briques différentes à travers un seul identifiant quelle que soit la technologie utilisée.",
+          "benefit": "Une compréhension commune immédiate entre les équipes métier et techniques."
+        }
+      },
+      "events": {
+        "title": "Événements et contextes d'exécution",
+        "subtitle": "API, BATCH, Démarrage, Tests : comprendre tous les types d'activité",
+        "description": "Une application se limite rarement à quelques redirections vers des onglets : il y a quasi systématiquement beaucoup de traitements de fonds, ou d'exécutions nocturnes qui sont indispensables et qu'il faut superviser",
+        "concept": {
+          "title": "Quelques événements supervisés par INSPECT",
+          "batch": {
+            "title": "Requêtes web et traitements réguliers",
+            "desc": "Les requêtes exécutées par les utilisateurs et les batch réguliers exécutés selon une fréquence déterminée sont correctement supervisés."
+          },
+          "startup": {
+            "title": "Démarrage et initialisation",
+            "desc": "Le moment où l'application se charge, se connecte aux bases de données et vérifie sa configuration. INSPECT identifie immédiatement les composants qui retardent le démarrage."
+          },
+          "tests": {
+            "title": "Tests automatisés",
+            "desc": "Les vérifications automatiques exécutées avant une mise en production. INSPECT capture les régressions de performance et les erreurs dès la phase de test."
+          }
+        },
+        "value": {
+          "title": "L'apport d'INSPECT pour vos équipes",
+          "first": {
+            "title": "Visibilité sur les batchs",
+            "desc": "Ne découvrez plus après remontée utilisateur seulement qu'un traitement s'est arrêté à 3h du matin. INSPECT vous donne le statut, le temps d'exécution et la ligne précise en échec."
+          },
+          "second": {
+            "title": "Diagnostic instantané des API",
+            "desc": "Identifiez en un clic si une lenteur provient de votre serveur, du réseau ou d'un service externe partenaire."
+          },
+          "third": {
+            "title": "Validation continue de la qualité",
+            "desc": "Comparez les performances d'une version à l'autre dès les tests de recette pour empêcher les régressions d'arriver en production."
+          }
+        }
+      },
+      "workflow": {
+        "title": "Flux sortants et dépendances systèmes",
+        "subtitle": "Polyvalence des protocoles",
+        "description": "Une application étant amenée à échanger avec d'autres, il est parfois compliqué d'avoir une manière uniforme d'analyser les échanges car il n'y a pas de manière uniforme d'échanger. De nombreux protocoles existent. INSPECT s'adapte à une multitude de protocoles.",
+        "concept": {
+          "title": "Protocoles intégrables via INSPECT",
+          "jdbc": {
+            "title": "JDBC / Base de données",
+            "desc": "INSPECT est capable de lire et d'analyser les requêtes qui ont eu lieu dans votre base de données. Si des transactions prennent du temps, cela devient facilement repérable et des actions peuvent être mises en place (comme la mise en place d'index)."
+          },
+          "rest": {
+            "title": "Requêtes HTTP",
+            "desc": "Superviser les appels vers d'autres applications ou partenaires. Les différents codes de réponse HTTP sont pris en compte (200, 400, 500...)"
+          },
+          "ftp": {
+            "title": "FTP / SFTP",
+            "desc": "L'envoi ou la récupération de fichiers sur des serveurs distants. INSPECT surveille le débit, la taille des fichiers et les erreurs de connexion."
+          },
+          "smtp": {
+            "title": "SMTP / Emails",
+            "desc": "L'envoi des notifications, confirmations de commande et alertes. INSPECT vérifie que les emails partent bien et mesure les délais de remise."
+          }
+        },
+        "stages": {
+          "title": "Mode de vue Stages",
+          "subtitle": "Comment faire lorsque tous ces protocoles sont appelés dans une seule action ?",
+          "desc": " L'avantage clé d'INSPECT est de pouvoir suivre une action complète, même si elle fait appel à plusieurs protocoles différents. Si une action utilisateur déclenche une requête HTTP, qui elle-même déclenche une requête JDBC, INSPECT suit l'ensemble du flux et vous montre exactement ce qui a lieu grâce à la partie Stages. Les actions sont toutes listées chronologiquement pour comprendre comment est organisée la chaine."
+        }
+      },
+      "user": {
+        "badges": {
+          "title": "EXPÉRIENCE UTILISATEUR"
+        },
+        "title": "Expérience Utilisateur et Parcours",
+        "subtitle": "Navigation et Product Analytics au service de la satisfaction client",
+        "description": "La performance technique n'a de sens que si elle sert l'utilisateur final. INSPECT relie chaque parcours de navigation aux performances réelles perçues par vos clients.",
+        "concept": {
+          "title": "Comprendre l'analyse de parcours",
+          "desc": "Le parcours utilisateur représente l'enchaînement des écrans et actions réalisés par un internaute (ex: recherche d'article -> ajout panier -> paiement).",
+          "journey": {
+            "title": "Parcours & Navigation (Le Cheminement du client)",
+            "desc": "Suivre pas à pas les étapes franchies par l'utilisateur pour comprendre où il rencontre des difficultés ou des lenteurs."
+          },
+          "analytics": {
+            "title": "Product Analytics (Les Habitudes d'usage)",
+            "desc": "Mesurer quelles fonctionnalités sont les plus utilisées, à quels moments, et quel est le taux d'abandon lors des étapes clés."
+          }
+        },
+        "value": {
+          "title": "L'apport d'INSPECT pour vos équipes",
+          "subtitle": "Alignez les décisions produit avec la réalité terrain",
+          "first": {
+            "title": "Compréhension de l'impact métier des bugs",
+            "desc": "Mesurez exactement combien d'utilisateurs ont été bloqués par une erreur technique et sur quel montant de panier."
+          },
+          "second": {
+            "title": "Optimisation des tunnels de conversion",
+            "desc": "Détectez les pages trop lentes qui découragent vos clients et entraînent des abandons de parcours."
+          },
+          "third": {
+            "title": "Support client ultra-efficace",
+            "desc": "Lorsqu'un client contacte le support, retrouvez l'historique complet de sa session et l'erreur exacte qu'il a rencontrée en quelques clics."
+          }
+        }
+      }
+    },
+    "e2e": {
+      "title": "Cartographie et Traçabilité End-to-End",
+      "badges": {
+        "title": "TRAÇABILITÉ END-TO-END"
+      },
+      "intro": {
+        "title": "Vision de bout en bout de vos systèmes d'information",
+        "subtitle": "Suivre chaque transaction du clic utilisateur jusqu'à la base de données",
+        "description": "Dans un système moderne composé de multiples microservices, serveurs et bases de données, suivre le chemin d'une opération devient un casse-tête. INSPECT offre une vision continue, sans couture, d'un bout à l'autre de la chaîne."
+      },
+      "tree": {
+        "badges": {
+          "title": "ARBRE DE TRACE"
+        },
+        "title": "Arbre de Trace Détaillé",
+        "subtitle": "Vue composant par appel : La radiographie de vos transactions",
+        "description": "L'arbre de trace décompose une opération en une arborescence visuelle montrant chaque composant sollicité, la durée de chaque sous-étape et l'endroit exact d'une éventuelle panne.",
+        "concept": {
+          "title": "Comprendre l'arbre de trace",
+          "desc": "Un arbre de trace est comme un ticket de caisse détaillé ou un arbre généalogique de l'exécution : l'action parent déclenche des sous-actions enfants.",
+          "span": {
+            "title": "La Trace & les Spans (Les Étapes élémentaires)",
+            "desc": "Une trace représente le voyage complet d'une requête. Chaque sous-étape (appel SQL, calcul, appel externe) est un 'span' chronométré avec précision."
+          },
+          "hierarchy": {
+            "title": "La Vue Hiérarchique (Qui appelle qui ?)",
+            "desc": "Une arborescence claire qui montre visuellement comment les composants s'emboîtent et s'exécutent les uns après les autres ou en parallèle."
+          }
+        },
+        "value": {
+          "title": "L'apport d'INSPECT pour vos équipes",
+          "subtitle": "Isolez la ligne exacte en cause en 3 clics",
+          "first": {
+            "title": "Résolution de panne ultra-rapide (MTTR réduit)",
+            "desc": "Inutile de lire des milliers de lignes de logs obscurs : l'arbre de trace pointe en rouge vif l'appel précis qui a échoué."
+          },
+          "second": {
+            "title": "Compréhension des temps d'attente",
+            "desc": "Voyez en un clin d'œil si une opération de 3 secondes a passé 2,8 secondes à attendre une réponse d'un tiers."
+          },
+          "third": {
+            "title": "Partage simple entre métiers et développeurs",
+            "desc": "Un schéma visuel universel qui permet aux fonctionnels de pointer précisément l'étape métier défaillante aux développeurs."
+          }
+        }
+      },
+      "thread": {
+        "badges": {
+          "title": "SUIVI DES THREADS & ASYNCHRONISME"
+        },
+        "title": "Suivi des Traitements par Thread",
+        "subtitle": "Asynchronisme et Multi-thread : Ne perdez jamais le fil",
+        "description": "Pour être rapides, les applications modernes répartissent leur travail entre plusieurs 'ouvriers' virtuels (les threads) qui travaillent en parallèle. INSPECT garantit la traçabilité continue sans jamais perdre le contexte.",
+        "concept": {
+          "title": "Qu'est-ce qu'un Thread et l'Asynchronisme ?",
+          "desc": "Explications simples pour comprendre comment votre serveur réalise plusieurs choses à la fois.",
+          "thread": {
+            "title": "Qu'est-ce qu'un Thread ? (L'Ouvrier en cuisine)",
+            "desc": "Un thread est une unité d'exécution autonome. Imaginez une brigade de cuisine : chaque cuisinier est un thread qui réalise une recette spécifique en même temps que les autres."
+          },
+          "async": {
+            "title": "Qu'est-ce que l'Asynchronisme ? (Le Bip de commande)",
+            "desc": "C'est le fait de lancer une tâche lourde en arrière-plan (ex: générer un rapport PDF) et de libérer immédiatement l'utilisateur avec un ticket d'attente, sans bloquer son écran."
+          },
+          "context": {
+            "title": "Le Piège classique : La perte de contexte",
+            "desc": "Dans la plupart des outils, quand une tâche passe d'un ouvrier à un autre en arrière-plan, le fil d'Ariane est perdu. INSPECT résout ce problème en transmettant automatiquement l'identifiant de trace."
+          }
+        },
+        "value": {
+          "title": "L'apport d'INSPECT pour vos équipes",
+          "subtitle": "Une traçabilité ininterrompue même dans les architectures les plus complexes",
+          "first": {
+            "title": "Suivi complet des tâches d'arrière-plan",
+            "desc": "Suivez le cycle complet d'une demande même lorsqu'elle est déléguée à des files de messages ou des exécuteurs asynchrones."
+          },
+          "second": {
+            "title": "Détection des blocages entre threads (Deadlocks)",
+            "desc": "Identifiez les situations où plusieurs ouvriers s'attendent mutuellement, provoquant le gel de l'application."
+          },
+          "third": {
+            "title": "Support natif des technologies modernes",
+            "desc": "Compatible avec les threads classiques et les nouveaux Virtual Threads (Java 21 Loom), sans aucune configuration complexe."
+          }
+        }
+      },
+      "cartography": {
+        "badges": {
+          "title": "CARTOGRAPHIE DYNAMIQUE"
+        },
+        "title": "Vue d'Architecture Globale",
+        "subtitle": "Cartographie dynamique des systèmes et des dépendances",
+        "description": "Fini les schémas d'architecture sur PowerPoint obsolètes dès le lendemain. INSPECT dessine automatiquement la carte vivante et en temps réel de vos systèmes d'information à partir du trafic réel.",
+        "concept": {
+          "title": "Comprendre la cartographie dynamique",
+          "desc": "La cartographie dynamique est le plan de métro interactif et toujours à jour de votre écosystème informatique.",
+          "map": {
+            "title": "La Carte des flux (Le Plan des autoroutes de l'information)",
+            "desc": "Une représentation graphique où chaque bulle est une application, un service ou une base de données, et chaque flèche représente des échanges réels."
+          },
+          "health": {
+            "title": "L'État de santé en temps réel (Le Trafic routier)",
+            "desc": "Les liens et bulles changent de couleur (vert, orange, rouge) selon le niveau de saturation ou d'erreurs en cours."
+          }
+        },
+        "value": {
+          "title": "L'apport d'INSPECT pour vos équipes",
+          "subtitle": "Gouvernance et maîtrise des risques simplifiées",
+          "first": {
+            "title": "Documentation vivante et infalsifiable",
+            "desc": "Obtenez la vraie cartographie de vos flux sans dépendre de schémas manuels souvent incomplets ou dépassés."
+          },
+          "second": {
+            "title": "Analyse d'impact avant changement",
+            "desc": "Avant de modifier ou couper un service, visualisez instantanément toutes les autres applications qui en dépendent."
+          },
+          "third": {
+            "title": "Communication fluide avec la direction",
+            "desc": "Présentez l'état du système d'information de manière claire et visuelle aux comités de direction et équipes d'audit."
+          }
+        }
+      }
+    },
+    "metrics": {
+      "title": "Métriques de Performance & APM",
+      "badges": {
+        "title": "MÉTRIQUES DE PERFORMANCE & APM"
+      },
+      "intro": {
+        "title": "Surveillance proactive de la performance et de la santé",
+        "subtitle": "Mesurer, anticiper et garantir la qualité de service",
+        "description": "L'APM (Application Performance Monitoring) consiste à mesurer en permanence la vitalité de vos logiciels pour détecter les dégradations avant que les utilisateurs n'en souffrent."
+      },
+      "sla": {
+        "badges": {
+          "title": "SANTÉ & DISPONIBILITÉ"
+        },
+        "title": "Santé et Disponibilité",
+        "subtitle": "SLA, Uptime, Taux d'erreur et Budget d'erreur",
+        "description": "Mesurez objectivement le respect de vos engagements de service et la fiabilité de vos applications pour vos clients et partenaires.",
+        "concept": {
+          "title": "Comprendre les notions de disponibilité et de SLA",
+          "desc": "Des termes simples pour mesurer si un service fonctionne comme promis.",
+          "sla": {
+            "title": "Qu'est-ce qu'un SLA ? (L'Engagement de qualité)",
+            "desc": "Le Service Level Agreement est le contrat d'engagement formel (ex: 99,9% de disponibilité garantie par mois)."
+          },
+          "uptime": {
+            "title": "Qu'est-ce que l'Uptime ? (Le Temps de service)",
+            "desc": "Le pourcentage de temps pendant lequel l'application a été accessible et pleinement opérationnelle sans panne."
+          },
+          "budget": {
+            "title": "Qu'est-ce que le Budget d'erreur ? (La Marge de sécurité)",
+            "desc": "Le nombre maximal d'incidents ou de minutes d'arrêt toléré sur une période avant de rompre le contrat client."
+          }
+        },
+        "value": {
+          "title": "L'apport d'INSPECT pour vos équipes",
+          "subtitle": "Garantissez la confiance de vos utilisateurs et clients",
+          "first": {
+            "title": "Suivi objectif des engagements contractuels",
+            "desc": "Générez des rapports fiables pour prouver le respect des engagements de service auprès de vos clients et partenaires."
+          },
+          "second": {
+            "title": "Alertes proactives avant rupture de SLA",
+            "desc": "Soyez notifié dès qu'un taux d'erreur grimpe anormalement, avant que le budget d'erreur ne soit consommé."
+          },
+          "third": {
+            "title": "Pilotage serein des comités de service",
+            "desc": "Fournissez des chiffres transparents et indiscutables lors des revues de performance avec le métier."
+          }
+        }
+      },
+      "performance": {
+        "badges": {
+          "title": "TEMPS DE RÉPONSE & LATENCE"
+        },
+        "title": "Performance et Temps de Réponse",
+        "subtitle": "Latence, Percentiles (P95, P99) et Goulots d'étranglement",
+        "description": "Comprenez la vitesse réelle ressentie par vos utilisateurs et repérez les ralentissements sournois cachés derrière les moyennes.",
+        "concept": {
+          "title": "Comprendre la latence et les percentiles",
+          "desc": "Pourquoi la moyenne est trompeuse et comment mesurer la vraie expérience client.",
+          "latency": {
+            "title": "Qu'est-ce que la Latence ? (Le Temps d'attente)",
+            "desc": "Le délai entre le moment où l'utilisateur clique et le moment où la réponse s'affiche à l'écran."
+          },
+          "percentile": {
+            "title": "Pourquoi la moyenne ment ? Les Percentiles (P95, P99)",
+            "desc": "Si 99 personnes attendent 1 seconde et 1 personne attend 60 secondes, la moyenne semble bonne. Le percentile P99 montre la réalité de cette personne la moins bien servie."
+          },
+          "bottleneck": {
+            "title": "Qu'est-ce qu'un Goulot d'étranglement ? (L'Entonnoir)",
+            "desc": "Le composant précis (base de données, réseau, calcul lourd) qui ralentit toute la chaîne, comme un rétrécissement de voies sur l'autoroute."
+          }
+        },
+        "value": {
+          "title": "L'apport d'INSPECT pour vos équipes",
+          "subtitle": "Éradiquez les lenteurs qui frustrent vos utilisateurs",
+          "first": {
+            "title": "Détection des lenteurs isolées",
+            "desc": "Repérez les 1% ou 5% d'utilisateurs qui subissent des temps de chargement inacceptables même quand la moyenne paraît normale."
+          },
+          "second": {
+            "title": "Identification chirurgicale des goulots",
+            "desc": "Localisez instantanément le composant responsable d'un ralentissement global."
+          },
+          "third": {
+            "title": "Suivi des gains après optimisation",
+            "desc": "Mesurez immédiatement l'impact d'une amélioration technique sur la réactivité réelle du système."
+          }
+        }
+      },
+      "volume": {
+        "badges": {
+          "title": "VOLUMÉTRIE & DÉBIT"
+        },
+        "title": "Volumétrie et Débit",
+        "subtitle": "Charge globale, débit de requêtes et pics d'activité",
+        "description": "Suivez le volume de transactions traitées par seconde et anticipez les montées en charge pour garantir la fluidité du service.",
+        "concept": {
+          "title": "Comprendre le débit et la charge",
+          "desc": "Mesurer la capacité de vos systèmes à absorber l'activité de vos clients.",
+          "rps": {
+            "title": "Qu'est-ce que le Débit (Throughput) ? (Le Flux de véhicules)",
+            "desc": "Le nombre de requêtes, commandes ou transactions traitées avec succès par unité de temps (ex: 2 000 requêtes par seconde)."
+          },
+          "spike": {
+            "title": "Qu'est-ce qu'un Pic de charge ? (L'Heure de pointe)",
+            "desc": "Les moments d'affluence exceptionnelle (soldes, ouverture de billetterie, clôture comptable mensuelle)."
+          },
+          "capacity": {
+            "title": "Capacité et Dimensionnement (Anticipation)",
+            "desc": "Anticiper les montées en charge et dimensionner l'infrastructure avant la saturation des serveurs."
+          }
+        },
+        "value": {
+          "title": "L'apport d'INSPECT pour vos équipes",
+          "subtitle": "Préparez vos systèmes aux grands événements commerciaux",
+          "first": {
+            "title": "Dimensionnement précis des infrastructures",
+            "desc": "Évitez de surpayer des serveurs inutiles ou de sous-dimensionner vos machines grâce aux métriques de charge réelle."
+          },
+          "second": {
+            "title": "Anticipation des saturations",
+            "desc": "Détectez les tendances de hausse d'activité plusieurs semaines à l'avance pour adapter vos capacités sereinement."
+          },
+          "third": {
+            "title": "Sécurité lors des temps forts métier",
+            "desc": "Surveillez en temps réel le comportement de vos systèmes pendant les lancements de produits ou les pics de ventes."
+          }
+        }
+      },
+      "resources": {
+        "badges": {
+          "title": "RESSOURCES SYSTÈME"
+        },
+        "title": "Ressources Système & Machine",
+        "subtitle": "Consommation CPU, Mémoire JVM, Threads actifs et Garbage Collector",
+        "description": "Surveillez la santé physique des machines hébergeant vos logiciels pour prévenir les crashs matériels et les fuites de mémoire.",
+        "concept": {
+          "title": "Comprendre les ressources système",
+          "desc": "Les éléments matériels essentiels au fonctionnement d'un logiciel.",
+          "cpu": {
+            "title": "Le CPU (Le Cerveau et la capacité de calcul)",
+            "desc": "Le processeur qui exécute les calculs. Un CPU saturé à 100% fait ramer toutes les applications du serveur."
+          },
+          "ram": {
+            "title": "La Mémoire RAM / JVM (L'Espace de travail)",
+            "desc": "L'espace où les données actives sont stockées. Si la mémoire est pleine (Out of Memory), l'application s'arrête net."
+          },
+          "gc": {
+            "title": "Le Garbage Collector (Le Nettoyage de la table)",
+            "desc": "Le mécanisme automatique qui libère la mémoire inutilisée. S'il met trop de temps à nettoyer, il provoque des micro-pauses perceptibles."
+          },
+          "threads": {
+            "title": "Les Threads actifs (Les Ouvriers mobilisés)",
+            "desc": "Le nombre d'exécutions simultanées en cours sur la machine."
+          }
+        },
+        "value": {
+          "title": "L'apport d'INSPECT pour vos équipes",
+          "subtitle": "Prévenez les pannes matérielles avant l'arrêt du service",
+          "first": {
+            "title": "Alerte précoce sur fuite de mémoire",
+            "desc": "Identifiez une consommation mémoire qui grimpe progressivement avant qu'elle ne provoque un crash de l'application."
+          },
+          "second": {
+            "title": "Optimisation des coûts d'hébergement Cloud",
+            "desc": "Ajustez la taille exacte de vos serveurs en fonction de leur consommation réelle pour réduire la facture d'hébergement."
+          },
+          "third": {
+            "title": "Stabilité continue du service",
+            "desc": "Assurez une disponibilité maximale en détectant les serveurs en surchauffe avant qu'ils ne cèdent sous la charge."
+          }
+        }
+      }
+    },
+    "health": {
+      "title": "Cycle de Vie et Gestion des Versions",
+      "badges": {
+        "title": "GESTION DES VERSIONS & CYCLE DE VIE"
+      },
+      "intro": {
+        "title": "Gouvernance applicative et maîtrise des déploiements",
+        "subtitle": "Inventaire en temps réel et corrélation des événements de cycle de vie",
+        "description": "Savoir exactement quelle version de logiciel tourne sur quel serveur et pouvoir lier un problème à un déploiement récent est la clé d'une exploitation sereine."
+      },
+      "inventory": {
+        "badges": {
+          "title": "INVENTAIRE APPLICATIF"
+        },
+        "title": "Inventaire Applicatif",
+        "subtitle": "Cartographie complète de votre parc par environnement",
+        "description": "Une vue consolidée et toujours à jour de toutes vos applications, réparties par environnement (Développement, Recette, Pré-production, Production).",
+        "concept": {
+          "title": "Comprendre l'inventaire applicatif",
+          "desc": "L'inventaire est la liste exhaustive et vivante de tout le patrimoine logiciel de votre entreprise.",
+          "environments": {
+            "title": "Les Environnements (Les Étapes de validation)",
+            "desc": "La Dev (pour coder), la Recette (pour tester), la Pré-prod (pour valider) et la Production (utilisée par vos vrais clients)."
+          },
+          "versioning": {
+            "title": "La Gestion des versions (Le Numéro d'édition)",
+            "desc": "Savoir à tout moment si la version 2.4.1 ou 2.4.0 est déployée sur chaque serveur pour éviter les disparités."
+          }
+        },
+        "value": {
+          "title": "L'apport d'INSPECT pour vos équipes",
+          "subtitle": "Fini les doutes sur l'état réel de vos serveurs",
+          "first": {
+            "title": "Visibilité immédiate sur tout le parc",
+            "desc": "Retrouvez en quelques clics l'ensemble des modules déployés dans votre entreprise sans interroger les équipes système."
+          },
+          "second": {
+            "title": "Détection des écarts de version",
+            "desc": "Repérez immédiatement si un serveur de production a été oublié lors d'une mise à jour de sécurité."
+          },
+          "third": {
+            "title": "Conformité et audit simplifiés",
+            "desc": "Fournissez instantanément la liste exacte des logiciels en service lors des audits de sécurité et de conformité."
+          }
+        }
+      },
+      "events": {
+        "badges": {
+          "title": "HISTORIQUE DES ÉVÉNEMENTS"
+        },
+        "title": "Historique des événements",
+        "subtitle": "Redémarrages, montées de version, déploiements et arrêts imprévus",
+        "description": "Historisez chaque événement marquant du cycle de vie de vos applications pour corréler instantanément un changement technique avec ses effets sur les performances.",
+        "concept": {
+          "title": "Comprendre les événements de cycle de vie",
+          "desc": "Tout ce qui modifie l'état d'une application au cours du temps.",
+          "deployments": {
+            "title": "Les Déploiements (Les Mises en service)",
+            "desc": "Le moment précis où une nouvelle version du logiciel est installée et activée."
+          },
+          "restarts": {
+            "title": "Les Redémarrages (Prévus ou accidentels)",
+            "desc": "Savoir si un serveur a redémarré suite à une opération de maintenance planifiée ou à cause d'un crash."
+          },
+          "correlation": {
+            "title": "La Corrélation temporelle (La Cause à effet)",
+            "desc": "Relier chronologiquement une hausse du taux d'erreur à un déploiement effectué 5 minutes plus tôt."
+          }
+        },
+        "value": {
+          "title": "L'apport d'INSPECT pour vos équipes",
+          "subtitle": "Sachez immédiatement ce qui a changé",
+          "first": {
+            "title": "Identification instantanée des régressions",
+            "desc": "Si les erreurs augmentent après une mise en production à 14h, INSPECT confirme immédiatement le lien avec le déploiement."
+          },
+          "second": {
+            "title": "Décision rapide de retour en arrière (Rollback)",
+            "desc": "Permet aux responsables de décider en toute connaissance de cause d'annuler une livraison avant que l'impact client ne soit critique."
+          },
+          "third": {
+            "title": "Audit continu de la stabilité",
+            "desc": "Suivez la fréquence des redémarrages imprévus pour identifier les applications structurellement instables."
+          }
+        }
+      }
+    },
+    "autonomy": {
+      "title": "Self Management et Autonomie",
+      "badges": {
+        "title": "SELF MANAGEMENT & AUTONOMIE"
+      },
+      "intro": {
+        "title": "Zéro effort d'administration et auto-gestion intelligente",
+        "subtitle": "Un système autonome qui s'auto-optimise, s'auto-purge et s'auto-surveille",
+        "description": "Installer un outil de supervision ne doit pas créer une charge de travail supplémentaire pour vos équipes. INSPECT gère automatiquement sa base de données, son stockage et sa propre résilience."
+      },
+      "partitioning": {
+        "badges": {
+          "title": "PARTITIONNEMENT DYNAMIQUE"
+        },
+        "title": "Partitionnement Dynamique des Données",
+        "subtitle": "Création automatique des partitions Jour/Mois sans intervention humaine",
+        "description": "Pour rester rapide même avec des milliards de données, INSPECT organise automatiquement ses données dans des tiroirs chronologiques séparés.",
+        "concept": {
+          "title": "Qu'est-ce que le Partitionnement de données ?",
+          "desc": "Une technique indispensable pour conserver des recherches ultra-rapides dans le temps.",
+          "partition": {
+            "title": "Le Concept des Partitions (Les Classeurs par mois)",
+            "desc": "Au lieu de jeter toutes les feuilles dans une boîte géante de 10 mètres de haut, vous créez un classeur par jour ou par mois. La recherche ne fouille que le classeur concerné."
+          },
+          "dynamic": {
+            "title": "L'Automatisation Dynamique (Zéro tâche manuelle)",
+            "desc": "INSPECT crée automatiquement les nouveaux classeurs pour demain et le mois prochain, sans qu'aucun administrateur de base de données n'ait à intervenir."
+          }
+        },
+        "value": {
+          "title": "L'apport d'INSPECT pour vos équipes",
+          "subtitle": "Performances constantes sans maintenance technique",
+          "first": {
+            "title": "Recherches instantanées toute l'année",
+            "desc": "Consultez une trace d'il y a 3 mois aussi rapidement qu'une trace enregistrée il y a 5 secondes."
+          },
+          "second": {
+            "title": "Zéro coût d'administration (DBA)",
+            "desc": "Vos équipes de bases de données n'ont aucun script de maintenance ou de découpage à créer ni à surveiller."
+          },
+          "third": {
+            "title": "Évolutivité illimitée (Scalabilité)",
+            "desc": "Le système supporte des volumes massifs de données sans jamais ralentir ni saturer."
+          }
+        }
+      },
+      "retention": {
+        "badges": {
+          "title": "PURGE & RÉTENTION INTELLIGENTE"
+        },
+        "title": "Purge et Rétention Intelligente",
+        "subtitle": "Configuration distribuée et rétention différenciée Technique vs Fonctionnel",
+        "description": "Optimisez l'espace de stockage en conservant les données techniques le temps nécessaire au diagnostic, et les événements métier stratégiques sur la durée requise par vos obligations légales.",
+        "concept": {
+          "title": "Comprendre la rétention différenciée et la purge",
+          "desc": "Conserver le bon niveau d'information sans gaspiller d'espace disque.",
+          "retention": {
+            "title": "Qu'est-ce que la Rétention ? (La Durée de conservation)",
+            "desc": "La politique qui définit combien de jours une information reste consultable avant d'être effacée."
+          },
+          "differentiated": {
+            "title": "Rétention Différenciée (Tech vs Métier)",
+            "desc": "Garder les détails techniques lourds (spans de 2ms) pendant 7 ou 14 jours, mais conserver l'historique des commandes métiers pendant 6 ou 12 mois."
+          },
+          "purge": {
+            "title": "La Purge Intelligente (Le Nettoyage automatique)",
+            "desc": "La suppression propre et automatique des partitions expirées en une fraction de seconde, sans consommer de CPU."
+          }
+        },
+        "value": {
+          "title": "L'apport d'INSPECT pour vos équipes",
+          "subtitle": "Maîtrise des coûts de stockage et conformité légale",
+          "first": {
+            "title": "Économies substantielles sur l'espace disque",
+            "desc": "Évitez le gonflement inutile des disques durs en nettoyant automatiquement les données techniques volumineuses expirées."
+          },
+          "second": {
+            "title": "Conformité réglementaire (RGPD & Audit)",
+            "desc": "Respectez les obligations de conservation des données métier sans risque d'oubli."
+          },
+          "third": {
+            "title": "Configuration simple et centralisée",
+            "desc": "Définissez vos règles de rétention par module et laissez INSPECT appliquer les politiques automatiquement."
+          }
+        }
+      },
+      "reporting": {
+        "badges": {
+          "title": "SELF-REPORTING & RÉSILIENCE"
+        },
+        "title": "Self-Reporting des Collecteurs",
+        "subtitle": "Rapport d'anomalies des collecteurs embarqués et protection circuit-breaker",
+        "description": "Qui surveille le surveillant ? Les agents INSPECT s'auto-diagnostiquent en continu et se mettent en sécurité pour ne jamais perturber votre application métier.",
+        "concept": {
+          "title": "Comprendre le Self-Reporting et la résilience",
+          "desc": "L'assurance que l'outil de supervision ne ralentira ni ne fera jamais planter vos applications.",
+          "report": {
+            "title": "Qu'est-ce que le Self-Reporting ? (L'Auto-diagnostic)",
+            "desc": "La capacité de l'agent INSPECT à mesurer sa propre consommation et à signaler d'éventuels retards d'envoi."
+          },
+          "circuit": {
+            "title": "Le Circuit-Breaker (Le Disjoncteur de sécurité)",
+            "desc": "Comme le disjoncteur de votre maison : si le réseau ou la base INSPECT est saturé, l'agent coupe temporairement sa collecte pour préserver 100% des ressources de votre application métier."
+          }
+        },
+        "value": {
+          "title": "L'apport d'INSPECT pour vos équipes",
+          "subtitle": "Sérénité absolue pour les équipes de production",
+          "first": {
+            "title": "Garantie de non-impact en production",
+            "desc": "INSPECT ne consomme jamais les ressources vitales de vos applications clientes en cas de situation de crise."
+          },
+          "second": {
+            "title": "Transparence totale de fonctionnement",
+            "desc": "Consultez à tout moment la santé des collecteurs et l'état de transmission des données."
+          },
+          "third": {
+            "title": "Auto-guérison et reconnexion transparente",
+            "desc": "Dès le retour à la normale, l'agent reprend automatiquement son activité sans intervention d'un administrateur."
+          }
+        }
+      }
+    }
+  },
+  "installation": {
+    "title": "Installation",
+    "content": "Pour installer INSPECT, il y a 2 dépendances à ajouter dans votre projet : INSPECT-core et INSPECT-ng-collector"
+  },
+  "compatibilities": {
+    "title": "Compatibilités",
+    "table": {
+      "stack": "Stack d'INSPECT",
+      "dependency": "Dépendance",
+      "version": "Version",
+      "function": {
+        "title": "Utilité",
+        "angular": "Front end framework",
+        "inspect-ng-collector": "Collecteur pour les applications angular",
+        "jquery-charts": "Graphiques pour générer les KPIs",
+        "jakarta": "API utilisée pour la gestion des emails"
+      }
+    }
+  },
+  "architecture": {
+    "title": "Architecture",
+    "content": "INSPECT est composé de 3 composants principaux : le collecteur, le serveur et l'application. Le collecteur est responsable de la collecte des données à partir de diverses sources, telles que les journaux, les métriques et les traces. Le serveur est responsable du traitement et du stockage des données collectées, et fournit une interface utilisateur pour visualiser et analyser les données. L'application est responsable de la génération des données collectées par le collecteur.",
+    "application": {
+      "title": "Application",
+      "content": "L'application est le composant qui génère les données collectées par le collecteur. Il peut s'agir d'une application web, d'un service backend ou de tout autre type d'application qui produit des données de performance et de suivi."
+    },
+    "collector": {
+      "title": "Collecteur",
+      "content": "Le collecteur est le composant responsable de la collecte des données à partir de diverses sources. Il peut collecter des données à partir de journaux, de métriques et de traces, et les envoyer au serveur pour traitement et stockage."
+    },
+    "server": {
+      "title": "Serveur",
+      "content": "Le serveur est le composant responsable du traitement et du stockage des données collectées par le collecteur. Il fournit également une interface utilisateur pour visualiser et analyser les données collectées, permettant aux utilisateurs de comprendre les performances et le comportement de leur application."
+    },
+    "flow": {
+      "title": "Flux",
+      "content": "Voici un exemple de flux applicatif typique :"
+    }
+  },
+  "components": {
+    "title": "Composants techniques"
+  }
+}

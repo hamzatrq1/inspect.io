@@ -1,0 +1,88 @@
+﻿<div class="volume-container">
+  <!-- HERO SECTION -->
+  <section class="hero" id="volume-hero">
+    <div class="hero__glow hero__glow--primary"></div>
+    <div class="hero__glow hero__glow--secondary"></div>
+
+    <div class="hero__badge reveal">
+      <span class="hero__badge-dot"></span>
+      <span>{{ "features.metrics.volume.badges.title" | translate }}</span>
+    </div>
+
+    <h1 class="hero__headline reveal">
+      {{ "features.metrics.volume.title" | translate }}
+    </h1>
+
+    <h2 class="hero__gradient reveal">{{ "features.metrics.volume.subtitle" | translate }}</h2>
+
+    <p class="hero__desc reveal">
+      {{ "features.metrics.volume.description" | translate }}
+    </p>
+
+    <div class="hero__cta-group reveal">
+      <button type="button" class="btn btn--primary" (click)="goToInstallation()">
+        <ng-icon name="bootstrapRocketTakeoffFill" class="btn__icon"></ng-icon>
+        <span>{{ "common.button.install" | translate }}</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- SECTION 1: CONCEPT EXPLANATION -->
+  <section class="section" id="volume-concept">
+    <div class="section__header reveal">
+      <h2 class="section__title">{{ "features.metrics.volume.concept.title" | translate }}</h2>
+      <p class="section__subtitle">{{ "features.metrics.volume.concept.desc" | translate }}</p>
+    </div>
+
+    <div class="features-grid">
+      <article class="feature-card reveal">
+        <div class="feature-card__icon-wrap icon--indigo">
+          <ng-icon name="bootstrapActivity"></ng-icon>
+        </div>
+        <h3 class="feature-card__title">{{ "features.metrics.volume.concept.rps.title" | translate }}</h3>
+        <p class="feature-card__desc">{{ "features.metrics.volume.concept.rps.desc" | translate }}</p>
+      </article>
+
+      <article class="feature-card reveal">
+        <div class="feature-card__icon-wrap icon--cyan">
+          <ng-icon name="bootstrapLightningChargeFill"></ng-icon>
+        </div>
+        <h3 class="feature-card__title">{{ "features.metrics.volume.concept.spike.title" | translate }}</h3>
+        <p class="feature-card__desc">{{ "features.metrics.volume.concept.spike.desc" | translate }}</p>
+      </article>
+
+      <article class="feature-card reveal">
+        <div class="feature-card__icon-wrap icon--amber">
+          <ng-icon name="bootstrapSliders2"></ng-icon>
+        </div>
+        <h3 class="feature-card__title">{{ "features.metrics.volume.concept.capacity.title" | translate }}</h3>
+        <p class="feature-card__desc">{{ "features.metrics.volume.concept.capacity.desc" | translate }}</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- SECTION 2: INSPECT VALUE PROPOSITION -->
+  <section class="section" id="volume-value">
+    <div class="section__header reveal">
+      <h2 class="section__title">{{ "features.metrics.volume.value.title" | translate }}</h2>
+      <p class="section__subtitle">{{ "features.metrics.volume.value.subtitle" | translate }}</p>
+    </div>
+
+    <div class="roi-grid">
+      <div class="roi-card reveal">
+        <h4>{{ "features.metrics.volume.value.first.title" | translate }}</h4>
+        <p>{{ "features.metrics.volume.value.first.desc" | translate }}</p>
+      </div>
+
+      <div class="roi-card reveal">
+        <h4>{{ "features.metrics.volume.value.second.title" | translate }}</h4>
+        <p>{{ "features.metrics.volume.value.second.desc" | translate }}</p>
+      </div>
+
+      <div class="roi-card reveal">
+        <h4>{{ "features.metrics.volume.value.third.title" | translate }}</h4>
+        <p>{{ "features.metrics.volume.value.third.desc" | translate }}</p>
+      </div>
+    </div>
+  </section>
+</div>

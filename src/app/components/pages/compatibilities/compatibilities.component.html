@@ -1,0 +1,63 @@
+<section class="installation__scroll-trigger installation__scroll-trigger--up"
+         [class.is-visible]="isScrollUpVisible()"
+         (click)="goToInstallation()">
+  <div class="tui-scroll-indicator tui-scroll-indicator--up" [class.tui-scroll-indicator--active]="isTransitioning()">
+    <div class="tui-scroll-indicator__wheel"></div>
+  </div>
+</section>
+
+<div class="title"> {{ "compatibilities.title" | translate }} </div>
+<table>
+  <thead>
+  <tr>
+    <th> {{ "compatibilities.table.stack" | translate }}</th>
+    <th> {{ "compatibilities.table.dependency" | translate }}</th>
+    <th> {{ "compatibilities.table.version" | translate }}</th>
+    <th> {{ "compatibilities.table.function.title" | translate }}</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>inspect-app</td>
+    <td>Angular</td>
+    <td>v16+</td>
+    <td>{{ "compatibilities.table.function.angular" | translate }}</td>
+  </tr>
+  <tr>
+    <td>inspect-app</td>
+    <td>&#64;oneteme/inspect-ng-collector</td>
+    <td>v1.3+</td>
+    <td>{{ "compatibilities.table.function.inspect-ng-collector" | translate }}</td>
+  </tr>
+  <tr>
+    <td>inspect-app</td>
+    <td>jquery-echarts</td>
+    <td>v0.0+</td>
+    <td>{{ "compatibilities.table.function.jquery-charts" | translate }}</td>
+  </tr>
+  <tr>
+    <td>inspect-core</td>
+    <td>Java</td>
+    <td>v21.x</td>
+    <td> - </td>
+  </tr>
+  <tr>
+    <td>inspect-core</td>
+    <td>Jakarta</td>
+    <td>v2.1.x</td>
+    <td>{{ "compatibilities.table.function.jakarta" | translate }}</td>
+  </tr>
+  <tr>
+    <td>inspect-server</td>
+    <td> - </td>
+    <td> - </td>
+    <td> _ </td>
+  </tr>
+  </tbody>
+</table>
+
+<section class="installation__scroll-trigger" (click)="goToArchitecture()">
+  <div class="tui-scroll-indicator tui-scroll-indicator--down" [class.tui-scroll-indicator--active]="isTransitioning()">
+    <div class="tui-scroll-indicator__wheel"></div>
+  </div>
+</section>

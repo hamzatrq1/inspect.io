@@ -1,0 +1,218 @@
+<div class="home-container">
+  <!-- Hero Section -->
+  <section class="hero">
+    <!-- Floating background glow decoration -->
+    <div class="hero__glow hero__glow--primary"></div>
+    <div class="hero__glow hero__glow--secondary"></div>
+
+    <div class="hero__badge reveal">
+      <span class="hero__badge-dot"></span>
+      <span>{{ "home.badge.title" | translate }}</span>
+    </div>
+
+    <div class="hero__logo-wrapper reveal">
+      <img class="hero__logo" src="assets/icons/home/jarvis.svg" alt="Inspect Jarvis" />
+    </div>
+
+    <div class="hero__acronym reveal">
+      <span class="hero__acronym-letter">IN</span><span class="hero__acronym-word">tegrated </span>
+      <span class="hero__acronym-letter">S</span><span class="hero__acronym-word">ystem </span>
+      <span class="hero__acronym-letter">P</span><span class="hero__acronym-word">erformance </span>
+      <span class="hero__acronym-letter">E</span><span class="hero__acronym-word">valuation </span>
+      <span class="hero__acronym-letter">C</span><span class="hero__acronym-word">ommunication </span>
+      <span class="hero__acronym-letter">T</span><span class="hero__acronym-word">racking</span>
+    </div>
+
+    <h1 class="hero__headline reveal">
+      {{ "home.headline.prefix" | translate }}
+      <span class="hero__gradient">{{ "home.headline.highlight" | translate }}</span>
+      {{ "home.headline.suffix" | translate }}
+    </h1>
+
+    <p class="hero__desc reveal">
+      {{ "home.content" | translate }}
+    </p>
+  </section>
+
+  <!-- Section 1: Advantages / Points forts -->
+  <section class="section">
+    <div class="section__header reveal">
+      <h2 class="section__title">{{ "home.description.advantages" | translate }}</h2>
+      <p class="section__subtitle"> {{ "home.description.description" | translate }} </p>
+    </div>
+
+    <div class="cards-grid">
+      <!-- Card 1: Observability -->
+      <article class="feature-card reveal">
+        <div class="feature-card__top">
+          <div class="feature-card__icon-wrap">
+            <img [src]="'assets/icons/home/observability.png'" alt="Observabilité" class="feature-card__icon" />
+          </div>
+          <span class="feature-card__tag">Zero-Config</span>
+        </div>
+        <h3 class="feature-card__title">{{ "home.description.observability.title" | translate }}</h3>
+        <p class="feature-card__content">{{ "home.description.observability.content" | translate }}</p>
+      </article>
+
+      <!-- Card 2: Metrics -->
+      <article class="feature-card reveal">
+        <div class="feature-card__top">
+          <div class="feature-card__icon-wrap">
+            <img [src]="'assets/icons/home/metrics.png'" alt="Métriques" class="feature-card__icon" />
+          </div>
+          <span class="feature-card__tag">APM & KPIs</span>
+        </div>
+        <h3 class="feature-card__title">{{ "home.description.metrics.title" | translate }}</h3>
+        <p class="feature-card__content">{{ "home.description.metrics.content" | translate }}</p>
+      </article>
+
+      <!-- Card 3: Real time -->
+      <article class="feature-card reveal">
+        <div class="feature-card__top">
+          <div class="feature-card__icon-wrap">
+            <img [src]="'assets/icons/home/time.png'" alt="Temps réel" class="feature-card__icon" />
+          </div>
+          <span class="feature-card__tag"> {{ "home.badge.realtime" | translate }}</span>
+        </div>
+        <h3 class="feature-card__title">{{ "home.description.time.title" | translate }}</h3>
+        <p class="feature-card__content">{{ "home.description.time.content" | translate }}</p>
+      </article>
+
+      <!-- Card 4: E2E -->
+      <article class="feature-card reveal">
+        <div class="feature-card__top">
+          <div class="feature-card__icon-wrap">
+            <img [src]="'assets/icons/home/e2e.png'" alt="End to End" class="feature-card__icon" />
+          </div>
+          <span class="feature-card__tag"> {{ "home.badge.e2e" | translate }}</span>
+        </div>
+        <h3 class="feature-card__title">{{ "home.description.e2e.title" | translate }}</h3>
+        <p class="feature-card__content">{{ "home.description.e2e.content" | translate }}</p>
+      </article>
+
+      <!-- Card 5: Uniformize -->
+      <article class="feature-card reveal">
+        <div class="feature-card__top">
+          <div class="feature-card__icon-wrap">
+            <img [src]="'assets/icons/home/uniformize.png'" alt="Uniformisation" class="feature-card__icon" />
+          </div>
+          <span class="feature-card__tag">Multi-Protocoles</span>
+        </div>
+        <h3 class="feature-card__title">{{ "home.description.uniformize.title" | translate }}</h3>
+        <p class="feature-card__content">{{ "home.description.uniformize.content" | translate }}</p>
+      </article>
+
+      <!-- Card 6: Heartbeat / Monitoring -->
+      <article class="feature-card reveal">
+        <div class="feature-card__top">
+          <div class="feature-card__icon-wrap">
+            <img [src]="'assets/icons/home/heartbeat.png'" alt="Heartbeat" class="feature-card__icon" />
+          </div>
+          <span class="feature-card__tag">Microservices</span>
+        </div>
+        <h3 class="feature-card__title">{{ "home.description.heartbeat.title" | translate }}</h3>
+        <p class="feature-card__content">{{ "home.description.heartbeat.content" | translate }}</p>
+      </article>
+    </div>
+
+    <!-- Redirect to Features -->
+    <div class="section__action reveal">
+      <button type="button" class="action-link-btn" (click)="goToFeatures()">
+        <span>{{ "home.redirect.services" | translate }}</span>
+        <ng-icon name="bootstrapArrowRight" class="action-link-btn__icon"></ng-icon>
+      </button>
+    </div>
+  </section>
+
+  <!-- Section 2: Profiles / Use cases -->
+  <section class="section">
+    <div class="section__header reveal">
+      <h2 class="section__title">{{ "home.profiles.title" | translate }}</h2>
+      <p class="section__subtitle">{{ "home.profiles.description" | translate }}</p>
+    </div>
+
+    <div class="profiles-grid">
+      <!-- Technical Profile -->
+      <article class="profile-card profile-card--tech reveal">
+        <div class="profile-card__header">
+          <div class="profile-card__icon-wrap">
+            <img [src]="'assets/icons/technical.png'" alt="Technical Profile" class="profile-card__icon" />
+          </div>
+          <div>
+            <span class="profile-card__badge">{{ "home.profiles.technical.people" | translate }}</span>
+            <h3 class="profile-card__title">{{ "home.profiles.technical.title" | translate }}</h3>
+          </div>
+        </div>
+        <p class="profile-card__content">{{ "home.profiles.technical.content" | translate }}</p>
+        <ul class="profile-card__list">
+          <li>
+            <ng-icon name="bootstrapCheckCircleFill" class="check-icon"></ng-icon>
+            <span>{{ "home.profiles.technical.description.first" | translate }}</span>
+          </li>
+          <li>
+            <ng-icon name="bootstrapCheckCircleFill" class="check-icon"></ng-icon>
+            <span>{{ "home.profiles.technical.description.second" | translate }}</span>
+          </li>
+          <li>
+            <ng-icon name="bootstrapCheckCircleFill" class="check-icon"></ng-icon>
+            <span>{{ "home.profiles.technical.description.third" | translate }}</span>
+          </li>
+        </ul>
+      </article>
+
+      <!-- Functional Profile -->
+      <article class="profile-card profile-card--func reveal">
+        <div class="profile-card__header">
+          <div class="profile-card__icon-wrap">
+            <img [src]="'assets/icons/functional.png'" alt="Functional Profile" class="profile-card__icon" />
+          </div>
+          <div>
+            <span class="profile-card__badge">{{ "home.profiles.functional.people" | translate }}</span>
+            <h3 class="profile-card__title">{{ "home.profiles.functional.title" | translate }}</h3>
+          </div>
+        </div>
+        <p class="profile-card__content">{{ "home.profiles.functional.content" | translate }}</p>
+        <ul class="profile-card__list">
+          <li>
+            <ng-icon name="bootstrapCheckCircleFill" class="check-icon"></ng-icon>
+            <span>{{ "home.profiles.functional.description.first" | translate }}</span>
+          </li>
+          <li>
+            <ng-icon name="bootstrapCheckCircleFill" class="check-icon"></ng-icon>
+            <span>{{ "home.profiles.functional.description.second" | translate }}</span>
+          </li>
+          <li>
+            <ng-icon name="bootstrapCheckCircleFill" class="check-icon"></ng-icon>
+            <span>{{ "home.profiles.functional.description.third" | translate }}</span>
+          </li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- Section 3: Commercial CTA Banner -->
+  <section class="cta-banner reveal">
+    <div class="cta-banner__inner">
+      <div class="cta-banner__badge">{{ "home.badge.quick-deploiement" | translate }}</div>
+      <h2 class="cta-banner__title">{{ "home.cta.title" | translate }}</h2>
+      <p class="cta-banner__desc">{{ "home.cta.subtitle" | translate }}</p>
+      <div class="cta-banner__actions">
+        <button type="button" class="btn btn--primary" (click)="goToInstallation()">
+          <ng-icon name="bootstrapRocketTakeoffFill" class="btn__icon"></ng-icon>
+          <span>{{ "home.cta.install" | translate }}</span>
+        </button>
+        <button type="button" class="btn btn--secondary" (click)="goToFeatures()">
+          <span>{{ "home.cta.explore" | translate }}</span>
+          <ng-icon name="bootstrapArrowRight" class="btn__icon"></ng-icon>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scroll down trigger -->
+  <section class="scroll-trigger" (click)="goToFeatures()" title="Découvrir la suite">
+    <div class="tui-scroll-indicator" [class.tui-scroll-indicator--active]="isTransitioning()">
+      <div class="tui-scroll-indicator__wheel"></div>
+    </div>
+  </section>
+</div>

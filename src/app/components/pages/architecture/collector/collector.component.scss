@@ -1,0 +1,9 @@
+@use "src/styles.scss" as *;
+
+.collector {
+  margin-top: 4rem;
+  text-align: center;
+  .doc {
+    text-align: left;
+  }
+}

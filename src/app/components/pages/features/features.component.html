@@ -1,0 +1,94 @@
+<!-- Relink when scroll up --><!-- Hero Section: Observability, Telemetry & INSPECT -->
+<div class="features-intro-container">
+  <section class="hero" id="features-hero">
+    <div class="hero__glow hero__glow--primary"></div>
+    <div class="hero__glow hero__glow--secondary"></div>
+
+    <div class="hero__badge">
+      <span class="hero__badge-dot"></span>
+      <span>{{ "features.badge.title" | translate }}</span>
+    </div>
+
+    <h1 class="hero__headline">
+      {{ "features.title" | translate }}
+    </h1>
+
+    <h2 class="hero__gradient">
+      {{ "features.subtitle" | translate }}
+    </h2>
+
+    <div class="hero__cta-group">
+      <button type="button" class="btn btn--primary" (click)="goToInstallation()">
+        <ng-icon name="bootstrapRocketTakeoffFill" class="btn__icon"></ng-icon>
+        <span>{{ "common.button.install" | translate }}</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Observability & Telemetry Pillar Cards -->
+  <section class="section" id="features-pillars">
+    <div class="pillars-grid">
+      <!-- Card 1: Observability -->
+      <article class="pillar-card pillar-card--observability">
+        <div class="pillar-card__header">
+          <div class="pillar-card__icon-wrap icon--indigo">
+            <ng-icon name="bootstrapEyeFill"></ng-icon>
+          </div>
+          <div class="pillar-card__header-text">
+            <h3 class="pillar-card__title">{{ "features.observability.title" | translate }}</h3>
+            <span class="pillar-card__subtitle">{{ "features.observability.subtitle" | translate }}</span>
+          </div>
+        </div>
+        <p class="pillar-card__desc">{{ "features.observability.description" | translate }}</p>
+        <div class="pillar-card__value">
+          <strong class="pillar-card__value-title">{{ "features.observability.value.title" | translate }}</strong>
+          <span>{{ "features.observability.value.desc" | translate }}</span>
+        </div>
+      </article>
+
+      <!-- Card 2: Telemetry -->
+      <article class="pillar-card pillar-card--telemetry">
+        <div class="pillar-card__header">
+          <div class="pillar-card__icon-wrap icon--cyan">
+            <ng-icon name="bootstrapActivity"></ng-icon>
+          </div>
+          <div class="pillar-card__header-text">
+            <h3 class="pillar-card__title">{{ "features.telemetry.title" | translate }}</h3>
+            <span class="pillar-card__subtitle">{{ "features.telemetry.subtitle" | translate }}</span>
+          </div>
+        </div>
+        <p class="pillar-card__desc">{{ "features.telemetry.description" | translate }}</p>
+        <div class="pillar-card__value">
+          <strong class="pillar-card__value-title">{{ "features.telemetry.value.title" | translate }}</strong>
+          <span>{{ "features.telemetry.value.desc" | translate }}</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Solution Section -->
+  <section class="solution-section" id="features-solution">
+    <div class="solution-card">
+      <h2 class="solution-card__title">
+        {{ "features.solution.title" | translate }}
+      </h2>
+      <br>
+      <div class="solution-card__points">
+        <div class="solution-point">
+          <ng-icon name="bootstrapCheckCircleFill" class="solution-point__icon"></ng-icon>
+          <span class="solution-point__text">{{ "features.solution.points.observability" | translate }}</span>
+        </div>
+        <div class="solution-point">
+          <ng-icon name="bootstrapCheckCircleFill" class="solution-point__icon"></ng-icon>
+          <span class="solution-point__text">{{ "features.solution.points.telemetry" | translate }}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Relink when scroll down -->
+<section class="scroll-trigger scroll-trigger--down" (click)="goToNext()">
+  <span class="scroll-trigger__label"> {{ "features.badge.redirect" | translate }}</span>
+  <ng-icon name="bootstrapArrowDown" class="scroll-trigger__icon"></ng-icon>
+</section>

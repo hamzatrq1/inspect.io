@@ -1,0 +1,63 @@
+<jquery-table class="flex-table" [config]="tableConfig" [data]="requests" [isLoading]="isLoading">
+  <ng-template jqtCellDef="host" let-row>
+    <span [matTooltip]='"features.monitoring.session.content.host" | translate'
+          matTooltipClass="custom-tooltip">
+      {{ row.host }}
+    </span>
+  </ng-template>
+
+  <ng-template jqtCellDef="resource" let-row>
+    <span style="font-weight: bold;"
+          [ngStyle]="{'color': row.protocol=='http' ? 'green':'gray'}"
+          [matTooltip]='"features.monitoring.session.content.resource" | translate'
+    >{{ row.method | typeColumnFormat }} </span>
+    <br>
+    <span [title]="row.path">{{ row.path }}</span>
+  </ng-template>
+
+  <ng-template jqtCellDef="start" let-row>
+    <div [matTooltip]='"features.monitoring.session.content.start" | translate'>
+    {{ (row.start * 1000 | date:'dd/MM/yyyy') }}
+    <br>
+    {{ (row.start * 1000 | date:'HH:mm:ss.SSS') }}
+    </div>
+  </ng-template>
+
+  <ng-template jqtCellDef="user" let-row>
+    <span [matTooltip]='"features.monitoring.session.content.user" | translate'
+          matTooltipClass="custom-tooltip">
+      {{ row.user }}
+    </span>
+  </ng-template>
+
+  <ng-template jqtCellDef="delay" let-row>
+    <div *ngIf="!row.end" style="display: flex; align-items: center; gap: 6px;">
+      <mat-spinner [diameter]="14"></mat-spinner>
+      <span class="cell-secondary">En cours...</span>
+    </div>
+    <div *ngIf="row.end" class="cell-primary"
+         [matTooltip]='"features.monitoring.session.content.duration" | translate'
+         matTooltipClass="custom-tooltip">
+      {{ ((row.end - row.start) * 1000 | number:'1.0-0') }} ms
+    </div>
+  </ng-template>
+
+  <ng-template jqtCellDef="status" let-row>
+    <div *ngIf="!row.end" style="display: flex; align-items: center; gap: 6px;">
+      <mat-progress-spinner [diameter]="14"></mat-progress-spinner>
+      <span class="cell-secondary">En cours...</span>
+    </div>
+    <div *ngIf="row.end"
+         [matTooltip]='"features.monitoring.session.content.status" | translate'>
+      {{ row.status }}
+    </div>
+  </ng-template>
+
+  <ng-template jqtCellDef="action" let-row>
+    <button mat-icon-button color="primary"
+            [matTooltip]='"features.monitoring.session.content.action" | translate'
+            matTooltipClass="custom-tooltip">
+      <mat-icon class="material-symbols-outlined">link</mat-icon>
+    </button>
+  </ng-template>
+</jquery-table>

@@ -1,0 +1,23 @@
+<!-- Relink when scroll up -->
+<section class="scroll-trigger scroll-trigger--up"
+         [class.is-visible]="isScrollUpVisible()"
+         (click)="goToCompatibilities()">
+  <div class="tui-scroll-indicator tui-scroll-indicator--up" [class.tui-scroll-indicator--active]="isTransitioning()">
+    <div class="tui-scroll-indicator__wheel"></div>
+  </div>
+</section>
+
+  <markdown
+    mermaid
+    class="architecture__doc"
+    [src]="'assets/pages/architecture/architecture_' + (translate.currentLang || 'en') + '.md'">
+  </markdown>
+<br>
+
+
+<!-- Relink when scroll down -->
+<section class="scroll-trigger" (click)="goToComponents()">
+  <div class="tui-scroll-indicator tui-scroll-indicator--down" [class.tui-scroll-indicator--active]="isTransitioning()">
+    <div class="tui-scroll-indicator__wheel"></div>
+  </div>
+</section>

@@ -1,0 +1,86 @@
+<div class="monitoring-intro-container">
+  <section class="hero" id="monitoring-hero">
+    <div class="hero__glow hero__glow--primary"></div>
+    <div class="hero__glow hero__glow--secondary"></div>
+
+    <div class="hero__badge reveal">
+      <span class="hero__badge-dot"></span>
+      <span>{{ "features.monitoring.badges.title" | translate }}</span>
+    </div>
+
+    <h2 class="hero__gradient reveal">
+      {{ "features.monitoring.intro.subtitle" | translate }}
+    </h2>
+
+    <p class="hero__desc reveal">
+      {{ "features.monitoring.intro.description" | translate }}
+    </p>
+  </section>
+
+  <h3 class="subtitle reveal"> {{ "features.monitoring.pillars.title" | translate }} </h3>
+  <section class="section" id="monitoring-intro-pillars">
+    <div class="intro-grid reveal">
+      <article class="intro-card">
+        <div class="intro-card__header">
+          <span class="intro-card__icon-badge icon--indigo">
+            <ng-icon name="bootstrapSearch"></ng-icon>
+          </span>
+          <h3 class="intro-card__title">{{ "features.monitoring.pillars.traces.title" | translate }}</h3>
+        </div>
+        <p class="intro-card__desc">{{ "features.monitoring.pillars.traces.description" | translate }}</p>
+        <div class="intro-card__value">
+          <ng-icon name="bootstrapCheckCircleFill" class="value-icon"></ng-icon>
+          <span>{{ "features.monitoring.pillars.traces.benefit" | translate }}</span>
+        </div>
+      </article>
+
+      <article class="intro-card">
+        <div class="intro-card__header">
+          <span class="intro-card__icon-badge icon--cyan">
+            <ng-icon name="bootstrapBarChartFill"></ng-icon>
+          </span>
+          <h3 class="intro-card__title">{{ "features.monitoring.pillars.metrics.title" | translate }}</h3>
+        </div>
+        <p class="intro-card__desc">{{ "features.monitoring.pillars.metrics.description" | translate }}</p>
+        <div class="intro-card__value">
+          <ng-icon name="bootstrapCheckCircleFill" class="value-icon"></ng-icon>
+          <span>{{ "features.monitoring.pillars.metrics.benefit" | translate }}</span>
+        </div>
+      </article>
+
+      <article class="intro-card">
+        <div class="intro-card__header">
+          <span class="intro-card__icon-badge icon--red">
+            <ng-icon name="bootstrapExclamationTriangleFill"></ng-icon>
+          </span>
+          <h3 class="intro-card__title">{{ "features.monitoring.pillars.exceptions.title" | translate }}</h3>
+        </div>
+        <p class="intro-card__desc">{{ "features.monitoring.pillars.exceptions.description" | translate }}</p>
+        <div class="intro-card__value">
+          <ng-icon name="bootstrapCheckCircleFill" class="value-icon"></ng-icon>
+          <span>{{ "features.monitoring.pillars.exceptions.benefit" | translate }}</span>
+        </div>
+      </article>
+
+      <article class="intro-card">
+        <div class="intro-card__header">
+          <span class="intro-card__icon-badge icon--emerald">
+            <ng-icon name="bootstrapLightningChargeFill"></ng-icon>
+          </span>
+          <h3 class="intro-card__title">{{ "features.monitoring.pillars.dualtrace.title" | translate }}</h3>
+        </div>
+        <p class="intro-card__desc">{{ "features.monitoring.pillars.dualtrace.description" | translate }}</p>
+        <div class="intro-card__value">
+          <ng-icon name="bootstrapCheckCircleFill" class="value-icon"></ng-icon>
+          <span>{{ "features.monitoring.pillars.dualtrace.benefit" | translate }}</span>
+        </div>
+      </article>
+    </div>
+  </section>
+</div>
+
+<!-- Relink when scroll down -->
+<section class="scroll-trigger scroll-trigger--down" (click)="goToNext()">
+  <span class="scroll-trigger__label"> {{ "common.button.details" | translate }}</span>
+  <ng-icon name="bootstrapArrowDown" class="scroll-trigger__icon"></ng-icon>
+</section>

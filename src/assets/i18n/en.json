@@ -273,43 +273,42 @@
           "title": "Stages analysis",
           "subtitle": "How should we do when a single action launches multiple protocols at one time?",
           "desc": "Key concept of INSPECT is the ability to track down a complete feature execution, even if it involves multiple protocols and services. If a user launch one http request, and that request makes an action in the database, INSPECT tracks the whole flow and show exactly what happened in a tab called 'Stages'. All chain is available to understand how it's organized."
-          }
+        }
+      }
+    },
+    "user": {
+      "badges": {
+        "title": "USER EXPERIENCE"
+      },
+      "title": "User Experience & Journey Analytics",
+      "subtitle": "Navigation and Product Analytics to maximize customer satisfaction",
+      "description": "Technical performance only matters if it delivers value to the end user. INSPECT links navigation journeys directly to the real performance felt by your customers.",
+      "concept": {
+        "title": "Understanding user journey analytics",
+        "desc": "A user journey represents the sequence of screens and actions taken by a customer (e.g., search item -> add to cart -> checkout).",
+        "journey": {
+          "title": "User Journeys & Navigation (The Customer Path)",
+          "desc": "Tracking step-by-step navigation to discover where users encounter roadblocks, errors, or slow screens."
+        },
+        "analytics": {
+          "title": "Product Analytics (Usage Insights)",
+          "desc": "Measuring which features are most used, at what times, and identifying drop-off rates during critical business funnels."
         }
       },
-      "user": {
-        "badges": {
-          "title": "USER EXPERIENCE"
+      "value": {
+        "title": "The INSPECT Advantage for Your Teams",
+        "subtitle": "Align product decisions with real customer behavior",
+        "first": {
+          "title": "Understand the business impact of bugs",
+          "desc": "Measure exactly how many customers were blocked by a technical issue and the associated revenue impact."
         },
-        "title": "User Experience & Journey Analytics",
-        "subtitle": "Navigation and Product Analytics to maximize customer satisfaction",
-        "description": "Technical performance only matters if it delivers value to the end user. INSPECT links navigation journeys directly to the real performance felt by your customers.",
-        "concept": {
-          "title": "Understanding user journey analytics",
-          "desc": "A user journey represents the sequence of screens and actions taken by a customer (e.g., search item -> add to cart -> checkout).",
-          "journey": {
-            "title": "User Journeys & Navigation (The Customer Path)",
-            "desc": "Tracking step-by-step navigation to discover where users encounter roadblocks, errors, or slow screens."
-          },
-          "analytics": {
-            "title": "Product Analytics (Usage Insights)",
-            "desc": "Measuring which features are most used, at what times, and identifying drop-off rates during critical business funnels."
-          }
+        "second": {
+          "title": "Optimize conversion funnels",
+          "desc": "Detect slow pages that frustrate users and cause checkout abandonment."
         },
-        "value": {
-          "title": "The INSPECT Advantage for Your Teams",
-          "subtitle": "Align product decisions with real customer behavior",
-          "first": {
-            "title": "Understand the business impact of bugs",
-            "desc": "Measure exactly how many customers were blocked by a technical issue and the associated revenue impact."
-          },
-          "second": {
-            "title": "Optimize conversion funnels",
-            "desc": "Detect slow pages that frustrate users and cause checkout abandonment."
-          },
-          "third": {
-            "title": "Empowered customer support",
-            "desc": "When a customer contacts support, view their full session history and the exact error encountered in a few clicks."
-          }
+        "third": {
+          "title": "Empowered customer support",
+          "desc": "When a customer contacts support, view their full session history and the exact error encountered in a few clicks."
         }
       }
     },
@@ -821,6 +820,7 @@
         }
       }
     },
+  },
   "installation": {
     "title": "Installation",
     "content": "To install INSPECT, there are 2 dependencies to add to your project: INSPECT-core and INSPECT-ng-collector"

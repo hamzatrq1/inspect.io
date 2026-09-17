@@ -272,41 +272,41 @@
           "subtitle": "Comment faire lorsque tous ces protocoles sont appelés dans une seule action ?",
           "desc": " L'avantage clé d'INSPECT est de pouvoir suivre une action complète, même si elle fait appel à plusieurs protocoles différents. Si une action utilisateur déclenche une requête HTTP, qui elle-même déclenche une requête JDBC, INSPECT suit l'ensemble du flux et vous montre exactement ce qui a lieu grâce à la partie Stages. Les actions sont toutes listées chronologiquement pour comprendre comment est organisée la chaine."
         }
-      }
-    },
-    "user": {
-      "badges": {
-        "title": "EXPÉRIENCE UTILISATEUR"
       },
-      "title": "Expérience Utilisateur et Parcours",
-      "subtitle": "Navigation et Product Analytics au service de la satisfaction client",
-      "description": "La performance technique n'a de sens que si elle sert l'utilisateur final. INSPECT relie chaque parcours de navigation aux performances réelles perçues par vos clients.",
-      "concept": {
-        "title": "Comprendre l'analyse de parcours",
-        "desc": "Le parcours utilisateur représente l'enchaînement des écrans et actions réalisés par un internaute (ex: recherche d'article -> ajout panier -> paiement).",
-        "journey": {
-          "title": "Parcours & Navigation (Le Cheminement du client)",
-          "desc": "Suivre pas à pas les étapes franchies par l'utilisateur pour comprendre où il rencontre des difficultés ou des lenteurs."
+      "user": {
+        "badges": {
+          "title": "EXPÉRIENCE UTILISATEUR"
         },
-        "analytics": {
-          "title": "Product Analytics (Les Habitudes d'usage)",
-          "desc": "Mesurer quelles fonctionnalités sont les plus utilisées, à quels moments, et quel est le taux d'abandon lors des étapes clés."
-        }
-      },
-      "value": {
-        "title": "L'apport d'INSPECT pour vos équipes",
-        "subtitle": "Alignez les décisions produit avec la réalité terrain",
-        "first": {
-          "title": "Compréhension de l'impact métier des bugs",
-          "desc": "Mesurez exactement combien d'utilisateurs ont été bloqués par une erreur technique et sur quel montant de panier."
+        "title": "Expérience Utilisateur et Parcours",
+        "subtitle": "Navigation et Product Analytics au service de la satisfaction client",
+        "description": "La performance technique n'a de sens que si elle sert l'utilisateur final. INSPECT relie chaque parcours de navigation aux performances réelles perçues par vos clients.",
+        "concept": {
+          "title": "Comprendre l'analyse de parcours",
+          "desc": "Le parcours utilisateur représente l'enchaînement des écrans et actions réalisés par un internaute (ex: recherche d'article -> ajout panier -> paiement).",
+          "journey": {
+            "title": "Parcours & Navigation (Le Cheminement du client)",
+            "desc": "Suivre pas à pas les étapes franchies par l'utilisateur pour comprendre où il rencontre des difficultés ou des lenteurs."
+          },
+          "analytics": {
+            "title": "Product Analytics (Les Habitudes d'usage)",
+            "desc": "Mesurer quelles fonctionnalités sont les plus utilisées, à quels moments, et quel est le taux d'abandon lors des étapes clés."
+          }
         },
-        "second": {
-          "title": "Optimisation des tunnels de conversion",
-          "desc": "Détectez les pages trop lentes qui découragent vos clients et entraînent des abandons de parcours."
-        },
-        "third": {
-          "title": "Support client ultra-efficace",
-          "desc": "Lorsqu'un client contacte le support, retrouvez l'historique complet de sa session et l'erreur exacte qu'il a rencontrée en quelques clics."
+        "value": {
+          "title": "L'apport d'INSPECT pour vos équipes",
+          "subtitle": "Alignez les décisions produit avec la réalité terrain",
+          "first": {
+            "title": "Compréhension de l'impact métier des bugs",
+            "desc": "Mesurez exactement combien d'utilisateurs ont été bloqués par une erreur technique et sur quel montant de panier."
+          },
+          "second": {
+            "title": "Optimisation des tunnels de conversion",
+            "desc": "Détectez les pages trop lentes qui découragent vos clients et entraînent des abandons de parcours."
+          },
+          "third": {
+            "title": "Support client ultra-efficace",
+            "desc": "Lorsqu'un client contacte le support, retrouvez l'historique complet de sa session et l'erreur exacte qu'il a rencontrée en quelques clics."
+          }
         }
       }
     },

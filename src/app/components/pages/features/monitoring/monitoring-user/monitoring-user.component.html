@@ -4,20 +4,14 @@
     <div class="hero__glow hero__glow--primary"></div>
     <div class="hero__glow hero__glow--secondary"></div>
 
-    <div class="hero__badge reveal">
+    <div class="hero__badge reveal" (click)="goToMonitoring()">
       <span class="hero__badge-dot"></span>
-      <span>{{ "features.monitoring.user.badges.title" | translate }}</span>
+      <span>{{ "features.monitoring.badges.title" | translate }}</span>
     </div>
 
     <h1 class="hero__headline reveal">
       {{ "features.monitoring.user.title" | translate }}
     </h1>
-
-    <h2 class="hero__gradient reveal">{{ "features.monitoring.user.subtitle" | translate }}</h2>
-
-    <p class="hero__desc reveal">
-      {{ "features.monitoring.user.description" | translate }}
-    </p>
 
   </section>
 
@@ -25,7 +19,7 @@
   <section class="section" id="monitoring-user-concept">
     <div class="section__header reveal">
       <h2 class="section__title">{{ "features.monitoring.user.concept.title" | translate }}</h2>
-      <p class="section__subtitle">{{ "features.monitoring.user.concept.desc" | translate }}</p>
+      <h2 class="section__subtitle">{{ "features.monitoring.user.concept.desc" | translate }}</h2>
     </div>
 
     <div class="features-grid">
@@ -39,37 +33,164 @@
 
       <article class="feature-card reveal">
         <div class="feature-card__icon-wrap icon--cyan">
-          <ng-icon name="bootstrapFunnelFill"></ng-icon>
+          <ng-icon name="bootstrapSpeedometer2"></ng-icon>
         </div>
-        <h3 class="feature-card__title">{{ "features.monitoring.user.concept.analytics.title" | translate }}</h3>
-        <p class="feature-card__desc">{{ "features.monitoring.user.concept.analytics.desc" | translate }}</p>
+        <h3 class="feature-card__title">{{ "features.monitoring.user.concept.ux.title" | translate }}</h3>
+        <p class="feature-card__desc">{{ "features.monitoring.user.concept.ux.desc" | translate }}</p>
       </article>
     </div>
   </section>
 
-  <!-- SECTION 2: INSPECT VALUE PROPOSITION -->
-  <section class="section" id="monitoring-user-value">
+  <!-- SECTION 2: INSPECT ROLE IN NAVIGATION & UX -->
+  <section class="section" id="monitoring-user-role">
     <div class="section__header reveal">
-      <h2 class="section__title">{{ "features.monitoring.user.value.title" | translate }}</h2>
-      <p class="section__subtitle">{{ "features.monitoring.user.value.subtitle" | translate }}</p>
+      <h2 class="section__title">{{ "features.monitoring.user.role.title" | translate }}</h2>
+      <p class="section__subtitle">{{ "features.monitoring.user.role.subtitle" | translate }}</p>
+    </div>
+
+    <div class="role-grid">
+      <!-- 1. Traçage automatique de la navigation -->
+      <article class="role-card reveal">
+        <div class="role-card__header">
+          <div class="feature-card__icon-wrap icon--indigo">
+            <ng-icon name="bootstrapGlobe2"></ng-icon>
+          </div>
+          <div class="role-card__heading">
+            <h3 class="role-card__title">{{ "features.monitoring.user.role.navigation.title" | translate }}</h3>
+          </div>
+        </div>
+        <ul class="role-card__list">
+          <li class="role-card__item">
+            <div class="item-bullet">
+              <ng-icon name="bootstrapCheckCircleFill"></ng-icon>
+            </div>
+            <div class="item-content">
+              <strong>{{ "features.monitoring.user.role.navigation.router.title" | translate }}</strong>
+              <br>
+              <span> {{ "features.monitoring.user.role.navigation.router.desc" | translate }}</span>
+            </div>
+          </li>
+          <li class="role-card__item">
+            <div class="item-bullet">
+              <ng-icon name="bootstrapCheckCircleFill"></ng-icon>
+            </div>
+            <div class="item-content">
+              <strong>{{ "features.monitoring.user.role.navigation.cache.title" | translate }} :</strong>
+              <br>
+              <span> {{ "features.monitoring.user.role.navigation.cache.desc" | translate }}</span>
+            </div>
+          </li>
+          <li class="role-card__item">
+            <div class="item-bullet">
+              <ng-icon name="bootstrapCheckCircleFill"></ng-icon>
+            </div>
+            <div class="item-content">
+              <strong>{{ "features.monitoring.user.role.navigation.session.title" | translate }}</strong>
+              <br>
+              <span> {{ "features.monitoring.user.role.navigation.session.desc" | translate }}</span>
+            </div>
+          </li>
+        </ul>
+      </article>
+
+      <!-- 2. Capture non intrusive des interactions -->
+      <article class="role-card reveal">
+        <div class="role-card__header">
+          <div class="feature-card__icon-wrap icon--cyan">
+            <ng-icon name="bootstrapCursorFill"></ng-icon>
+          </div>
+          <div class="role-card__heading">
+            <h3 class="role-card__title">{{ "features.monitoring.user.role.interaction.title" | translate }}</h3>
+          </div>
+        </div>
+        <ul class="role-card__list">
+          <li class="role-card__item">
+            <div class="item-bullet">
+              <ng-icon name="bootstrapCheckCircleFill"></ng-icon>
+            </div>
+            <div class="item-content">
+              <strong>{{ "features.monitoring.user.role.interaction.dom.title" | translate }}</strong>
+              <br>
+              <span> {{ "features.monitoring.user.role.interaction.dom.desc" | translate }}</span>
+            </div>
+          </li>
+          <li class="role-card__item">
+            <div class="item-bullet">
+              <ng-icon name="bootstrapCheckCircleFill"></ng-icon>
+            </div>
+            <div class="item-content">
+              <strong>{{ "features.monitoring.user.role.interaction.semantic.title" | translate }} </strong>
+              <br>
+              <span> {{ "features.monitoring.user.role.interaction.semantic.desc" | translate }}</span>
+            </div>
+          </li>
+        </ul>
+      </article>
+
+      <!-- 3. Liaison immédiate avec erreurs et perf -->
+      <article class="role-card role-card reveal">
+        <div class="role-card__header">
+          <div class="feature-card__icon-wrap icon--amber">
+            <ng-icon name="bootstrapExclamationTriangleFill"></ng-icon>
+          </div>
+          <div class="role-card__heading">
+            <h3 class="role-card__title">{{ "features.monitoring.user.role.correlation.title" | translate }}</h3>
+          </div>
+        </div>
+        <ul class="role-card__list">
+          <li class="role-card__item">
+            <div class="item-bullet">
+              <ng-icon name="bootstrapCheckCircleFill"></ng-icon>
+            </div>
+            <div class="item-content">
+              <strong>{{ "features.monitoring.user.role.correlation.error.title" | translate }} </strong>
+              <br>
+              <span> {{ "features.monitoring.user.role.correlation.error.desc" | translate }}</span>
+            </div>
+          </li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- SECTION 3: PRODUCT ANALYTICS MODULE -->
+  <section class="section" id="monitoring-user-analytics">
+    <div class="section__header reveal">
+      <h2 class="section__title">{{ "features.monitoring.user.analytics.title" | translate }}</h2>
+      <p class="section__subtitle">{{ "features.monitoring.user.analytics.subtitle" | translate }}</p>
     </div>
 
     <div class="roi-grid">
       <div class="roi-card reveal">
-        <h4>{{ "features.monitoring.user.value.first.title" | translate }}</h4>
-        <p>{{ "features.monitoring.user.value.first.desc" | translate }}</p>
+        <div class="feature-card__icon-wrap icon--indigo">
+          <ng-icon name="bootstrapClockHistory"></ng-icon>
+        </div>
+        <h4>{{ "features.monitoring.user.analytics.timeline.title" | translate }}</h4>
+        <p>{{ "features.monitoring.user.analytics.timeline.desc" | translate }}</p>
       </div>
 
       <div class="roi-card reveal">
-        <h4>{{ "features.monitoring.user.value.second.title" | translate }}</h4>
-        <p>{{ "features.monitoring.user.value.second.desc" | translate }}</p>
+        <div class="feature-card__icon-wrap icon--emerald">
+          <ng-icon name="bootstrapShieldCheck"></ng-icon>
+        </div>
+        <h4>{{ "features.monitoring.user.analytics.reproduction.title" | translate }}</h4>
+        <p>{{ "features.monitoring.user.analytics.reproduction.desc" | translate }}</p>
       </div>
 
       <div class="roi-card reveal">
-        <h4>{{ "features.monitoring.user.value.third.title" | translate }}</h4>
-        <p>{{ "features.monitoring.user.value.third.desc" | translate }}</p>
+        <div class="feature-card__icon-wrap icon--cyan">
+          <ng-icon name="bootstrapGraphUpArrow"></ng-icon>
+        </div>
+        <h4>{{ "features.monitoring.user.analytics.insights.title" | translate }}</h4>
+        <p>{{ "features.monitoring.user.analytics.insights.desc" | translate }}</p>
       </div>
     </div>
   </section>
 </div>
+
+<!-- Relink when scroll down -->
+<section class="scroll-trigger scroll-trigger--down" (click)="goToNext()">
+  <span class="scroll-trigger__label">{{ "common.button.next" | translate }}</span>
+  <ng-icon name="bootstrapArrowDown" class="scroll-trigger__icon"></ng-icon>
+</section>
 

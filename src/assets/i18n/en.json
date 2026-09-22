@@ -351,14 +351,36 @@
       }
     },
     "e2e": {
-      "title": "End-to-End Cartography & Tracing",
+      "title": "Cartography & Traceability",
       "badges": {
-        "title": "END-TO-END TRACEABILITY"
+        "title": "CARTOGRAPHY AND TRACEABILITY"
       },
       "intro": {
-        "title": "End-to-End vision across your information systems",
         "subtitle": "Track transactions from the user click down to the database",
         "description": "In modern multi-service architectures, following the path of an operation can be daunting. INSPECT provides continuous, seamless visibility across the entire chain."
+      },
+      "pillars": {
+        "title": "What Application Mapping Enables",
+        "topology": {
+          "title": "Architecture Discovery & Dependency Mapping",
+          "desc": "Automatically visualize all software components (microservices, databases, brokers, third-party APIs) and their live communication to understand the full application ecosystem.",
+          "benefit": "A clear, shared architectural vision between engineering and business teams."
+        },
+        "impact": {
+          "title": "Impact Analysis & Change Management",
+          "desc": "Anticipate risks and cascading effects on dependent services before any deployment, upgrade, or component decommissioning.",
+          "benefit": "Secure releases and avoid domino-effect outages."
+        },
+        "bottlenecks": {
+          "title": "Bottleneck Detection & Domino Effect Tracking",
+          "desc": "Instantly pinpoint which intermediary link is saturated or failing and observe how latency ripples through the entire application chain.",
+          "benefit": "Isolate the root cause of an incident within seconds."
+        },
+        "governance": {
+          "title": "Flow Governance & Shadow IT Detection",
+          "desc": "Uncover hidden dependencies, deprecated endpoints, or unencrypted communications to ensure infrastructure compliance and security.",
+          "benefit": "Maintain a living, auditable, and secure architectural blueprint."
+        }
       },
       "tree": {
         "badges": {
@@ -371,11 +393,11 @@
           "title": "Understanding the Trace Tree",
           "desc": "A trace tree is like an itemized receipt or a family tree of execution: the parent action triggers child sub-actions.",
           "span": {
-            "title": "Traces & Spans (The Building Blocks)",
+            "title": "Traces & Spans",
             "desc": "A trace represents the complete journey of a request. Each sub-step (database call, calculation, external request) is an accurately timed 'span'."
           },
           "hierarchy": {
-            "title": "Hierarchical View (Who called what?)",
+            "title": "Hierarchical View",
             "desc": "A clean visual tree showing how components execute sequentially or concurrently."
           }
         },
@@ -407,11 +429,11 @@
           "title": "What are Threads and Asynchronism?",
           "desc": "Simple explanations to understand how servers handle multiple tasks at once.",
           "thread": {
-            "title": "What is a Thread? (The Kitchen Chef)",
+            "title": "What is a Thread?",
             "desc": "A thread is an autonomous execution worker. Think of a restaurant kitchen brigade: each chef is a thread preparing a specific recipe alongside others."
           },
           "async": {
-            "title": "What is Asynchronism? (The Order Buzzer)",
+            "title": "What is Asynchronism?",
             "desc": "Delegating a heavy task to the background (e.g. generating a PDF report) and immediately freeing the user with an order buzzer without freezing their screen."
           },
           "context": {

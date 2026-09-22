@@ -344,31 +344,53 @@
       }
     },
     "e2e": {
-      "title": "Cartographie et Traçabilité End-to-End",
+      "title": "Cartographie et traçabilité",
       "badges": {
-        "title": "TRAÇABILITÉ END-TO-END"
+        "title": "CARTOGRAPHIE ET TRAÇABILITÉ"
       },
       "intro": {
-        "title": "Vision de bout en bout de vos systèmes d'information",
         "subtitle": "Suivre chaque transaction du clic utilisateur jusqu'à la base de données",
         "description": "Dans un système moderne composé de multiples microservices, serveurs et bases de données, suivre le chemin d'une opération devient un casse-tête. INSPECT offre une vision continue, sans couture, d'un bout à l'autre de la chaîne."
+      },
+      "pillars": {
+        "title": "Ce que permet la cartographie dans une application informatique",
+        "topology": {
+          "title": "Urbanisation - Découverte des dépendances",
+          "desc": "Visualiser automatiquement l'ensemble des briques logicielles (microservices, bases de données, brokers, API tierces) et leurs flux réels pour comprendre l'écosystème applicatif global.",
+          "benefit": "Une vision d'ensemble claire et partagée entre équipes techniques et métier."
+        },
+        "impact": {
+          "title": "Analyse d'impact",
+          "desc": "Anticiper les répercussions et les risques sur les services dépendants avant toute mise en production, montée de version ou arrêt d'une brique logicielle.",
+          "benefit": "Sécuriser les déploiements et éviter les pannes en cascade."
+        },
+        "bottlenecks": {
+          "title": "Détection des goulots d'étranglement",
+          "desc": "Identifier instantanément quel maillon intermédiaire sature ou dysfonctionne et observer comment les ralentissements se propagent dans la chaîne applicative.",
+          "benefit": "Isoler la cause racine d'un incident en quelques secondes."
+        },
+        "governance": {
+          "title": "Gouvernance des flux",
+          "desc": "Repérer les flux invisibles, les dépendances obsolètes ou les communications non sécurisées pour garantir la conformité et la sécurité de votre système d'information.",
+          "benefit": "Maintenir un référentiel d'architecture vivant, auditable et sécurisé."
+        }
       },
       "tree": {
         "badges": {
           "title": "ARBRE DE TRACE"
         },
-        "title": "Arbre de Trace Détaillé",
-        "subtitle": "Vue composant par appel : La radiographie de vos transactions",
+        "title": "Arbre de trace détaillé",
+        "subtitle": "Vue composant par appel",
         "description": "L'arbre de trace décompose une opération en une arborescence visuelle montrant chaque composant sollicité, la durée de chaque sous-étape et l'endroit exact d'une éventuelle panne.",
         "concept": {
           "title": "Comprendre l'arbre de trace",
-          "desc": "Un arbre de trace est comme un ticket de caisse détaillé ou un arbre généalogique de l'exécution : l'action parent déclenche des sous-actions enfants.",
+          "desc": "Un arbre de trace est permet de connaitre la chronologie d'une action : l'action parent déclenche des sous-actions enfants et sont toutes hiérarchisées.",
           "span": {
-            "title": "La Trace & les Spans (Les Étapes élémentaires)",
+            "title": "La Trace et le span",
             "desc": "Une trace représente le voyage complet d'une requête. Chaque sous-étape (appel SQL, calcul, appel externe) est un 'span' chronométré avec précision."
           },
           "hierarchy": {
-            "title": "La Vue Hiérarchique (Qui appelle qui ?)",
+            "title": "La vue hiérarchique",
             "desc": "Une arborescence claire qui montre visuellement comment les composants s'emboîtent et s'exécutent les uns après les autres ou en parallèle."
           }
         },
@@ -400,11 +422,11 @@
           "title": "Qu'est-ce qu'un Thread et l'Asynchronisme ?",
           "desc": "Explications simples pour comprendre comment votre serveur réalise plusieurs choses à la fois.",
           "thread": {
-            "title": "Qu'est-ce qu'un Thread ? (L'Ouvrier en cuisine)",
+            "title": "Thread",
             "desc": "Un thread est une unité d'exécution autonome. Imaginez une brigade de cuisine : chaque cuisinier est un thread qui réalise une recette spécifique en même temps que les autres."
           },
           "async": {
-            "title": "Qu'est-ce que l'Asynchronisme ? (Le Bip de commande)",
+            "title": "Asynchronisme",
             "desc": "C'est le fait de lancer une tâche lourde en arrière-plan (ex: générer un rapport PDF) et de libérer immédiatement l'utilisateur avec un ticket d'attente, sans bloquer son écran."
           },
           "context": {

@@ -274,68 +274,123 @@
         }
       },
       "user": {
-        "badges": {
-          "title": "EXPÉRIENCE UTILISATEUR"
-        },
-        "title": "Expérience Utilisateur et Parcours",
-        "subtitle": "Navigation et Product Analytics au service de la satisfaction client",
+        "title": "Expérience utilisateur et parcours",
         "description": "La performance technique n'a de sens que si elle sert l'utilisateur final. INSPECT relie chaque parcours de navigation aux performances réelles perçues par vos clients.",
         "concept": {
-          "title": "Comprendre l'analyse de parcours",
-          "desc": "Le parcours utilisateur représente l'enchaînement des écrans et actions réalisés par un internaute (ex: recherche d'article -> ajout panier -> paiement).",
+          "title": "Qu'est-ce que le parcours et l'expérience utilisateur (UX) dans une application web ?",
+          "desc": "Comprendre les actions de l'internaute et son ressenti global lors de l'utilisation de l'application.",
           "journey": {
-            "title": "Parcours & Navigation (Le Cheminement du client)",
-            "desc": "Suivre pas à pas les étapes franchies par l'utilisateur pour comprendre où il rencontre des difficultés ou des lenteurs."
+            "title": "Le parcours utilisateur",
+            "desc": "Désigne la succession d'étapes, d'écrans et d'actions (clics, saisies, navigations) qu'un internaute effectue pour atteindre un objectif (ex. : se connecter, chercher un dossier, valider un formulaire)."
           },
-          "analytics": {
-            "title": "Product Analytics (Les Habitudes d'usage)",
-            "desc": "Mesurer quelles fonctionnalités sont les plus utilisées, à quels moments, et quel est le taux d'abandon lors des étapes clés."
+          "ux": {
+            "title": "L'expérience utilisateur (User Experience - UX)",
+            "desc": "Englobe le ressenti global de l'utilisateur : la fluidité, la rapidité d'affichage, la clarté du flux et l'absence d'erreurs ou de blocages techniques."
           }
         },
-        "value": {
-          "title": "L'apport d'INSPECT pour vos équipes",
-          "subtitle": "Alignez les décisions produit avec la réalité terrain",
-          "first": {
-            "title": "Compréhension de l'impact métier des bugs",
-            "desc": "Mesurez exactement combien d'utilisateurs ont été bloqués par une erreur technique et sur quel montant de panier."
+        "role": {
+          "title": "Le rôle d'INSPECT dans la navigation et l'expérience utilisateur",
+          "subtitle": "Dans beaucoup d'architectures, lorsqu'un utilisateur rencontre une anomalie ou une lenteur, il est difficile de savoir exactement ce qu'il a fait.",
+          "navigation": {
+            "title": "Traçage automatique de la navigation",
+            "router": {
+              "title": "Écoute du cycle de vie du routeur",
+              "desc": "INSPECT détecte chaque changement d'URL (NavigationStart, NavigationEnd, NavigationCancel) et horodate les temps de transition."
+            },
+            "cache": {
+              "title": "Gestion des comportements avancés",
+              "desc": "Prise en compte du cache du navigateur et des sorties de page."
+            },
+            "session": {
+              "title": "Corrélation de session (SessionManager)",
+              "desc": "Chaque vue ou navigation est rattachée à une session logique, propageant les identifiants techniques vers les requêtes HTTP backend."
+            }
           },
-          "second": {
-            "title": "Optimisation des tunnels de conversion",
-            "desc": "Détectez les pages trop lentes qui découragent vos clients et entraînent des abandons de parcours."
+          "interaction": {
+            "title": "Capture des interactions utilisateur",
+            "dom": {
+              "title": "Écoute automatique des événements DOM (Document Object Model)",
+              "desc": "Le module UserActionMonitor écoute automatiquement les événements DOM, qui sont toutes les actions basiques de l'utilisateur comme le clic, le scroll, le chargement."
+            },
+            "semantic": {
+              "title": "Résolution intelligente",
+              "desc": "INSPECT identifie l'élément ciblé sans configuration manuelle en extrayant son libellé via ses attributs techniques."
+            }
           },
-          "third": {
-            "title": "Support client ultra-efficace",
-            "desc": "Lorsqu'un client contacte le support, retrouvez l'historique complet de sa session et l'erreur exacte qu'il a rencontrée en quelques clics."
+          "correlation": {
+            "title": "Liaison immédiate avec les erreurs et la performance",
+            "error": {
+              "title": "Rattachement direct aux anomalies",
+              "desc": "Tout crash ou lenteur réseau est instantanément rattaché à l'action exacte et à la page où se trouvait l'utilisateur."
+            }
+          }
+        },
+        "analytics": {
+          "title": "Le module « Product Analytics (Beta) » dans INSPECT",
+          "subtitle": "Le module Product Analytics transforme les traces techniques en une chronologie visuelle exploitable :",
+          "timeline": {
+            "title": "Timeline du parcours utilisateur",
+            "desc": "En sélectionnant un utilisateur et une date, l'équipe technique ou le support accède à la restitution exacte de sa session sous forme de fil chronologique (\"Chargement de la page\", \"Clique sur le bouton Valider\", \"Changement de champ\")."
+          },
+          "reproduction": {
+            "title": "Reproduction ultra-rapide des incidents",
+            "desc": "Plus besoin de demander à l'utilisateur de décrire ses étapes, le scénario est facilement réalisé."
+          },
+          "insights": {
+            "title": "Compréhension des usages réels",
+            "desc": "Les équipes produit et développement peuvent identifier les onglets les plus utilisés, les écrans moins consultés."
           }
         }
       }
     },
     "e2e": {
-      "title": "Cartographie et Traçabilité End-to-End",
+      "title": "Cartographie et traçabilité",
       "badges": {
-        "title": "TRAÇABILITÉ END-TO-END"
+        "title": "CARTOGRAPHIE ET TRAÇABILITÉ"
       },
       "intro": {
-        "title": "Vision de bout en bout de vos systèmes d'information",
         "subtitle": "Suivre chaque transaction du clic utilisateur jusqu'à la base de données",
         "description": "Dans un système moderne composé de multiples microservices, serveurs et bases de données, suivre le chemin d'une opération devient un casse-tête. INSPECT offre une vision continue, sans couture, d'un bout à l'autre de la chaîne."
+      },
+      "pillars": {
+        "title": "Ce que permet la cartographie dans une application informatique",
+        "topology": {
+          "title": "Urbanisation - Découverte des dépendances",
+          "desc": "Visualiser automatiquement l'ensemble des briques logicielles (microservices, bases de données, brokers, API tierces) et leurs flux réels pour comprendre l'écosystème applicatif global.",
+          "benefit": "Une vision d'ensemble claire et partagée entre équipes techniques et métier."
+        },
+        "impact": {
+          "title": "Analyse d'impact",
+          "desc": "Anticiper les répercussions et les risques sur les services dépendants avant toute mise en production, montée de version ou arrêt d'une brique logicielle.",
+          "benefit": "Sécuriser les déploiements et éviter les pannes en cascade."
+        },
+        "bottlenecks": {
+          "title": "Détection des goulots d'étranglement",
+          "desc": "Identifier instantanément quel maillon intermédiaire sature ou dysfonctionne et observer comment les ralentissements se propagent dans la chaîne applicative.",
+          "benefit": "Isoler la cause racine d'un incident en quelques secondes."
+        },
+        "governance": {
+          "title": "Gouvernance des flux",
+          "desc": "Repérer les flux invisibles, les dépendances obsolètes ou les communications non sécurisées pour garantir la conformité et la sécurité de votre système d'information.",
+          "benefit": "Maintenir un référentiel d'architecture vivant, auditable et sécurisé."
+        }
       },
       "tree": {
         "badges": {
           "title": "ARBRE DE TRACE"
         },
-        "title": "Arbre de Trace Détaillé",
-        "subtitle": "Vue composant par appel : La radiographie de vos transactions",
+        "title": "Arbre de trace détaillé",
+        "subtitle": "Vue composant par appel",
         "description": "L'arbre de trace décompose une opération en une arborescence visuelle montrant chaque composant sollicité, la durée de chaque sous-étape et l'endroit exact d'une éventuelle panne.",
         "concept": {
           "title": "Comprendre l'arbre de trace",
-          "desc": "Un arbre de trace est comme un ticket de caisse détaillé ou un arbre généalogique de l'exécution : l'action parent déclenche des sous-actions enfants.",
+          "desc": "Un arbre de trace est permet de connaitre la chronologie d'une action : l'action parent déclenche des sous-actions enfants et sont toutes hiérarchisées.",
           "span": {
-            "title": "La Trace & les Spans (Les Étapes élémentaires)",
+            "title": "La Trace et le span",
             "desc": "Une trace représente le voyage complet d'une requête. Chaque sous-étape (appel SQL, calcul, appel externe) est un 'span' chronométré avec précision."
           },
           "hierarchy": {
-            "title": "La Vue Hiérarchique (Qui appelle qui ?)",
+            "title": "La vue hiérarchique",
             "desc": "Une arborescence claire qui montre visuellement comment les composants s'emboîtent et s'exécutent les uns après les autres ou en parallèle."
           }
         },
@@ -367,11 +422,11 @@
           "title": "Qu'est-ce qu'un Thread et l'Asynchronisme ?",
           "desc": "Explications simples pour comprendre comment votre serveur réalise plusieurs choses à la fois.",
           "thread": {
-            "title": "Qu'est-ce qu'un Thread ? (L'Ouvrier en cuisine)",
+            "title": "Thread",
             "desc": "Un thread est une unité d'exécution autonome. Imaginez une brigade de cuisine : chaque cuisinier est un thread qui réalise une recette spécifique en même temps que les autres."
           },
           "async": {
-            "title": "Qu'est-ce que l'Asynchronisme ? (Le Bip de commande)",
+            "title": "Asynchronisme",
             "desc": "C'est le fait de lancer une tâche lourde en arrière-plan (ex: générer un rapport PDF) et de libérer immédiatement l'utilisateur avec un ticket d'attente, sans bloquer son écran."
           },
           "context": {

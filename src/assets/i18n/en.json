@@ -283,44 +283,104 @@
         "subtitle": "Navigation and Product Analytics to maximize customer satisfaction",
         "description": "Technical performance only matters if it delivers value to the end user. INSPECT links navigation journeys directly to the real performance felt by your customers.",
         "concept": {
-          "title": "Understanding user journey analytics",
-          "desc": "A user journey represents the sequence of screens and actions taken by a customer (e.g., search item -> add to cart -> checkout).",
+          "title": "What are User Journey and User Experience (UX) in a Web Application?",
+          "desc": "Understanding the sequence of user actions and their overall perception when interacting with the application.",
           "journey": {
-            "title": "User Journeys & Navigation (The Customer Path)",
-            "desc": "Tracking step-by-step navigation to discover where users encounter roadblocks, errors, or slow screens."
+            "title": "User Journey",
+            "desc": "Refers to the sequence of steps, screens, and actions (clicks, inputs, navigations) that a user performs to achieve a goal (e.g., logging in, searching for a file, submitting a form)."
           },
-          "analytics": {
-            "title": "Product Analytics (Usage Insights)",
-            "desc": "Measuring which features are most used, at what times, and identifying drop-off rates during critical business funnels."
+          "ux": {
+            "title": "User Experience (UX)",
+            "desc": "Encompasses the user's overall feeling: fluidity, display speed, workflow clarity, and the absence of errors or technical roadblocks."
           }
         },
-        "value": {
-          "title": "The INSPECT Advantage for Your Teams",
-          "subtitle": "Align product decisions with real customer behavior",
-          "first": {
-            "title": "Understand the business impact of bugs",
-            "desc": "Measure exactly how many customers were blocked by a technical issue and the associated revenue impact."
+        "role": {
+          "title": "INSPECT's Role in Navigation and User Experience",
+          "subtitle": "In many architectures, when a user encounters an anomaly or slowdown, it is difficult to know exactly what they did. INSPECT bridges this gap by directly linking browser-side behavior to backend executions:",
+          "navigation": {
+            "title": "Automatic Navigation Tracking",
+            "router": {
+              "title": "Router lifecycle monitoring (navigation.monitor.ts)",
+              "desc": "INSPECT detects every URL change (NavigationStart, NavigationEnd, NavigationCancel) and timestamps transition durations."
+            },
+            "cache": {
+              "title": "Advanced behavior handling",
+              "desc": "Support for browser Back-Forward Cache (pageshow / bfcache) and page unload events (beforeunload)."
+            },
+            "session": {
+              "title": "Session correlation (SessionManager)",
+              "desc": "Each view or navigation is linked to a logical session, propagating technical IDs to backend HTTP requests."
+            }
           },
-          "second": {
-            "title": "Optimize conversion funnels",
-            "desc": "Detect slow pages that frustrate users and cause checkout abandonment."
+          "interaction": {
+            "title": "User Interaction Capture",
+            "dom": {
+              "title": "DOM (Document Object Model) event listening",
+              "desc": "The UserActionMonitor module automatically listens to DOM events, which are all basic user actions like click, scroll, and load."
+            },
+            "semantic": {
+              "title": "Intelligent resolution",
+              "desc": "INSPECT identifies target elements without manual setup by extracting labels via technical attributes."
+            }
           },
-          "third": {
-            "title": "Empowered customer support",
-            "desc": "When a customer contacts support, view their full session history and the exact error encountered in a few clicks."
+          "correlation": {
+            "title": "Instant Link with Errors & Performance",
+            "error": {
+              "title": "Direct link to anomalies",
+              "desc": "Any crash or network latency is instantly tied to the exact action and page where the user was."
+            }
+          }
+        },
+        "analytics": {
+          "badge": "inspect-app/src/app/views/analytic/",
+          "title": "The \"Product Analytics (Beta)\" Module in INSPECT",
+          "subtitle": "The Product Analytics module transforms technical traces into an actionable visual timeline:",
+          "timeline": {
+            "title": "User Journey Timeline",
+            "desc": "By selecting a user and a date, technical or support teams access the exact session replay as a chronological feed (\"Page load\", \"Click on Submit button\", \"Field change\")."
+          },
+          "reproduction": {
+            "title": "Ultra-Fast Incident Reproduction",
+            "desc": "No need to ask users to describe their steps, the scenario is easily reproduced."
+          },
+          "insights": {
+            "title": "Understanding Real Usage",
+            "desc": "Enables product and development teams to identify most frequented paths, neglected screens."
           }
         }
       }
     },
     "e2e": {
-      "title": "End-to-End Cartography & Tracing",
+      "title": "Cartography & Traceability",
       "badges": {
-        "title": "END-TO-END TRACEABILITY"
+        "title": "CARTOGRAPHY AND TRACEABILITY"
       },
       "intro": {
-        "title": "End-to-End vision across your information systems",
         "subtitle": "Track transactions from the user click down to the database",
         "description": "In modern multi-service architectures, following the path of an operation can be daunting. INSPECT provides continuous, seamless visibility across the entire chain."
+      },
+      "pillars": {
+        "title": "What Application Mapping Enables",
+        "topology": {
+          "title": "Architecture Discovery & Dependency Mapping",
+          "desc": "Automatically visualize all software components (microservices, databases, brokers, third-party APIs) and their live communication to understand the full application ecosystem.",
+          "benefit": "A clear, shared architectural vision between engineering and business teams."
+        },
+        "impact": {
+          "title": "Impact Analysis & Change Management",
+          "desc": "Anticipate risks and cascading effects on dependent services before any deployment, upgrade, or component decommissioning.",
+          "benefit": "Secure releases and avoid domino-effect outages."
+        },
+        "bottlenecks": {
+          "title": "Bottleneck Detection & Domino Effect Tracking",
+          "desc": "Instantly pinpoint which intermediary link is saturated or failing and observe how latency ripples through the entire application chain.",
+          "benefit": "Isolate the root cause of an incident within seconds."
+        },
+        "governance": {
+          "title": "Flow Governance & Shadow IT Detection",
+          "desc": "Uncover hidden dependencies, deprecated endpoints, or unencrypted communications to ensure infrastructure compliance and security.",
+          "benefit": "Maintain a living, auditable, and secure architectural blueprint."
+        }
       },
       "tree": {
         "badges": {
@@ -333,11 +393,11 @@
           "title": "Understanding the Trace Tree",
           "desc": "A trace tree is like an itemized receipt or a family tree of execution: the parent action triggers child sub-actions.",
           "span": {
-            "title": "Traces & Spans (The Building Blocks)",
+            "title": "Traces & Spans",
             "desc": "A trace represents the complete journey of a request. Each sub-step (database call, calculation, external request) is an accurately timed 'span'."
           },
           "hierarchy": {
-            "title": "Hierarchical View (Who called what?)",
+            "title": "Hierarchical View",
             "desc": "A clean visual tree showing how components execute sequentially or concurrently."
           }
         },
@@ -369,11 +429,11 @@
           "title": "What are Threads and Asynchronism?",
           "desc": "Simple explanations to understand how servers handle multiple tasks at once.",
           "thread": {
-            "title": "What is a Thread? (The Kitchen Chef)",
+            "title": "What is a Thread?",
             "desc": "A thread is an autonomous execution worker. Think of a restaurant kitchen brigade: each chef is a thread preparing a specific recipe alongside others."
           },
           "async": {
-            "title": "What is Asynchronism? (The Order Buzzer)",
+            "title": "What is Asynchronism?",
             "desc": "Delegating a heavy task to the background (e.g. generating a PDF report) and immediately freeing the user with an order buzzer without freezing their screen."
           },
           "context": {
